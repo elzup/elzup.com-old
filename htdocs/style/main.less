@@ -1,0 +1,560 @@
+@charset "utf-8";
+//@import "../lib/bootstrap/less/variables.less";
+//@import "../lib/bootstrap/less/mixins.less";
+
+@col_font_a : #01C500;
+
+@footer_height : 150px;
+
+html,body {
+	height: 100%;
+    background: #FAFFFC;
+//    font-family:"Times New Roman",Georgia,Serif;
+    font-family:'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+}
+
+a {
+    color: @col_font_a;
+    font-weight: bold;
+    &:hover {
+        color: @col_font_a;
+    }
+}
+
+#title-div {
+    text-align: center;
+    h1.top-logo {
+        background: url(http://localhost/tohyomaker/public_html/style/../images/logo.png);
+        background-size: cover;
+        width: 427px;
+        line-height: 108px;
+        .clear-font();
+        margin: 0 auto;
+    }
+}
+
+#navbar {
+    .icon-bar {
+        background-color: white;
+    }
+    .navbar-header {
+        .navbar-brand {
+            background: url(http://localhost/tohyomaker/public_html/style/../images/logo-white.png);
+            background-size: cover;
+            width: 190px;
+            >a {
+                .clear-font();
+                display: block;
+            }
+        }
+    }
+    background-color: rgb(0, 190, 0);
+    border-color: #008105;
+    color: white;
+    .navbar-right {
+        margin-right: 10px;
+        > li {
+            a {
+                color: white;
+            }
+            li {
+                i {
+                    color: green;
+                }
+                a {
+                    color: black;
+                }
+            }
+            @media (max-width: 767px) {
+                float:left;
+                width: 15%;
+                a {
+                    padding: 2px;
+                }
+                i,a,li a,li i {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//.btn-default:hover, .btn-default:focus, .btn-group.open .dropdown-toggle.btn-default {
+//    color: #000000;
+//    background-color: #A6FF9E;
+//    border-color: #79EE54;
+//}
+//.btn-default {
+//    color: #000000;
+//    background-color: #A6FF9E;
+//    border-color: #79EE54;
+//}
+
+.clear-font {
+    color: rgba(0,0,0,0);
+    &:hover,&:active {
+        color: rgba(0,0,0,0);
+    }
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+    margin-top: 100px;
+    padding-bottom: @footer_height + 20px;
+//    text-align: center;
+}
+
+#footer {
+	position: relative;
+	margin-top: 0 - @footer_height;
+	height: @footer_height;
+	clear: both;
+	padding-top: 20px;
+	background-color: gray;
+
+    .row>div {
+
+    }
+    a {
+        color: white;
+    }
+    ul >li {
+        margin-left: 5px;
+    }
+}
+
+.itembox-div {
+    button {
+        clear: both;
+//        margin: 5px 0;
+    }
+
+    li {
+        margin-top: 5px;
+        > .row {
+            div {
+                &.col-sm-8 {
+                    position: relative;
+                    > span {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -0.5em;
+                    }
+                }
+                height: 3em;
+            }
+        }
+    }
+
+    .panel-itemselect {
+        box-shadow: none;
+        >.panel-body {
+            position: relative;
+            height: 4em;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .col-sm-8 {
+                height: 3em;
+                >span {
+                    top: 50%;
+                    margin-top: -0.5em;
+                    position: absolute;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+            .btn {
+                .btn-push-margin();
+                &.active {
+                    color: #ffffff;
+                    background-color: #219524;
+                    border-color: #186f1b;
+                }
+            }
+        }
+    }
+
+    &.itembox-img-div {
+        .panel-itemselect {
+            >.panel-body {
+                height: 10em;
+                .btn {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.btn-push-margin (@h :4px){
+    margin-top: @h;
+    &:active{
+        margin-top: @h + 2px !important;
+        margin-bottom: 1px !important;
+    }
+    &:hover{
+        margin-top: @h + 1px;
+    }
+}
+
+#itemresultbox-div,#itemresultbox-soted-div {
+    margin-top: 10px;
+    .panel {
+        margin-bottom: 7px;
+        .panel-heading {
+            padding: 1px 15px;
+            .rank {
+                font-size: 20px;
+                &:after {
+                    content: "位";
+                    font-size: 15px;
+                }
+            }
+            .voted {
+                float: right;
+                color: gold;
+                font-size: 20px;
+                margin-top: 5px;
+            }
+        }
+        &.rank-1, &.rank-2, &.rank-3 {
+            .rank {
+                font-size: 30px;
+            }
+        }
+        &.rank-1 {
+            .rank {
+                .col-gold();
+            }
+        }
+        &.rank-2 {
+            .rank {
+                .col-silver();
+            }
+        }
+        &.rank-3 {
+            .rank {
+                .col-bronds();
+            }
+        }
+        .panel-body {
+            h2, h3, h4 {
+                    margin: 0;
+            }
+            .num {
+                text-align: right;
+                font-size: 30px;
+                &:after {
+                    font-size: 15px;
+                    content: "票";
+                }
+
+            }
+            >div:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+}
+
+#vote-textarea {
+    width: 100%;
+}
+
+#survey-head-div {
+    h1 {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    > div > div {
+//        margin-top: 10px;
+    }
+    .survey-cont {
+        margin-top: 5px;
+    }
+    .total-num {
+        &:after {
+            content: '票';
+        }
+    }
+    .badge {
+        // TODO: fix
+//        padding: 2px;
+//        font-size: 10px;
+//        display: none;
+    }
+}
+
+
+i {
+    margin-left  : 5px;
+    margin-right : 5px;
+    &.icon-orange {
+        color: orange;
+        text-shadow: 2px 2px 0px #F6FF93;
+    }
+    &.fa-twitter
+    {
+        color: blue;
+    }
+}
+
+.panel-surveys {
+    .panel-heading {
+        p {
+            margin: 0;
+        }
+        .title {
+            font-weight: bold;
+        }
+    }
+    .panel-body {
+        ul {
+            >li {
+                .title {
+                }
+                .total-num {
+                    text-align: right;
+                    &:after {
+                        content: '票';
+                    }
+                }
+                .remain {
+                }
+            }
+        }
+    }
+}
+
+
+#survey-pager-div {
+    margin-bottom: 10px;
+
+}
+
+.panel-survey {
+    .panel-heading {
+        padding-top: 1px;
+        padding-bottom: 0px;
+        @h : 40px;
+        >div>div {
+            height: @h;
+        }
+        a {
+            color: white;
+            font-weight: bold;
+            &:hover, &:active {
+                color: white;
+            }
+        }
+        .title {
+            padding-right: 0;
+            .badge
+            {
+                background: rgb(157, 255, 139);
+                color: green;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+        .state {
+        }
+        .total-num {
+            text-align: right;
+            span {
+                line-height: @h;
+                font-size: 22px;
+
+                &:after {
+                    font-size: 15px;
+                    content: "票";
+                }
+            }
+        }
+    }
+    .panel-body {
+        .col-sm-8-s {
+            width: 60%;
+            padding-right: 0;
+            .ellipsis();
+        }
+        .col-sm-4-s {
+            width: 40%;
+            padding-left: 5px;
+            padding-right: 2px;
+            .ellipsis();
+        }
+    }
+    .btn-group-itmes {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 0 10px;
+        .row>div {
+            padding: 0;
+            >a {
+                width: 100% !important;
+            }
+        }
+        .btn-item {
+            .ellipsis();
+        }
+    }
+    .btn-group-tags {
+        .btn-tag {
+        }
+    }
+    .panel-footer {
+        padding-top: 2px;
+        padding-bottom: 1px;
+        > p {
+            margin: 0px;
+        }
+    }
+    i {
+        top: 3px;
+        left: -3px;
+    }
+}
+
+#survey-log-div {
+    margin-top: 5px;
+    .panel-log {
+        >.panel-heading, >.panel-footer {
+            >.result-type-time {
+                >:first-child {
+                    color: gold;
+                }
+            }
+            >.result-type-total {
+                >:last-child {
+                    color: gold;
+                }
+            }
+        }
+        >.panel-body {
+            table {
+                .rank {
+                    width: 10%;
+                    text-align: right;
+                    &:after {
+                        content: '位';
+                    }
+                    &.rank-1, &.rank-2, &.rank-3 {
+                        .text-shadow();
+                    }
+                    &.rank-1 {
+                        .col-gold();
+                    }
+                    &.rank-2 {
+                        .col-silver();
+                    }
+                    &.rank-3 {
+                        .col-bronds();
+                    }
+                }
+                .itemname {
+                    width: 60%;
+                    overflow: hidden;
+                    .ellipsis();
+                }
+                .num {
+                    width: 30%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+
+#makecheck-div {
+    .submit-btns {
+        .btn {
+            .btn-push-margin();
+        }
+    }
+    
+}
+
+.progress {
+    margin-bottom: 0;
+}
+
+.progress-bar-end {
+    background-color: #aaa;
+}
+
+.page-header {
+    border-bottom: 1px solid green;
+    margin-bottom: 3px;
+}
+
+.nav-tab {
+
+}
+
+.col-gold() {
+    color: gold;
+}
+.col-silver() {
+    color: silver;
+}
+.col-bronds() {
+    color: #c47222;
+}
+
+/* --------------------------------------------------------- *
+ *     single classes
+ * --------------------------------------------------------- */
+
+
+.dropdown-menu {
+    li i {
+        color: gray;
+        &.fa-twitter
+        {
+            color: limegreen;
+        }
+    }
+}
+
+
+.text-shadow() {
+    text-shadow: 1px 1px 2px;
+}
+
+.col-wide, .no-container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.sharebtns-div {
+    margin-top: 5px !important;
+}
+
+.ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.no-display {
+    display: none;
+}
