@@ -16,8 +16,8 @@ class Metaobj
 
 	public function __construct()
 	{
-		$this->title = '投票メーカー';
-		$this->title_meta = '投票メーカー';
+		$this->title = '';
+		$this->title_meta = '';
 		$this->keywords = array();
 		$this->keywords[] = '投票';
 		$this->keywords[] = 'Twitter';
