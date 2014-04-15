@@ -3,22 +3,15 @@
 class Index extends CI_Controller
 {
 
-	/** @var Survey_model */
-	public $survey;
-
-	/** @var User_model */
-	public $user;
-
 	public function __construct()
 	{
 		parent::__construct();
-//		$this->load->model('Survey_model', 'survey', TRUE);
-//		$this->load->model('User_model', 'user', TRUE);
+		die('test_end');
 	}
 
 	function index()
 	{
-		echo 'test';
+		die('test end');
 
 //		$user = $this->user->get_main_user();
 //		$surveys_hot = $this->survey->get_surveys_hot($user, 5, 0);
@@ -37,4 +30,5 @@ class Index extends CI_Controller
 //
 //		$this->load->view('foot');
 	}
+
 }

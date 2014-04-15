@@ -1,9 +1,10 @@
 .*
 system/
-htdocs/lib/
 application/*
 
-htdocs/google/
+public_html/lib/
+public_html/google/
+public_html/pro/
 !application/controllers/
 application/controllers/admin.php
 !application/views/
@@ -15,7 +16,7 @@ application/controllers/admin.php
 nbproject/
 plan/*
 !plan/todo.md
-test.php
+test*
 
 ~*
 
