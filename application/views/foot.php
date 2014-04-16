@@ -29,23 +29,23 @@
 <!--<script src="<?= base_url("lib/ZeroClipboard.minjs") ?>"></script>-->
 
 <!-- LESS include -->
-<script type="text/javascript" src="<?= base_url('lib/less-1.3.3.min.js') ?>"></script>
+<?= tag_script_js(base_url(PATH_LIB_LESS)); ?> 
 <!-- LESS Twitter bootstrap include -->
-<script src="<?= base_url('lib/bootstrap/js/bootstrap.min.js') ?>" type="text/javascript"></script>
+<?= tag_script_js(base_url(PATH_LIB_BOOTSTRAP)); ?> 
 <!-- Incliude Twitter share button widgets -->
-<script src="http://platform.twitter.com/widgets.js" type="text/javascript" charset="utf-8"></script>
+<?= tag_script_js(URL_TWITTER_WIDGETS); ?> 
 
 <!-- js of act on all page-->
-<script src="<?= base_url(PATH_JS.'/helper.js') ?>" type="text/javascript"></script>
-<script src="<?= base_url(PATH_JS.'/alert.js' ) ?>" type="text/javascript"></script>
-<script src="<?= base_url(PATH_JS.'/navbar.js') ?>" type="text/javascript"></script>
+<!--<?= tag_script_js(PATH_JS . 'hoge'); ?> -->
+
 <?php
 if (!empty($jss))
 {
 	foreach ($jss as $js)
 	{
 		?>
-		<script src="<?= base_url("js/{$js}.js") ?>" type="text/javascript"></script>
+		<script src="<?= base_url(PATH_JS. "{$js}.js") ?>" type="text/javascript"></script>
+		<?= tag_script_js(PATH_JS . 'hoge'); ?>
 		<?php
 	}
 }
