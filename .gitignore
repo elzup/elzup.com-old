@@ -2,9 +2,9 @@
 system/
 application/*
 
-public_html/lib/
-public_html/google/
-public_html/pro/
+htdocs/lib/
+htdocs/google/
+htdocs/pro/
 !application/controllers/
 application/controllers/admin.php
 !application/views/
