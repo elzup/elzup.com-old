@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * need include func_helper.php
+ */
 
 if (!function_exists('tag_script_js'))
 {
@@ -10,6 +13,7 @@ if (!function_exists('tag_script_js'))
 		return '<script src="' . $src . '" type="text/javascript" charset="' . $charset . '"></script>';
 	}
 }
+
 
 if (!function_exists('tag_icon'))
 {

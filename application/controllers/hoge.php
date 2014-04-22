@@ -1,6 +1,6 @@
 <?php
 
-class Index extends CI_Controller
+class Hoge extends CI_Controller
 {
 
 	public function __construct()
@@ -12,9 +12,11 @@ class Index extends CI_Controller
 	{
 		?>
 <div class="wrap">
-	<p><span>it's test in index page</span></p>
+	<p><span>this text is teset</span></p>
 </div>
 			<?php
 	}
+
 }
+
 
