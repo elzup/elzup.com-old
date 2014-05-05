@@ -271,9 +271,9 @@ if (!function_exists('is_pc_viewport'))
 	{
 //		$user_agent = $_SERVER['HTTP_USER_AGENT'];
 		$lib = explode(',', ' iPhone, iPod, Android');
-		foreach ($lib as $str) 
+		foreach ($lib as $str)
 		{
-			if (strpos($user_agent, $str) !== FALSE) 
+			if (strpos($user_agent, $str) !== FALSE)
 			{
 				return FALSE;
 			}
@@ -281,4 +281,21 @@ if (!function_exists('is_pc_viewport'))
 		return TRUE;
 	}
 
+}
+
+if (!function_exists('multi_split'))
+{
+
+	function multi_split($str)
+	{
+		return preg_split("//u", $str, -1, PREG_SPLIT_NO_EMPTY);
+	}
+
+}
+
+if (!function_exists('mb_multi_strlen'))
+{
+	function mb_multi_strlen($str) {
+		return count(multi_split($str));
+	}
 }

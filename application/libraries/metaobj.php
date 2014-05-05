@@ -10,7 +10,6 @@ class Metaobj
 	public $keywords;
 	public $url;
 	private $type;
-
 	public $no_meta;
 	public $no_og;
 
@@ -26,7 +25,6 @@ class Metaobj
 		$this->no_meta = FALSE;
 		$this->no_og = FALSE;
 	}
-
 
 	public function unset_type()
 	{
@@ -69,48 +67,57 @@ class Metaobj
 		$this->type = 'website';
 	}
 
+	public function setup_yopparatter()
+	{
+		$this->url = YOPPARATTER_URL;
+		$this->description = 'ヨッパラッタ状態でTweetをひょうこう～！';
+		$this->type = 'website';
+		$this->set_title('ヨッパラッタ～');
+		$this->keywords = array('twitter,投稿,ヨッパラッタ～');
+	}
+
 	/*
-	public function setup_make()
-	{
-		$this->set_title('投票作成');
-		$this->url = base_url(PATH_MAKE);
-		$this->description = 'オリジナルの投票を気軽に作成することが出来ます';
-	}
+	  public function setup_make()
+	  {
+	  $this->set_title('投票作成');
+	  $this->url = base_url(PATH_MAKE);
+	  $this->description = 'オリジナルの投票を気軽に作成することが出来ます';
+	  }
 
-	public function setup_login()
-	{
-		$this->set_title('ログイン');
-		$this->url = base_url(PATH_LOGIN);
-		$this->description = 'Twitter認証でログインを出来ます';
-	}
+	  public function setup_login()
+	  {
+	  $this->set_title('ログイン');
+	  $this->url = base_url(PATH_LOGIN);
+	  $this->description = 'Twitter認証でログインを出来ます';
+	  }
 
-	public function setup_catalog_hot()
-	{
-		$this->set_title('人気の投票');
-		$this->url = base_url(PATH_HOT);
-		$this->description = '今人気のある投票の一覧';
-	}
+	  public function setup_catalog_hot()
+	  {
+	  $this->set_title('人気の投票');
+	  $this->url = base_url(PATH_HOT);
+	  $this->description = '今人気のある投票の一覧';
+	  }
 
-	public function setup_catalog_new()
-	{
-		$this->set_title('新着投票');
-		$this->url = base_url(PATH_NEW);
-		$this->description = '最近作成された投票の新着順一覧';
-	}
+	  public function setup_catalog_new()
+	  {
+	  $this->set_title('新着投票');
+	  $this->url = base_url(PATH_NEW);
+	  $this->description = '最近作成された投票の新着順一覧';
+	  }
 
-	public function setup_my()
-	{
-		$this->set_title('マイページ');
-		$this->url = base_url(PATH_MYPAGE);
-		$this->no_meta = TRUE;
-	}
+	  public function setup_my()
+	  {
+	  $this->set_title('マイページ');
+	  $this->url = base_url(PATH_MYPAGE);
+	  $this->no_meta = TRUE;
+	  }
 
-	public function setup_user($user_name)
-	{
-		$this->set_title($user_name . 'さんが作成した投票');
-		$this->url = base_url(PATH_NEW);
-		$this->no_og = TRUE;
-		$this->description = $user_name . 'さんが作成した投票';
-	}
+	  public function setup_user($user_name)
+	  {
+	  $this->set_title($user_name . 'さんが作成した投票');
+	  $this->url = base_url(PATH_NEW);
+	  $this->no_og = TRUE;
+	  $this->description = $user_name . 'さんが作成した投票';
+	  }
 	 */
 }

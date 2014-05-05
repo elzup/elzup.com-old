@@ -3,7 +3,6 @@
 class User_model extends CI_Model
 {
 
-	public $twitter_connection;
 	private $is_login;
 	public $user = NULL;
 
@@ -18,6 +17,10 @@ class User_model extends CI_Model
 		return $this->is_login;
 	}
 
+	/**
+	 * 
+	 * @return Userobj
+	 */
 	public function get_user()
 	{
 		return $this->is_login ? $this->user : NULL;
@@ -39,12 +42,12 @@ class User_model extends CI_Model
 		{
 			return FALSE;
 		}
-		$this->twitter_connection = new TwitterOAuth($twitter_config['key'], $twitter_config['secret'], $access_token['oauth_token'], $access_token['oauth_token_secret']);
+		$connection = new TwitterOAuth($twitter_config['key'], $twitter_config['secret'], $access_token['oauth_token'], $access_token['oauth_token_secret']);
 		$id_twitter = $access_token['user_id'];
 		$screen_name = $access_token['screen_name'];
-		$result = $this->twitter_connection->get('account/verify_credentials');
+		$result = $connection->get('account/verify_credentials');
 		$img_url = $result->profile_image_url;
-		$this->user = new Userobj($id_twitter, $screen_name, $img_url);
+		$this->user = new Userobj($connection, $id_twitter, $screen_name, $img_url);
 		$this->session->set_userdata(array('userserial' => serialize($this->user)));
 		return TRUE;
 	}

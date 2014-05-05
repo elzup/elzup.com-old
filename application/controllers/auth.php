@@ -54,7 +54,8 @@ class Auth extends CI_Controller
 		$this->session->set_userdata(array ('access_token' => $access_token));
 		$ref = $this->session->userdata('referer');
 		$this->session->unset_userdata('referer');
-		jump($mode == 'y' ? : YOPPARATTER_URL ? : base_url());
+		jump($mode == 'y' ? : '//localhost/elzup/htdocs/yopparatter' ? : base_url());
+//		jump($mode == 'y' ? : YOPPARATTER_URL ? : base_url());
 	}
 
 	function logout()

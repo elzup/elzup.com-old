@@ -9,7 +9,7 @@
 			<span class="icon-bar"></span>
 		</button>
 
-		<div class="navbar-brand"><a href="<?=YOPPARATTER_URL?>">酔っ払った～</a></div>
+		<div class="navbar-brand"><a href="<?=YOPPARATTER_URL?>">ヨッパラッタ～</a></div>
 		<!--<a href="" class="navbar-brand">投票メーカー</a>-->
 	</div>
 	<div class="navbar-collapse collapse navbar-categlyes">
