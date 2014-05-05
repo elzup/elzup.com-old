@@ -19,7 +19,7 @@ if (empty($bootstrap_url))
     <link rel="stylesheet" type="text/css" href="<?= URL_YAHOO_RESET_CSS ?>">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" charset="UTF-8" href="<?= base_url(PATH_LIB_BOOTSTRAP_CSS) ?>" media="screen" />
+    <link rel="stylesheet" charset="UTF-8" href="<?= base_url($bootstrap_url) ?>" media="screen" />
     <link rel="stylesheet" charset="UTF-8" href="<?= base_url(PATH_LIB . '/bootstrap/css/font-awesome.min.css') ?>" media="screen" />
     <link rel="stylesheet/less" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE . '/main.less') ?>" media="screen">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

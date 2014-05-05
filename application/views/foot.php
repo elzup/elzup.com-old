@@ -1,4 +1,4 @@
-
+</div>
 </div>
 <div id="footer">
 	<div class="container">
@@ -15,7 +15,7 @@
 
 </div>
 <!-- jQuery include -->
-<script src="<?=URL_JQUERY?>"></script>
+<script src="<?= URL_JQUERY ?>"></script>
 <!-- zClip jQuery plugins -->
 
 <!-- LESS include -->
@@ -34,7 +34,7 @@ if (!empty($jss))
 	foreach ($jss as $js)
 	{
 		?>
-		<script src="<?= base_url(PATH_JS. "{$js}.js") ?>" type="text/javascript"></script>
+		<script src="<?= base_url(PATH_JS . "{$js}.js") ?>" type="text/javascript"></script>
 		<?= tag_script_js(PATH_JS . 'hoge'); ?>
 		<?php
 	}
