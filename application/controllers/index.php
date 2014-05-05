@@ -11,10 +11,10 @@ class Index extends CI_Controller
 	public function index()
 	{
 		?>
-<div class="wrap">
-	<p><span>it's test in index page</span></p>
-</div>
-			<?php
+		<div class="wrap">
+			<h3><p><span>it's test in index page</span></p></h3>
+		</div>
+		<?php
 	}
-}
 
+}
