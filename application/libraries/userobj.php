@@ -21,8 +21,8 @@ class Userobj
 		$data = array(
 				'status' => $text,
 		);
-		$result = $this->twitter_connection->post('statuses/update', $data);
-		return isset($result->errors);
+		
+		return $this->twitter_connection->post('statuses/update', $data);
 	}
 
 }

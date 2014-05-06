@@ -5,9 +5,23 @@
 		<div class="row">
 			<!--TODO: create footer-->
 			<div class="col-sm-4">
-				<strong>特に書くこと無い</strong>
 				<ul>
-					<li><a <?= attr_href() ?>>トップ</a></li>
+					<?php
+					$text = 'ヨッパラッタ～ ';
+					$uri = YOPPARATTER_URL;
+					?>
+					<?=sharebtn_twitter($text, $uri)?>
+					<li></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<ul>
+					<li><a <?= attr_href('//twitter.com/arzzup', NULL, FALSE) ?>>作者 @Arzzup</a></li>
 				</ul>
 			</div>
 		</div>
