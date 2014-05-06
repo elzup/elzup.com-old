@@ -44,12 +44,14 @@ $post_url = $l[ENVIRONMENT];
 			</div>
 			<div class="form-group">
 				<div class="col-lg-10 col-lg-offset-1">
-					<?php if ($is_login)
+					<?php
+					if ($is_login)
 					{
 						?>
 						<input type="hidden" name="token" value="<?= $token ?>" />
 						<button type="submit" class="btn btn-lg btn-primary btn-block">ツイートする</button>
-					<?php } else
+					<?php
+					} else
 					{
 						?>
 						<button type="submit" class="btn btn-lg btn-primary btn-block" disabled="">ツイートする</button>
