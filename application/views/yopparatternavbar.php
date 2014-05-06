@@ -29,7 +29,7 @@
 					<a <?= attr_href('//twitter.com/' . $user->screen_name, NULL, FALSE) ?>><?= $user->screen_name ?></a>
 				</li>
 				<li>
-					<a <?= attr_href(PATH_LOGOUT) ?>>ログアウトする</a>
+					<a <?= attr_href(PATH_LOGOUT . '/y') ?>>ログアウトする</a>
 				</li>
 			<?php } ?>
 

@@ -33,7 +33,7 @@ class Yopparatter extends CI_Controller
 		$this->load->view('yopparatternavbar', array('user' => $user));
 		$this->load->view('alert', array('messages' => $messages));
 		$this->load->view('yopparatterform', array('token' => $this->_set_token()));
-		$this->load->view('foot');
+		$this->load->view('yopparatterfoot');
 	}
 
 	public function post()
@@ -42,7 +42,8 @@ class Yopparatter extends CI_Controller
 		$text = $this->input->post('text');
 		$level = $this->input->post('level') + 1;
 		$isset_url = !!$this->input->post('set_url');
-		$tweet_text = (new Yopparai($text, $level))->get_text() . ' #yopparatter' . ($isset_url ? ' ' . substr(YOPPARATTER_URL, 2) : '');
+		$yopparai = new Yopparai($text, $level);
+		$tweet_text = $yopparai->get_text() . ' #yopparatter' . ($isset_url ? ' ' . substr(YOPPARATTER_URL, 2) : '');
 		$res = $user->post($tweet_text);
 		if (isset($res->errors))
 		{

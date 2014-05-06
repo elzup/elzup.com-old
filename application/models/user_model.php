@@ -28,7 +28,8 @@ class User_model extends CI_Model
 
 	public function check_login()
 	{
-		$twitter_config = $this->config->item('TWITTER_CONSUMER')['yopparatter'];
+		$tcp = $this->config->item('TWITTER_CONSUMER');
+		$twitter_config = $tcp['yopparatter'];
 
 		$serial = @$this->session->userdata('userserial');
 		if (!empty($serial))

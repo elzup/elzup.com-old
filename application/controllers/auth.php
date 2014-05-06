@@ -21,9 +21,9 @@ class Auth extends CI_Controller
 
 	function start($mode = 'normal')
 	{
-
  		$this->session->set_userdata(array('referer' => $this->input->server('HTTP_REFERER')));
-		$twitter_config = $this->config->item('TWITTER_CONSUMER')[$mode];
+		$tcp = $this->config->item('TWITTER_CONSUMER');
+		$twitter_config = $tcp[$mode];
 		$this->session->set_userdata(array(
 				'consumer_key' => $twitter_config['key'],
 				'consumer_secret' => $twitter_config['secret'],
@@ -54,17 +54,15 @@ class Auth extends CI_Controller
 		$this->session->set_userdata(array ('access_token' => $access_token));
 		$ref = $this->session->userdata('referer');
 		$this->session->unset_userdata('referer');
-		exit;
-		jump($mode == 'y' ? : '//localhost/elzup/htdocs/yopparatter' ? : base_url());
-//		jump($mode == 'y' ? : YOPPARATTER_URL ? : base_url());
+		jump($mode == 'y' ? (ENVIRONMENT == 'development' ? '//localhost/elzup/htdocs/yopparatter' : YOPPARATTER_URL) : base_url());
 	}
 
-	function logout()
+	function logout($mode = "")
 	{
 		$this->session->sess_destroy();
 		$ref = filter_input(INPUT_SERVER, 'HTTP_REFERER');
 
-		jump($ref ? : base_url());
+		jump($ref ? : ($mode == 'y' ? (ENVIRONMENT == 'development' ? '//localhost/elzup/htdocs/yopparatter' : YOPPARATTER_URL) : base_url()));
 	}
 
 }
