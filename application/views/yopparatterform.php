@@ -9,6 +9,17 @@ $post_url = $l[ENVIRONMENT];
 		<h1>ヨッパラッタ～</h1>
 		<form action="<?= $post_url ?>" class="form-horizontal" method="POST">
 
+			<div class="form-group slidebar-div">
+				<div class="col-lg-2 col-img">
+					<img src="<?= base_url(PATH_IMG . '/yo/yo2.png')?>" alt="" />
+				</div>
+				<div class="col-lg-8">
+					<input type="text" id="yoi-level" name="level" class="slider" data-slider-value="50" data-slider-max="100" data-slider-min="0" style="width: 100% !important;" />
+				</div>
+				<div class="col-lg-2 col-img">
+					<img src="<?= base_url(PATH_IMG . '/yo/yo1.png')?>" alt="" />
+				</div>
+			</div>
 			<div class="form-group">
 				<div class="col-lg-10 col-lg-offset-1">
 					<label for="textArea" class="control-label">ひょんぶん</label>
@@ -20,7 +31,7 @@ $post_url = $l[ENVIRONMENT];
 						<div class="col-sm-6">
 							<div class="checkbox">
 								<label>
-									<input type="checkbox" name="set_url" checked="">URLをつき
+									<input type="checkbox" name="set_url" checked="">URLつける
 								</label>
 							</div>
 						</div>

@@ -40,7 +40,9 @@
 <?= tag_script_js(URL_TWITTER_WIDGETS); ?> 
 
 <!-- js of act on all page-->
-<!--<?= tag_script_js(PATH_JS . 'hoge'); ?> -->
+<?= tag_script_js(base_url(PATH_JS.'/helper.js')); ?>
+
+<?= tag_script_js(base_url(PATH_LIB. '/bootstrap/js/bootstrap-slider.js'))?>
 
 <?php
 if (!empty($jss))
