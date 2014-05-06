@@ -51,7 +51,7 @@ class Yopparai
 		{
 			unset($ts[$i]);
 		}
-		echo $this->text = implode('', $ts);
+		$this->text = implode('', $ts);
 	}
 
 	public function hurigana($text, $level)

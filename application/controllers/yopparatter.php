@@ -52,7 +52,7 @@ class Yopparatter extends CI_Controller
 		}
 		$isset_url = !!$this->input->post('set_url');
 		$yopparai = new Yopparai($text, $level);
-		$tweet_text = $yopparai->get_text() . ' #yopparatter' . ($isset_url ? ' ' . substr(YOPPARATTER_URL, 2) : '');
+		$tweet_text = $yopparai->get_text() . ' #yopparatter' . ($isset_url ? ' ' . substr(YOPPARATTER_URL_S, 2) : '');
 		$res = $user->post($tweet_text);
 		if (isset($res->errors))
 		{

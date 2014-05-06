@@ -80,26 +80,6 @@ html,body {
     }
 }
 
-.table-history {
-    tr > td:nth-of-type(4) {
-        border-left: solid black 1px;
-    }
-}
-
-#content-activity {
-}
-
-#content-members {
-}
-
-#content-contact {
-    form {
-        .radio {
-            float: left;
-            margin-right: 20px;
-        }
-    }
-}
 
 .col-img {
     >img {
@@ -126,14 +106,22 @@ html,body {
 
 //yopparatter 
 .slidebar-div {
-    height: 100px;
-    >.col-xs-8 {
-        position: relative;
-        top: 50%;
-        > .slider {
-            width: 100%;
+    .row {
+        overflow: hidden;
+        height: 100px;
+        .col-xs-8 {
+            position: relative;
+            top: 50%;
+            > .slider {
+                width: 100%;
+            }
         }
     }
+}
+
+.btn[disabled] {
+    background-color: #aaa;
+    border-color: #666;
 }
 
 

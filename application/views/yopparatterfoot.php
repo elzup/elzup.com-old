@@ -8,7 +8,7 @@
 				<ul>
 					<?php
 					$text = 'ヨッパラッタ～ - 酔っぱらいツイートしよう';
-					$uri = YOPPARATTER_URL;
+					$uri = YOPPARATTER_URL_S;
 					?>
 					<?=sharebtn_twitter($text, $uri)?>
 					<li></li>
