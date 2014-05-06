@@ -27,6 +27,7 @@ class Yopparai
 		$vp_min = round($len * $level / 100);
 		$lib = get_yopparatter_lib();
 		$k = FALSE;
+		
 		for ($i = 0; $i < count($cs); $i++)
 		{
 			$key = mb_convert_kana($cs[$i], 'K');
@@ -50,7 +51,7 @@ class Yopparai
 		{
 			unset($ts[$i]);
 		}
-		$this->text = implode('', $ts);
+		echo $this->text = implode('', $ts);
 	}
 
 	public function hurigana($text, $level)

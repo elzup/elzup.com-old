@@ -19,7 +19,6 @@ if (count($messages))
 
 		</div>
 	</div>
-	</div>
 	<?php
 } 
 

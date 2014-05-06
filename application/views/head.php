@@ -32,9 +32,9 @@ if (empty($bootstrap_url))
   </head>
 	<body>
 		<?php
-//		if (ENVIRONMENT !== 'development')
-//		{
-//			include_once(PATH_GOOGLE . "/analyticstracking.php");
-//		}
+		if (ENVIRONMENT !== 'development')
+		{
+			include_once(PATH_GOOGLE_ANALYTICS);
+		}
 		?>
     <div id="wrapper">

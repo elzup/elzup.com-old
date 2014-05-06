@@ -32,7 +32,7 @@ class Yopparatter extends CI_Controller
 
 		$this->load->view('yopparatternavbar', array('user' => $user));
 		$this->load->view('alert', array('messages' => $messages));
-		$this->load->view('yopparatterform', array('token' => $this->_set_token()));
+		$this->load->view('yopparatterform', array('token' => $this->_set_token(), 'is_login' => !!$user));
 		$this->load->view('yopparatterfoot');
 	}
 
@@ -40,7 +40,16 @@ class Yopparatter extends CI_Controller
 	{
 		$user = $this->user->get_user();
 		$text = $this->input->post('text');
-		$level = $this->input->post('level') + 1;
+		$level = $this->input->post('level');
+		if ($level < 2)
+		{
+			$level = 50;
+		}
+		if (empty($text))
+		{
+			$this->session->set_userdata(array('err' => '本文が空です'));
+			jump('./');
+		}
 		$isset_url = !!$this->input->post('set_url');
 		$yopparai = new Yopparai($text, $level);
 		$tweet_text = $yopparai->get_text() . ' #yopparatter' . ($isset_url ? ' ' . substr(YOPPARATTER_URL, 2) : '');
