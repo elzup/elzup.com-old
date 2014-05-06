@@ -45,9 +45,10 @@ class User_model extends CI_Model
 		$connection = new TwitterOAuth($twitter_config['key'], $twitter_config['secret'], $access_token['oauth_token'], $access_token['oauth_token_secret']);
 		$id_twitter = $access_token['user_id'];
 		$screen_name = $access_token['screen_name'];
-		$result = $connection->get('account/verify_credentials');
-		$img_url = $result->profile_image_url;
-		$this->user = new Userobj($connection, $id_twitter, $screen_name, $img_url);
+//		$result = $connection->get('account/verify_credentials');
+//		$img_url = $result->profile_image_url;
+//		echo 'getting';
+		$this->user = new Userobj($connection, $id_twitter, $screen_name, $img_url = NULL);
 		$this->session->set_userdata(array('userserial' => serialize($this->user)));
 		return TRUE;
 	}

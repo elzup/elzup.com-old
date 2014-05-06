@@ -1,6 +1,5 @@
 <?php
 /** @var $token string */
-
 $l = array('development' => '//localhost/elzup/htdocs/yopparatter/post', 'testing' => YOPPARATTER_URL_POST, 'production' => YOPPARATTER_URL_POST);
 $post_url = $l[ENVIRONMENT];
 ?>
@@ -14,7 +13,18 @@ $post_url = $l[ENVIRONMENT];
 				<div class="col-lg-10 col-lg-offset-1">
 					<label for="textArea" class="control-label">ひょんぶん</label>
 					<textarea class="form-control" name="text" rows="3" id="textArea"></textarea>
-					<span class="help-block">#yopparatterタグが付きます</span>
+					<div class="row">
+						<div class="col-sm-6">
+							<span class="help-block">#yopparatterタグが付きます</span>
+						</div>
+						<div class="col-sm-6">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="set_url" checked="">URLをつき
+								</label>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="form-group">
