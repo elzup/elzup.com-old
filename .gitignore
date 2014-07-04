@@ -1,17 +1,13 @@
 .*
 system/
-application/*
 
 htdocs/lib/
 htdocs/google/
 htdocs/pro/
-!application/controllers/
 application/controllers/admin.php
-!application/views/
-!application/models/
-!application/helpers/
-!application/libraries/
-!application/core/
+application/config/development/
+application/config/production/
+application/config/testing/
 
 nbproject/
 plan/*
@@ -19,5 +15,3 @@ plan/*
 test*
 
 ~*
-
-
