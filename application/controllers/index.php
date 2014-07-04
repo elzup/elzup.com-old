@@ -14,9 +14,6 @@ class Index extends CI_Controller
 		$meta = new Metaobj();
 		$meta->setup_top();
 		$this->load->view('head', array ('meta' => $meta));
-		?>
-<div class="wrapper" style="margin-top: 20px">準備中...</div>
-		<?php
 		$this->load->view('foot');
 	}
 

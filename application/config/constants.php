@@ -49,29 +49,23 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /* site meta */
 define('SITE_NAME', 'elzup.com');
 define('SITE_DESCRIPTION', 'えるざっぷの創作物などのHP');
+define('META_KEYWORDS', 'elzup,えるざっぷ');
 
-define('YOPPARATTER_URL', '//elzup.com/yopparatter');
-//define('YOPPARATTER_URL_S', '//elzup.com/yp');
-define('YOPPARATTER_URL_S', '//elzup.com/yopparatter');
-define('YOPPARATTER_URL_POST', '//elzup.com/yopparatter/post');
-
-define('PATH_LOGIN_Y', 'auth/start/yopparatter');
-define('PATH_LOGOUT', 'auth/logout');
-define('PATH_AUTH_END_Y', 'auth/end/y');
-define('PATH_AUTH_END', 'auth/end');
 
 /* path */
 define('PATH_TOP', '');
 
-define('PATH_JS', 'js');
+define('PATH_JS', 'js/');
 define('PATH_GOOGLE', 'google');
-define('PATH_GOOGLE_ANALYTICS', PATH_GOOGLE . '/analyticstracking.php');
+//define('PATH_GOOGLE_ANALYTICS', PATH_GOOGLE . '/analyticstracking.php');
 define('PATH_IMG', 'images');
 define('PATH_LIB', 'lib');
-define('PATH_STYLE', 'style');
-define('PATH_LIB_BOOTSTRAP_JS', PATH_LIB . '/bootstrap/js/bootstrap.min.js');
-define('PATH_LIB_BOOTSTRAP_CSS', PATH_LIB . '/bootstrap/css/bootstrap.min.css');
-define('PATH_LIB_BOOTSTRAP_CSS2', PATH_LIB . '/bootstrap/css2/bootstrap.min.css');
+define('PATH_STYLE', 'style/');
+define('PATH_STYLE_CSS_MAIN', PATH_STYLE . 'main.css');
+define('PATH_STYLE_CSS_XS', PATH_STYLE . 'xs.css');
+//define('PATH_LIB_BOOTSTRAP_JS', PATH_LIB . '/bootstrap/js/bootstrap.min.js');
+//define('PATH_LIB_BOOTSTRAP_CSS', PATH_LIB . '/bootstrap/css/bootstrap.min.css');
+//define('PATH_LIB_BOOTSTRAP_CSS2', PATH_LIB . '/bootstrap/css2/bootstrap.min.css');
 define('PATH_LIB_LESS', PATH_LIB . '/less-1.3.3.min.js');
 
 /* online lib url */
