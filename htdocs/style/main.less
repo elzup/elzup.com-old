@@ -3,7 +3,8 @@
 //@import "../lib/bootstrap/less/mixins.less";
 
 
-@col_back: #eee;
+@col_back: #fff;
+@col_pane_back: black;
 
 
 html,body {
@@ -11,6 +12,25 @@ html,body {
     background: @col_back;
 //    font-family:"Times New Roman",Georgia,Serif;
     font-family:'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-
+    overflow: hidden;
 }
 
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.toppane {
+    margin-top: 50px;
+    .row-toppane {
+        overflow: hidden;
+        .cell {
+            float: left;
+            margin: 10px 2%;
+            width: 16%;
+            height: 100px;
+            background-color: @col_pane_back;
+        }
+    }
+}

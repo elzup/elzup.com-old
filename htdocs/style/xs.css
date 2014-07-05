@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+  .slidebar-div .row {
+    height: 60px;
+    width: 100%;
+  }
+  .slidebar-div .row > .col-xs-2 {
+    padding: 0;
+  }
+  .slidebar-div .row > .col-xs-8 {
+    height: 20px;
+    padding: 0;
+  }
+}

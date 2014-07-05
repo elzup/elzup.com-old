@@ -1,0 +1,25 @@
+@charset "utf-8";
+html,
+body {
+  height: 100%;
+  background: #fafafa;
+  font-family: 'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  overflow: hidden;
+}
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+.toppane {
+  margin-top: 50px;
+}
+.toppane .row-toppane {
+  overflow: hidden;
+}
+.toppane .row-toppane .cell {
+  float: left;
+  margin: 10px 2%;
+  width: 16%;
+  height: 100px;
+  background-color: #000000;
+}
