@@ -2,7 +2,7 @@
 html,
 body {
   height: 100%;
-  background: #fafafa;
+  background: #ffffff;
   font-family: 'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   overflow: hidden;
 }
@@ -15,11 +15,39 @@ body {
 }
 .toppane .row-toppane {
   overflow: hidden;
+  width: 100%;
 }
 .toppane .row-toppane .cell {
   float: left;
   margin: 10px 2%;
   width: 16%;
   height: 100px;
+  line-height: 100px;
   background-color: #000000;
+}
+.toppane .row-toppane .cell p {
+  text-align: center;
+}
+.toppane .row-toppane .cell p a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.toppane .row-toppane .cell p a:hover {
+  -webkit-animation: "btn 2x ease-out 0s 1 normal";
+  -o-animation: "btn 2x ease-out 0s 1 normal";
+  animation: "btn 2x ease-out 0s 1 normal";
+}
+.toppane .row-toppane-title {
+  height: 100px;
+  width: 100%;
+  display: table;
+}
+.toppane .row-toppane-title .middle-box {
+  display: table-cell;
+  vertical-align: middle;
+}
+.toppane .row-toppane-title .middle-box h1 {
+  text-align: center;
+  font-size: 70px;
 }

@@ -1,10 +1,12 @@
 @charset "utf-8";
 //@import "../lib/bootstrap/less/variables.less";
-//@import "../lib/bootstrap/less/mixins.less";
+@import "../lib/less/mixins.less";
 
 
 @col_back: #fff;
 @col_pane_back: black;
+
+@col_cell_font: white;
 
 
 html,body {
@@ -25,12 +27,39 @@ html,body {
     margin-top: 50px;
     .row-toppane {
         overflow: hidden;
+        width: 100%;
         .cell {
             float: left;
             margin: 10px 2%;
             width: 16%;
             height: 100px;
+            line-height: 100px;
             background-color: @col_pane_back;
+            p {
+                text-align: center;
+                a {
+                    display: block;
+                    color: @col_cell_font;
+                    text-decoration: none;
+                    &:hover {
+                        .animation("btn 2x ease-out 0s 1 normal");
+                    }
+                }
+            }
+        }
+    }
+    .row-toppane-title {
+        height: 100px;
+        width: 100%;
+        display: table;
+        .middle-box {
+            display: table-cell;
+            vertical-align: middle;
+            h1 {
+                text-align: center;
+                font-size: 70px;
+            }
         }
     }
 }
+

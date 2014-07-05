@@ -11,6 +11,8 @@
 <link href='<?= FONT_GOOGLE_ALDRICH ?>' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?= URL_YAHOO_RESET_CSS ?>">
 
+<link rel="stylesheet" type="text/css" href="<?= base_url(PATH_LIB_MAGIC) ?>" />
+
 <!-- Bootstrap -->
 <link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_MAIN) ?>" media="only screen" />
 <link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_XS) ?>"  media="only screen and (max-width: 480px)" />

@@ -5,11 +5,13 @@ class Pane {
     public $name;
     public $title;
     public $url;
+    public $is_blank;
 
-    public function __construct($name, $title, $url) {
+    public function __construct($name, $title, $url, $is_blank = FALSE) {
         $this->name = $name;
         $this->title = $title;
         $this->url = $url;
+        $this->is_blank = $is_blank;
     }
 
 }
@@ -18,16 +20,18 @@ function tag_cell($k, $pane) {
     ?>
     <div class="cell cell-<?= $k ?>">
         <?php if (!empty($pane)) { ?>
-            <a href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a>
+            <p><a class="<?=$pane->is_blank ? '' : ""?>" href="<?= $pane->url ?>"<?=$pane->is_blank ? ' target="_blnak"' :""?>><span><?= $pane->name ?></span></a></p>
         <?php } ?>
     </div>
     <?php
 }
 
 $panes = array();
-$panes[1] = new Pane("GitHub", "git@elzzup", "https://github.com/elzzup");
-$panes[10] = new Pane("twitter", "@Arzzup", "https://twitter.com/arzzup");
-$panes[13] = new Pane("Blog", "えるざっぷむーぶめんと", "http://blog.elzup.com");
+$panes[1] = new Pane("GitHub", "git@elzzup", "https://github.com/elzzup", TRUE);
+$panes[10] = new Pane("twitter", "@Arzzup", "https://twitter.com/arzzup", TRUE);
+$panes[13] = new Pane("Blog", "えるざっぷむーぶめんと", "http://blog.elzup.com", TRUE);
+$panes[21] = new Pane("Portfolio", "制作物", "./port");
+$panes[33] = new Pane("ElzApp", "ノーコメント", "http://app.elzup.com", TRUE);
 ?>
 <div class="content">
 
@@ -42,8 +46,11 @@ $panes[13] = new Pane("Blog", "えるざっぷむーぶめんと", "http://blog.
                 ?>
             </div>
         <?php } ?>
-        <div class="row-toppane">
-            <h1>ELZUP.COM</h1>
+        <div class="row-toppane-title">
+            <div class="middle-box">
+                <h1>ELZUP.COM</h1>
+<!--<img src="<?= PATH_IMG . "icon.png" ?>" />-->
+            </div>
         </div>
         <?php for ($j = 2; $j < 4; $j++) { ?>
             <div class="row-toppane">

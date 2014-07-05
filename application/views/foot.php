@@ -8,19 +8,14 @@
 <?= tag_script_js(URL_TWITTER_WIDGETS); ?> 
 
 <!-- js of act on all page-->
-<?= tag_script_js(base_url(PATH_JS.'helper.js')); ?>
+<?= tag_script_js(base_url(PATH_JS . 'helper.js')); ?>
 
 <?php
-if (!empty($jss))
-{
-	foreach ($jss as $js)
-	{
-		?>
-		<script src="<?= base_url(PATH_JS . "{$js}.js") ?>" type="text/javascript"></script>
-		<?= tag_script_js(PATH_JS . 'hoge'); ?>
-		<?php
-	}
+if (!empty($jss)) {
+    foreach ($jss as $js) {
+        ?>
+        <script src="<?= base_url(PATH_JS . "{$js}.js") ?>" type="text/javascript"></script>
+        <?php
+    }
 }
 ?>
-</body>
-</html>
