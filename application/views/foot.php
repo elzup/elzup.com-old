@@ -1,5 +1,5 @@
 <!-- jQuery include -->
-<script src="<?= URL_JQUERY ?>"></script>
+<?= tag_script_js(URL_JQUERY); ?> 
 <!-- zClip jQuery plugins -->
 
 <!-- LESS include -->

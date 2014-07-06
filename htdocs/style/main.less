@@ -63,3 +63,24 @@ html,body {
     }
 }
 
+.cell {
+    .perspective(800px);
+
+    .back, .front {
+        /* Make the picture and info go "on top" of each other */
+        position:absolute;
+        .transition(all 0.8s);
+        transform-style: preserve-3d;
+        &:hover {
+            transform: rotateY(180deg);
+        }
+    }
+    .back {
+        opacity:1;
+    }
+    .front {
+        .backface-visibility(hidden);
+        z-index:999;
+    }
+}
+

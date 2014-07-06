@@ -51,3 +51,31 @@ body {
   text-align: center;
   font-size: 70px;
 }
+/* In the default state, the info box has been slightly moved to the left */
+.cell {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+}
+.cell .back,
+.cell .front {
+  /* Make the picture and info go "on top" of each other */
+  position: absolute;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  transform-style: preserve-3d;
+}
+.cell .back:hover,
+.cell .front:hover {
+  transform: rotateY(180deg);
+}
+.cell .back {
+  opacity: 1;
+}
+.cell .front {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 999;
+}
