@@ -62,6 +62,7 @@ define('PATH_IMG', 'images/');
 define('PATH_LIB', 'lib/');
 define('PATH_LIB_MAGIC', PATH_LIB . 'magic.css');
 define('PATH_LIB_ANIME', PATH_LIB . 'animations.css');
+define('PATH_LIB_FLIP', PATH_LIB . 'roncioso/jquery.flip.js');
 define('PATH_STYLE', 'style/');
 define('PATH_STYLE_CSS_MAIN', PATH_STYLE . 'main.css');
 define('PATH_STYLE_CSS_XS', PATH_STYLE . 'xs.css');

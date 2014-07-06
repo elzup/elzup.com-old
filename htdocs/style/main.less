@@ -34,7 +34,11 @@ html,body {
             width: 16%;
             height: 100px;
             line-height: 100px;
-            background-color: @col_pane_back;
+            div {
+                display:block;
+                background-color: @col_pane_back;
+                height: 100%;
+            }
             p {
                 text-align: center;
                 a {
@@ -42,8 +46,25 @@ html,body {
                     color: @col_cell_font;
                     text-decoration: none;
                     &:hover {
-                        .animation("btn 2x ease-out 0s 1 normal");
+//                        .animation("btn 2x ease-out 0s 1 normal");
                     }
+                }
+            }
+            .back {
+                display: none;
+                &.on {
+                    .animation(flip-in 0.1s 0.1s);
+                }
+                &.off { 
+                    .animation(flip-out 0.1s);
+                }
+            }
+            .front {
+                &.on {
+                    .animation(flip-out 0.1s);
+                }
+                &.off { 
+                    .animation(flip-in 0.1s 0.1s);
                 }
             }
         }
@@ -63,24 +84,25 @@ html,body {
     }
 }
 
-.cell {
-    .perspective(800px);
-
-    .back, .front {
-        /* Make the picture and info go "on top" of each other */
-        position:absolute;
-        .transition(all 0.8s);
-        transform-style: preserve-3d;
-        &:hover {
-            transform: rotateY(180deg);
-        }
+.flip-in() {
+    from {
+        .rotateY(-90deg);
     }
-    .back {
-        opacity:1;
-    }
-    .front {
-        .backface-visibility(hidden);
-        z-index:999;
+    to {
+        .rotateY(0deg);
     }
 }
+@keyframes flip-in { .flip-in(); }
+@-webkit-keyframes flip-in { .flip-in(); }
+
+.flip-out() {
+    from {
+        .rotateY(0deg);
+    }
+    to {
+        .rotateY(90deg);
+    }
+}
+@keyframes flip-out { .flip-out(); }
+@-webkit-keyframes flip-out { .flip-out(); }
 

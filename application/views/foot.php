@@ -1,5 +1,6 @@
 <!-- jQuery include -->
 <?= tag_script_js(URL_JQUERY); ?> 
+<?= tag_script_js(base_url(PATH_LIB_FLIP)); ?> 
 <!-- zClip jQuery plugins -->
 
 <!-- LESS include -->

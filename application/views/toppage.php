@@ -26,6 +26,8 @@ function tag_cell($k, $pane) {
             <div class="back">
                 <p><a class="<?= $pane->is_blank ? '' : "" ?>" href="<?= $pane->url ?>"<?= $pane->is_blank ? ' target="_blnak"' : "" ?>><span><?= $pane->title ?></span></a></p>
             </div>
+        <?php } else { ?>
+        <div></div>
         <?php } ?>
     </div>
     <?php
