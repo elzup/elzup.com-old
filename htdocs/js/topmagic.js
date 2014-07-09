@@ -37,9 +37,9 @@
 //        setStartAnime(".cell-21", "fadeIn", 120);
 //        setStartAnime(".cell-33", "fadeIn", 150);
 
-        $(".cell-1").flip({
-            direction: 'lr'
-        });
+//        $(".cell-1").flip({
+//            direction: 'lr'
+//        });
 
 
         function setStartAnime(selector, addClass, starttime) {
