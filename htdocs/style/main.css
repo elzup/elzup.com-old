@@ -24,41 +24,39 @@ body {
   height: 100px;
   line-height: 100px;
 }
-.toppane .row-toppane .cell div {
+.toppane .row-toppane .cell > div {
   display: block;
   background-color: #000000;
   height: 100%;
 }
-.toppane .row-toppane .cell p {
+.toppane .row-toppane .cell > div p {
   text-align: center;
 }
-.toppane .row-toppane .cell p a {
+.toppane .row-toppane .cell > div p a {
   display: block;
   color: #ffffff;
   text-decoration: none;
+}
+.toppane .row-toppane .cell > div .link-logo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  float: right;
+  top: -40px;
+}
+.toppane .row-toppane .cell > div .link-logo > img {
+  width: 70%;
+  position: absolute;
+  padding: 15%;
 }
 .toppane .row-toppane .cell .back {
   display: none;
 }
 .toppane .row-toppane .cell .back.on {
-  -webkit-animation: flip-in 0.1s 0.1s;
-  -o-animation: flip-in 0.1s 0.1s;
-  animation: flip-in 0.1s 0.1s;
-}
-.toppane .row-toppane .cell .back.off {
-  -webkit-animation: flip-out 0.1s;
-  -o-animation: flip-out 0.1s;
-  animation: flip-out 0.1s;
+  background: #555;
 }
 .toppane .row-toppane .cell .front.on {
-  -webkit-animation: flip-out 0.1s;
-  -o-animation: flip-out 0.1s;
-  animation: flip-out 0.1s;
-}
-.toppane .row-toppane .cell .front.off {
-  -webkit-animation: flip-in 0.1s 0.1s;
-  -o-animation: flip-in 0.1s 0.1s;
-  animation: flip-in 0.1s 0.1s;
+  background: #555;
 }
 .toppane .row-toppane-title {
   height: 100px;

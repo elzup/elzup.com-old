@@ -79,6 +79,12 @@ define('URL_JQUERY', 'https://code.jquery.com/jquery.js');
 
 define('URL_YUI', 'http://yui.yahooapis.com/3.16.0/build/yui/yui-min.js');
 
+/* icon my */
+define('PATH_IMG_ICON_TWITTER', PATH_IMG .'icon_twitter.png');
+define('PATH_IMG_ICON_GITHUB', PATH_IMG .'icon_github.png');
+define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
+
+
 /* icon */
 define('ICON_HOT', 'glyphicon glyphicon-fire');
 define('ICON_NEW', 'glyphicon glyphicon-time');

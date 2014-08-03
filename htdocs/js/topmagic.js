@@ -4,6 +4,7 @@
         console.log("load topmagic");
         $('.front').show();
         $('.back').hide();
+		var stopTime = 0;
 
         $(".cell").hover( function() {
             $(this).children('div').removeClass("off");
@@ -13,7 +14,7 @@
             setTimeout(function() { 
                 front.hide();
                 back.show().addClass("on");
-            }, 100);
+            }, stopTime);
         }, function() {
             $(this).children('div').removeClass("on");
             var front = $(this).children('.front');
@@ -22,7 +23,7 @@
             setTimeout(function() { 
                 back.hide();
                 front.show().addClass("off");
-            }, 100);
+            }, stopTime);
         });
 
 //        $('.cell').hover(function() {
@@ -36,10 +37,6 @@
 //        setStartAnime(".cell-13", "fadeIn", 90);
 //        setStartAnime(".cell-21", "fadeIn", 120);
 //        setStartAnime(".cell-33", "fadeIn", 150);
-
-//        $(".cell-1").flip({
-//            direction: 'lr'
-//        });
 
 
         function setStartAnime(selector, addClass, starttime) {
