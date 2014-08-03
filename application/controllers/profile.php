@@ -1,6 +1,6 @@
 <?php
 
-class Portfolio extends CI_Controller
+class Profile extends CI_Controller
 {
 
 	public function __construct()
@@ -13,12 +13,12 @@ class Portfolio extends CI_Controller
 
 		$meta = new Metaobj();
 		$meta->url = base_url();
-		$meta->set_title("ポートフォリオ");
-		$meta->description = "えるざっぷの制作物";
+		$meta->set_title("プロフィール");
+		$meta->description = "えるざっぷという人物";
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head');
-		$this->load->view('portfoliopage');
+		$this->load->view('profilepage');
 		$this->load->view('bodywrapper_foot');
 		$this->load->view('foot');
 	}

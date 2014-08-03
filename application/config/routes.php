@@ -42,6 +42,7 @@ $route['default_controller'] = "index";
 $route['404_override'] = '';
 
 $route['port'] = 'portfolio';
+$route['me'] = 'profile';
 
 
 //$route['(:num)'] = 'survey/vote/$1';
