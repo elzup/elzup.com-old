@@ -23,6 +23,79 @@ html,body {
     margin: 0 auto;
 }
 
+a { 
+    color: #666;
+    &:visited {
+        color: #222;
+    }
+}
+
+.content {
+    margin-top: 30px;
+    h1 {
+        font-size: 30px;
+
+        &.content-title {
+            padding-bottom: 2px;
+            margin-bottom: 10px;
+            border-bottom: solid black;
+            width: 60%;
+        }
+    }
+    h2 {
+        font-size: 20px;
+    }
+    position: relative;
+    overflow: hidden;
+
+    .left-box {
+        width: 50%;
+        float: left;
+    }
+    .right-box {
+        width: 50%;
+        float: left;
+    }
+    .elzup-icon {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .param {
+        margin-bottom: 30px;
+        h4 {
+            font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+            tr {
+                height: 1.5em;
+                &:nth-child(2n) {
+                    background: #aaa;
+                }
+                td {
+                    &.name {
+                        padding-left: 10px;
+                        width: 50%;
+                    }
+                    &.value {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tag {
+    color: #333;
+    margin-left: 10px;
+    &:before {
+        content: '#';
+    }
+}
+
 .toppane {
     margin-top: 50px;
     .row-toppane {
