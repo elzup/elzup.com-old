@@ -68,7 +68,11 @@ class Production {
 
 $production_list = array(
 	new Production(
-		'投票メーカー', '投票を手軽に作成できるWebサービス', 'ドメインも取得して本格的なサービスとして作成した.', explode(',', 'PHP,codeigniter,mysql,Bootstrap,jQuery,LESS,TwitterWebAPI'), '2014年4月', PATH_IMG_PRO_TOHYO, '//tohyomaker.com'
+		'投票メーカー', '投票を手軽に作成できるWebサービス', <<<EOF
+		ドメインも取得して本格的なサービスとして作成した.初めてCodeIgniterフレームワークを使用して作成したサイト.アカウント管理やシェアの部分でTwitterと連携している
+EOF
+		, array (TECHTAG_PHP, TECHTAG_JQUERY, TECHTAG_LESS, TECHTAG_TWITTERAPI, TECHTAG_TWITTERWEBAPI, TECHTAG_CODEIGNITER, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_LINUX, TECHTAG_MYSQL, TECHTAG_GIT),
+		'2014年4月', PATH_IMG_PRO_TOHYO, '//tohyomaker.com'
 	),
 );
 ?>
@@ -77,18 +81,21 @@ $production_list = array(
 	<h1 class="content-title">ポートフォリオ</h1>
 	<div class="content-body">
 		<div class="production-box">
-			<?php foreach ($production_list as $list) { ?>
+<?php foreach ($production_list as $p) { ?>
 				<div class="production-item half">
-					<img class="sc" src="<?= $list->img_src ?>" alt="" />
+					<a href="<?= $p->link ?>" class="<?= $p->link ? '' : 'disabled' ?>">
+						<img class="sc" src="<?= $p->img_src ?>" alt="" />
+					</a>
 					<div class="detail-box">
-						<span class="name"><?= $list->name ?></span>
-						<p class="detail"><?= $list->detail ?></p>
+						<span class="name"><?= $p->name ?></span>
+						<p class="light-detail"><?= $p->light_detail ?></p>
+						<p class="detail"><?= $p->detail ?></p>
 					</div>
-					<?php foreach ($list->tech_list as $tech) { ?>
-					<span class="techtag techtag-<?= strtolower($tech) ?>"><?= $tech ?></span>
-					<?php } ?>
+	<?php foreach ($p->tech_list as $tech) { ?>
+						<span class="techtag techtag-<?= strtolower($tech) ?>"><?= $tech ?></span>
+	<?php } ?>
 				</div>
-			<?php } ?>
+<?php } ?>
 		</div>
 	</div>
 </div>

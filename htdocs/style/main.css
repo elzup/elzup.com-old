@@ -138,6 +138,9 @@ a:visited {
 .production-box .production-item .name {
   font-size: 30px;
 }
+.production-box .production-item .detail {
+  font-size: 0.8em;
+}
 /* sub funcs */
 .a-third {
   width: 33%;

@@ -13,54 +13,203 @@
 ---
 
 ## portfolio list
+// lang
+// metaLang
+// framework
+// lib
+// api
+// opt service
+
+// OS
+// db
+// IDE editorTool
+// version control
+
 * +3Dオセロ
+// lang
     + C++
+// lib
     + DxLib
+// OS
+    + Windows
+// IDE editorTool
+    + VisualStudio
+
 * +タンクゲーム
+// lang
     + C++
+// lib
     + DxLib
+// OS
+    + Windows
+// IDE editorTool
+    + Visualstudio
+
 * 電大トレンド君
+// lang
     + PHP
+// opt service
+    + GoogleScript
+// api
     + TwitterAPI
-    + GoogleScript
-    + GoogleScript
+    + Yahoo形態素解析API
+// OS
+    + Windows
+// IDE editorTool
+    + eclipse
+
 * +icon stage
+// lang
     + PHP
+    + js
+    + processing
+// metaLang
     + processing.js
     + jQuery
-    + Twitterapi
+// api
+    + twitterwebapi
+// OS
+    + Windows
+// IDE editorTool
+    + eclipse
+
 * +jenga note
+// lang
     + PHP
-    + Bootstrap
-    + mysql
-    + LESS
-* 投票メーカー
-    + PHP
-    + codeigniter
-    + mysql
-    + Bootstrap
+// metaLang
     + jQuery
     + LESS
-    + TwitterWebAPI
-* +asn-web
+// framework
+    + Bootstrap
+// OS
+    + Windows
+// db
+    + mysql
+// IDE editorTool
+    + eclipse
+    + vim
+
+* 一夜人狼
+// lang
+    + javascript
+// metaLang
+    + LESS
+// framework
+    + Bootstrap
+// OS
+    + Windows
+// IDE editorTool
+    + eclipse
+    + vim
+
+* RollCakeRSS
+// lang
+    + Java
+// OS
+    + Windows
+// IDE editorTool
+    + eclipse
+    + vim
+
+* 投票メーカー
+// lang
     + PHP
+// metaLang
+    + jQuery
+    + LESS
+// api
+    + TwitterAPI
+    + TwitterWebAPI
+// framework
     + codeigniter
     + Bootstrap
+// OS
+    + Windows
+    + linux
+// db
+    + mysql
+// version control
+    + git
+// IDE editorTool
+    + netbeans
+    + vim
+
+* +TDUClaud
+// lang
+    + Java
+// metaLang
     + LESS
+// OS
+    + Windows
+    + linux
+// version control
+    + git
+// IDE editorTool
+    + netbeans
+    + vim
+
+* +asn-web
+// lang
+    + PHP
+// metaLang
+    + LESS
+// api
     + UstreamAPI
+// framework
+    + Bootstrap
+    + codeigniter
+// OS
+    + Windows
+    + linux
+// version control
+    + git
+// IDE editorTool
+    + netbeans
+    + vim
 
 * 酔っ払った―
+// lang
     + PHP
-    + codeigniter
+// metaLang
+    + LESS
+// api
     + Yahoo形態素解析API
     + TwitterWebAPI
+// framework
+    + codeigniter
+    + Bootstrap
+// OS
+    + linux
+// IDE editorTool
+    + netbeans
+    + vim
 
 * elzup.com
+// lang
     + PHP
+// metaLang
+    + LESS
+// framework
     + codeigniter
+// OS
+    + linux
+// version control
+    + git
+// IDE editorTool
+    + netbeans
+    + vim
+
 
 * +birthday api
+// lang
     + PHP
+// OS
+    + linux
+// db
+    + mysql
+    + postgresql
+// IDE editorTool
+    + vim
 
 
 

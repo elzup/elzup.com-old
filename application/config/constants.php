@@ -88,5 +88,40 @@ define('PATH_IMG_ICON_ELZUP_PREF', PATH_IMG .'elzup_icon/co');
 /* icon myapp */
 define('PATH_IMG_PRO_TOHYO', PATH_IMG . 'sc_tohyo.png');
 
+/* techtag str */
+// lang
+define('TECHTAG_C++', 'C++');
+define('TECHTAG_PHP', 'PHP');
+define('TECHTAG_PROCESSING_JS', 'processing.js');
+// metaLang
+define('TECHTAG_JQUERY', 'jQuery');
+define('TECHTAG_LESS', 'LESS');
+// framework
+define('TECHTAG_CODEIGNITER', 'CodeIgniter');
+define('TECHTAG_BOOTSTRAP', 'Bootstrap');
+// lib
+define('TECHTAG_DXLIB', 'DxLib');
+// api
+define('TECHTAG_TWITTERAPI', 'TwitterAPI');
+define('TECHTAG_TWITTERWEBAPI', 'TwitterWebAPI');
+define('TECHTAG_USTREAMAPI', 'UstreamAPI');
+// opt service
+define('TECHTAG_GOOGLESCRIPT', 'GoogleScript');
+
+// OS
+define('TECHTAG_WINDOWS', 'Windows');
+define('TECHTAG_LINUX', 'linux');
+// db
+define('TECHTAG_MYSQL', 'mysql');
+define('TECHTAG_POSTGRESQL', 'PostgreSQL');
+// IDE,editor
+define('TECHTAG_VISUALSTUDIO', 'VisualStudio');
+define('TECHTAG_ECLIPSE', 'Eclipse');
+define('TECHTAG_NETBEANS', 'NetBeans');
+define('TECHTAG_VIM', 'Vim');
+// version control
+define('TECHTAG_GIT', 'git');
+
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
