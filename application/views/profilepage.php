@@ -20,12 +20,13 @@ class AccountRecord {
 $account_list = array(
 	new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzzup'),
 	new AccountRecord('Github', 'elzzup', '//github.com/elzzup'),
+	new AccountRecord('SlideShare', 'elzup', '//www.slideshare.net/elzup/'),
 	new AccountRecord('Skype', 'guild0105'),
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
 	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
 ?>
-<div class="content shift-top">
+<div class="content">
 	<h1 class="content-title">プロフィール</h1>
 	<div class="content-body">
 		<div class="profile">

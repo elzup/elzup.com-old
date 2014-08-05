@@ -17,7 +17,7 @@ class Profile extends CI_Controller
 		$meta->description = "えるざっぷという人物";
 
 		$this->load->view('head', array('meta' => $meta));
-		$this->load->view('bodywrapper_head');
+		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));
 		$this->load->view('profilepage');
 		$this->load->view('bodywrapper_foot');
 		$this->load->view('foot');
