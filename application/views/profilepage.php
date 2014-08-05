@@ -25,7 +25,7 @@ $account_list = array(
 	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
 ?>
-<div class="content">
+<div class="content shift-top">
 	<h1 class="content-title">プロフィール</h1>
 	<div class="content-body">
 		<div class="profile">

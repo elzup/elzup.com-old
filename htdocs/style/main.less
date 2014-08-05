@@ -12,9 +12,9 @@
 html,body {
 	height: 100%;
     background: @col_back;
-//    font-family:"Times New Roman",Georgia,Serif;
+/*    font-family:"Times New Roman",Georgia,Serif; */
     font-family:'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-    overflow: hidden;
+/*    overflow: hidden; */
 }
 
 
@@ -31,7 +31,7 @@ a {
 }
 
 .content {
-    margin-top: 30px;
+/*    margin-top: 30px; */
     h1 {
         font-size: 30px;
 
@@ -88,14 +88,6 @@ a {
     }
 }
 
-.tag {
-    color: #333;
-    margin-left: 10px;
-    &:before {
-        content: '#';
-    }
-}
-
 .toppane {
     margin-top: 50px;
     .row-toppane {
@@ -112,6 +104,7 @@ a {
                 display:block;
                 background-color: @col_pane_back;
                 height: 100%;
+                border-radius: 3px;
 
                 p {
                     text-align: center;
@@ -172,6 +165,22 @@ a {
         }
     }
 }
+
+/* sub funcs */
+
+.tag {
+    color: #333;
+    margin-left: 10px;
+    &:before {
+        content: '#';
+    }
+}
+
+.shift-top {
+    margin-top: 30px;
+}
+
+/* animation methods */
 
 .flip-in() {
     from {
