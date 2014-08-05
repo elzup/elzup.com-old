@@ -5,11 +5,12 @@ body {
   background: #ffffff;
   /*    font-family:"Times New Roman",Georgia,Serif; */
   font-family: 'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  /*    overflow: hidden; */
+  overflow: auto;
 }
 #wrapper {
   width: 800px;
   margin: 0 auto;
+  overflow: auto;
 }
 a {
   color: #666;
@@ -131,13 +132,33 @@ a:visited {
   text-align: center;
   font-size: 70px;
 }
+.production-box .production-item img.sc {
+  width: 100%;
+}
+.production-box .production-item .name {
+  font-size: 30px;
+}
 /* sub funcs */
+.a-third {
+  width: 33%;
+}
+.half {
+  width: 50%;
+}
 .tag {
   color: #333;
   margin-left: 10px;
 }
 .tag:before {
   content: '#';
+}
+.techtag {
+  color: white;
+  margin-left: 4px;
+  background: black;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 13px;
 }
 .shift-top {
   margin-top: 30px !important;

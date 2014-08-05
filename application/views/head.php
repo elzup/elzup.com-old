@@ -26,6 +26,6 @@
 
 <?php
 if (ENVIRONMENT !== 'development') {
-//    include_once(PATH_GOOGLE_ANALYTICS);
+    include_once(PATH_GOOGLE_ANALYTICS);
 }
 ?>

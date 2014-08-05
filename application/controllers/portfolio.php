@@ -18,6 +18,7 @@ class Portfolio extends CI_Controller
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));
+		$this->load->view('navbar');
 		$this->load->view('portfoliopage');
 		$this->load->view('bodywrapper_foot');
 		$this->load->view('foot');

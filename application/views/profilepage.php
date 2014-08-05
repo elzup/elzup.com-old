@@ -25,6 +25,7 @@ $account_list = array(
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
 	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
+
 ?>
 <div class="content">
 	<h1 class="content-title">プロフィール</h1>

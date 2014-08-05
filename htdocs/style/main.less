@@ -14,13 +14,14 @@ html,body {
     background: @col_back;
 /*    font-family:"Times New Roman",Georgia,Serif; */
     font-family:'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-/*    overflow: hidden; */
+    overflow: auto;
 }
 
 
 #wrapper {
     width: 800px;
     margin: 0 auto;
+    overflow: auto;
 }
 
 a { 
@@ -167,7 +168,24 @@ a {
     }
 }
 
+.production-box {
+    .production-item {
+        img.sc {
+            width: 100%;
+        }
+        .name {
+            font-size: 30px;
+        }
+    }
+}
+
 /* sub funcs */
+.a-third {
+    width: 33%;
+}
+.half {
+    width: 50%;
+}
 
 .tag {
     color: #333;
@@ -175,6 +193,14 @@ a {
     &:before {
         content: '#';
     }
+}
+.techtag {
+    color: white;
+    margin-left: 4px;
+    background: black;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
 }
 
 .shift-top {

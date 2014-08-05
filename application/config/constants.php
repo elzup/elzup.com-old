@@ -53,11 +53,11 @@ define('META_KEYWORDS', 'elzup,えるざっぷ');
 
 
 /* path */
-define('PATH_TOP', '');
+define('PATH_TOP', './');
 
 define('PATH_JS', 'js/');
 define('PATH_GOOGLE', 'google');
-//define('PATH_GOOGLE_ANALYTICS', PATH_GOOGLE . '/analyticstracking.php');
+define('PATH_GOOGLE_ANALYTICS', PATH_GOOGLE . '/analyticstracking.php');
 define('PATH_IMG', 'images/');
 define('PATH_LIB', 'lib/');
 define('PATH_LIB_MAGIC', PATH_LIB . 'magic.css');
@@ -85,39 +85,8 @@ define('PATH_IMG_ICON_GITHUB', PATH_IMG .'icon_github.png');
 define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
 define('PATH_IMG_ICON_ELZUP_PREF', PATH_IMG .'elzup_icon/co');
 
-
-/* icon */
-define('ICON_HOT', 'glyphicon glyphicon-fire');
-define('ICON_NEW', 'glyphicon glyphicon-time');
-define('ICON_MAKE', 'glyphicon glyphicon-edit');
-define('ICON_TIME', 'glyphicon glyphicon-time');
-define('ICON_OK', 'glyphicon glyphicon-ok');
-define('ICON_VOTE', 'glyphicon glyphicon-import');
-define('ICON_RESULT', 'glyphicon glyphicon-stats');
-define('ICON_FRIEND', 'glyphicon glyphicon-user');
-define('ICON_USER', 'glyphicon glyphicon-user');
-define('ICON_TAG', 'glyphicon glyphicon-tags');
-define('ICON_FLAG', 'glyphicon glyphicon-flag');
-define('ICON_VOTED', 'glyphicon glyphicon-ok');
-define('ICON_SEARCH', 'glyphicon glyphicon-search');
-define('ICON_SEARCHTAG', 'glyphicon glyphicon-zoom-in');
-define('ICON_LOGOUT', 'glyphicon glyphicon-off');
-define('ICON_PLUS', 'glyphicon glyphicon-plus');
-define('ICON_REMOVE', 'glyphicon glyphicon-remove');
-define('ICON_CHECK', 'glyphicon glyphicon-check');
-define('ICON_CHECK_EMPTY', 'glyphicon glyphicon-checkboxempty');
-
-define('ICON_TWITTER', 'fa fa-twitter');
-define('ICON_HOME', 'fa fa-home');
-define('ICON_DESCRIPTION', 'fa fa-comment');
-define('ICON_TARGET', 'fa fa-eye');
-define('ICON_AWARD', 'fa fa-trophy');
-define('ICON_LOGIN', 'fa fa-login');
-
-// TODO: change to hook
-/* keys */
-define('YAHOO_APP_KEY', 'dj0zaiZpPUJXQW1QVlROZGFSUCZzPWNvbnN1bWVyc2VjcmV0Jng9MGM-');
-define('YAHOO_APP_KEY_SECRET', 'e9d1576e6c8e9a8f10b19b18f115456cf530eee8');
+/* icon myapp */
+define('PATH_IMG_PRO_TOHYO', PATH_IMG . 'sc_tohyo.png');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
