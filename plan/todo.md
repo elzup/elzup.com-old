@@ -67,7 +67,7 @@
     + processing.js
     + jQuery
 // api
-    + twitterwebapi
+    + t&$countwitterwebapi
 // OS
     + Windows
 // IDE editorTool
@@ -134,20 +134,6 @@
     + netbeans
     + vim
 
-* +TDUClaud
-// lang
-    + Java
-// metaLang
-    + LESS
-// OS
-    + Windows
-    + linux
-// version control
-    + git
-// IDE editorTool
-    + netbeans
-    + vim
-
 * +asn-web
 // lang
     + PHP
@@ -165,6 +151,25 @@
     + git
 // IDE editorTool
     + netbeans
+    + vim
+
+* +TDUClaud
+// lang
+    + Java
+// api
+    + Twitterapi
+// lib
+    + JavaServlet
+// framework
+    + Bootstrap
+// OS
+    + Windows
+    + linux
+// version control
+    + git
+// IDE editorTool
+    + netbeans
+    + eclipse
     + vim
 
 * 酔っ払った―
