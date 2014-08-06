@@ -171,14 +171,25 @@ a {
 .production-box {
     .production-item {
         float: left;
+        padding: 1%;
+        width: 48%;
         img.sc {
             width: 100%;
         }
-        .name {
-            font-size: 30px;
-        }
-        .detail {
-            font-size: 0.8em;
+        .detail-box {
+            a, a:hover {
+                text-decoration: none;
+            }
+            .name {
+                font-size: 30px;
+            }
+            .detail {
+                font-size: 0.8em;
+                margin-bottom: 10px;
+            }
+            .member {
+                font-size: 0.8em;
+            }
         }
     }
 }
@@ -189,6 +200,10 @@ a {
 }
 .half {
     width: 50%;
+}
+
+.disabled {
+    cursor: default;
 }
 
 .tag {

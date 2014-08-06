@@ -162,20 +162,27 @@ EOF
 						<img class="sc" src="<?= $p->img_src ?>" alt="" />
 					</a>
 					<div class="detail-box">
-						<span class="name"><?= $p->name ?></span>
+						<a href="<?= $p->link ?>" class="<?= $p->link ? '' : 'disabled' ?>">
+							<span class="name"><?= $p->name ?></span>
+						</a>
 						<p class="light-detail"><?= $p->light_detail ?></p>
 						<p class="detail"><?= $p->detail ?></p>
 					</div>
 					<div class="members">
-					<?php foreach ($p->members as $sn => $text) { ?>
-						<a href="//twitter.com/<?= $sn ?>"><span class="member-name"><?= $sn ?></span></a>
-						<span class="text"><?= $text ?></span>
-					<?php } ?>
+						<?php if ($mems = $p->members) { ?>
+						<span class="tips">共同制作者</span>
+							<?php foreach ($mems as $sn => $text) { ?>
+								<p class="member">
+									<a href="//twitter.com/<?= $sn ?>" target="_blank"><span class="member-name">@<?= $sn ?></span></a>
+									<span class="text"><?= $text ?></span>
+								</p>
+							<?php } ?>
+						<?php } ?>
 					</div>
 					<div class="tags">
-					<?php foreach ($p->tech_list as $tech) { ?>
-						<span class="techtag techtag-<?= strtolower(str_replace('.', '-', $tech)) ?>"><?= $tech ?></span>
-					<?php } ?>
+						<?php foreach ($p->tech_list as $tech) { ?>
+							<span class="techtag techtag-<?= strtolower(str_replace('.', '-', $tech)) ?>"><?= $tech ?></span>
+						<?php } ?>
 					</div>
 				</div>
 			<?php } ?>

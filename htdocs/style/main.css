@@ -134,14 +134,24 @@ a:visited {
 }
 .production-box .production-item {
   float: left;
+  padding: 1%;
+  width: 48%;
 }
 .production-box .production-item img.sc {
   width: 100%;
 }
-.production-box .production-item .name {
+.production-box .production-item .detail-box a,
+.production-box .production-item .detail-box a:hover {
+  text-decoration: none;
+}
+.production-box .production-item .detail-box .name {
   font-size: 30px;
 }
-.production-box .production-item .detail {
+.production-box .production-item .detail-box .detail {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+.production-box .production-item .detail-box .member {
   font-size: 0.8em;
 }
 /* sub funcs */
@@ -150,6 +160,9 @@ a:visited {
 }
 .half {
   width: 50%;
+}
+.disabled {
+  cursor: default;
 }
 .tag {
   color: #333;
