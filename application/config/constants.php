@@ -87,7 +87,20 @@ define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
 define('PATH_IMG_ICON_ELZUP_PREF', PATH_IMG .'elzup_icon/co');
 
 /* icon myapp */
+define('PATH_IMG_PRO_OTHELLO', PATH_IMG . 'sc_othello.png');
+define('PATH_IMG_PRO_TANK', PATH_IMG . 'sc_tank.png');
+define('PATH_IMG_PRO_TREND', PATH_IMG . 'sc_trend.png');
+define('PATH_IMG_PRO_ICONSTAGE', PATH_IMG . 'sc_iconstage.png');
+define('PATH_IMG_PRO_JENGA', PATH_IMG . 'sc_jenga.png');
+define('PATH_IMG_PRO_ICHIYA', PATH_IMG . 'sc_wolf.png');
+define('PATH_IMG_PRO_ROLLCAKE', PATH_IMG . 'sc_rollcake.png');
 define('PATH_IMG_PRO_TOHYO', PATH_IMG . 'sc_tohyo.png');
+define('PATH_IMG_PRO_ASN', PATH_IMG . 'sc_asn.png');
+define('PATH_IMG_PRO_CLAUD', PATH_IMG . 'sc_claud.png');
+define('PATH_IMG_PRO_YOPPARATTER', PATH_IMG . 'sc_yopparatter.png');
+define('PATH_IMG_PRO_BIRTHDAY', PATH_IMG . 'sc_birthday.png');
+
+define('PATH_IMG_404', PATH_IMG . 'no_found.png');
 
 /* techtag str */
 // lang
