@@ -75,6 +75,10 @@ class Production {
 
 }
 
+function convert_to_css_class($str) {
+	return strtolower(str_replace(array('.', '+', '形態素解析'), array('-', 'p', ''), $str));
+}
+
 $production_list = array(
 	new Production(
 		'3Dオセロ', 'XYZ3次元に石を置けるオセロ', <<<EOF
@@ -128,7 +132,7 @@ EOF
 		'asn_web', '学生団体ASNのホームページ', <<<EOF
 		大学のつながりで依頼されて作ったサイト
 EOF
-		, array(TECHTAG_PHP, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_CODEIGNITER, TECHTAG_LINUX, TECHTAG_WINDOWS, TECHTAG_GIT, TECHTAG_NETBEANS, TECHTAG_VIM), '2014年7月', PATH_IMG_PRO_ASN, '//asn-web.com'
+		, array(TECHTAG_PHP, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_CODEIGNITER, TECHTAG_LINUX, TECHTAG_WINDOWS, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年7月', PATH_IMG_PRO_ASN, '//asn-web.com'
 	),
 	new Production(
 		'TDUClaud', '講義ごとにTweetまとめサイト', <<<EOF
@@ -147,7 +151,7 @@ EOF
 		'BirthdayAPI', '作品のキャラクター誕生日API', <<<EOF
 		作品タイトル,キャラクター,日付,自分の見た作品などから指定してリクエストするとその結果が帰ってくる,GETしか作っていない,ユーザごとに作品の管理ができるが今のところ半手動
 EOF
-		, array(TECHTAG_PHP, TECHTAG_LINUX, TECHTAG_MYSQL, TECHTAG_POSTGRESQL, TECHTAG_VIM), '2014年7月', PATH_IMG_PRO_BIRTHDAY, '//github.com/elzzup/CharactorBirthdayAPI'
+		, array(TECHTAG_PHP, TECHTAG_LINUX, TECHTAG_MYSQL, TECHTAG_POSTGRESQL, TECHTAG_VIM, TECHTAG_GIT), '2014年7月', PATH_IMG_PRO_BIRTHDAY, '//github.com/elzzup/CharactorBirthdayAPI'
 	),
 );
 ?>
@@ -183,7 +187,7 @@ EOF
 					</div>
 					<div class="tags">
 						<?php foreach ($p->tech_list as $tech) { ?>
-							<span class="techtag techtag-<?= strtolower(str_replace('.', '-', $tech)) ?>"><?= $tech ?></span>
+						<span class="techtag techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></span>
 						<?php } ?>
 					</div>
 				</div>

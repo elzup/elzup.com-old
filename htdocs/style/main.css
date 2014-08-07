@@ -186,6 +186,58 @@ a:visited {
   padding: 1px 5px;
   border-radius: 3px;
   font-size: 13px;
+  /* lang */
+  /* metalang */
+  /* framework */
+  /* lib */
+  /* api */
+  /* opt service */
+  /* os */
+  /* db */
+  /* ide,editor */
+  /* version control */
+}
+.techtag.techtag-cpp,
+.techtag.techtag-php,
+.techtag.techtag-java,
+.techtag.techtag-javascript,
+.techtag.techtag-processing {
+  background: #610B0B;
+}
+.techtag.techtag-jquery,
+.techtag.techtag-less,
+.techtag.techtag-processing-js {
+  background: #8A2908;
+}
+.techtag.techtag-codeigniter,
+.techtag.techtag-bootstrap {
+  background: #8A2908;
+}
+.techtag.techtag-dxlib,
+.techtag.techtag-java .techtag.servlet {
+  background: #0A0A2A;
+}
+.techtag.techtag-twitterapi,
+.techtag.techtag-twitterwebapi,
+.techtag.techtag-ustreamapi,
+.techtag.techtag-yahooapi {
+  background: #0A0A2A;
+}
+.techtag.techtag-googlescript {
+  background: #0A0A2A;
+}
+.techtag.techtag-mysql,
+.techtag.techtag-postgresql {
+  background: darkgreen;
+}
+.techtag.techtag-visualstudio,
+.techtag.techtag-eclipse,
+.techtag.techtag-netbeans,
+.techtag.techtag-vim {
+  background: #220A29;
+}
+.techtag.techtag-git {
+  background: darkgray;
 }
 .shift-top {
   margin-top: 30px !important;
