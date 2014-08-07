@@ -21,6 +21,7 @@ $account_list = array(
 	new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzzup'),
 	new AccountRecord('Github', 'elzzup', '//github.com/elzzup'),
 	new AccountRecord('SlideShare', 'elzup', '//www.slideshare.net/elzup/'),
+	new AccountRecord('Tumblr', 'elzup', '//elzup.tumblr.com'),
 	new AccountRecord('Skype', 'guild0105'),
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
 	new AccountRecord('GameCenter<iOS>', 'elzzup'),

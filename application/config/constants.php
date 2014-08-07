@@ -82,6 +82,7 @@ define('URL_YUI', 'http://yui.yahooapis.com/3.16.0/build/yui/yui-min.js');
 /* icon my */
 define('PATH_IMG_ICON_TWITTER', PATH_IMG .'icon_twitter.png');
 define('PATH_IMG_ICON_GITHUB', PATH_IMG .'icon_github.png');
+define('PATH_IMG_ICON_TUMBLR', PATH_IMG .'icon_tumblr.png');
 define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
 define('PATH_IMG_ICON_ELZUP_PREF', PATH_IMG .'elzup_icon/co');
 
