@@ -132,14 +132,14 @@ EOF
 		'asn_web', '学生団体ASNのホームページ', <<<EOF
 		大学のつながりで依頼されて作ったサイト
 EOF
-		, array(TECHTAG_PHP, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_CODEIGNITER, TECHTAG_LINUX, TECHTAG_WINDOWS, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年7月', PATH_IMG_PRO_ASN, '//asn-web.com'
+		, array(TECHTAG_PHP, TECHTAG_LESS, TECHTAG_JQUERY, TECHTAG_BOOTSTRAP, TECHTAG_CODEIGNITER, TECHTAG_USTREAMAPI, TECHTAG_LINUX, TECHTAG_WINDOWS, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年7月', PATH_IMG_PRO_ASN, '//asn-web.com'
 	),
 	new Production(
 		'TDUClaud', '講義ごとにTweetまとめサイト', <<<EOF
 		講義毎に決められたハッシュタグで投稿されたツイートをサイト側でラベル付やお気に入り登録して管理ができるサービス,Twitterアカウントでログイン制でラベル情報は全ユーザで共有される.
 		5人グループで内部設計,仕様書作成から行った,gitを使ったグループ開発のいい経験になった
 EOF
-		, array(TECHTAG_JAVA, TECHTAG_TWITTERAPI, TECHTAG_JAVASERVLET, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_LINUX, TECHTAG_ECLIPSE, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2013年6月', PATH_IMG_PRO_CLAUD, NULL, array('sukonbu0909' => 'プロジェクトマネージャ', 'twinkfrag' => 'アプリケーションスペシャリスト', 'godslew' => 'ITアーキテクト', 'arzzup' => 'ITアーキテクト', 'munisystem' => '品質保証マネージャ')
+		, array(TECHTAG_JAVA, TECHTAG_TWITTERAPI, TECHTAG_JAVASERVLET, TECHTAG_JQUERY, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_LINUX, TECHTAG_ECLIPSE, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2013年6月', PATH_IMG_PRO_CLAUD, NULL, array('sukonbu0909' => 'プロジェクトマネージャ', 'twinkfrag' => 'アプリケーションスペシャリスト', 'godslew' => 'ITアーキテクト', 'arzzup' => 'ITアーキテクト', 'munisystem' => '品質保証マネージャ')
 	),
 	new Production(
 		'酔っ払った―', '酔っ払ったツイートができる簡易Webアプリ', <<<EOF
@@ -152,6 +152,12 @@ EOF
 		作品タイトル,キャラクター,日付,自分の見た作品などから指定してリクエストするとその結果が帰ってくる,GETしか作っていない,ユーザごとに作品の管理ができるが今のところ半手動
 EOF
 		, array(TECHTAG_PHP, TECHTAG_LINUX, TECHTAG_MYSQL, TECHTAG_POSTGRESQL, TECHTAG_VIM, TECHTAG_GIT), '2014年7月', PATH_IMG_PRO_BIRTHDAY, '//github.com/elzzup/CharactorBirthdayAPI'
+	),
+	new Production(
+		'elzup.com', 'このホームページ', <<<EOF
+		Bootstrapは使わずに,できるだけライブラリに頼らないように作った
+EOF
+		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_JQUERY, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_ELZUP
 	),
 );
 ?>
