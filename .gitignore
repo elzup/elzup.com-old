@@ -1,7 +1,6 @@
 .*
 system/
 
-htdocs/lib/
 htdocs/google/
 htdocs/pro/
 application/controllers/admin.php
