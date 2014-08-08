@@ -55,8 +55,8 @@ function tag_cell($k, $pane) {
 /** @var $pane Pane[] */
 $panes = array();
 $panes[01] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
+$panes[04] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
 $panes[10] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
-$panes[13] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
 $panes[21] = new Pane("Portfolio", "制作物", "./port", 'darkorange');
 $panes[23] = new Pane("Profile", "自己紹介", "./me", 'red');
 $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', PATH_IMG_ICON_TUMBLR);

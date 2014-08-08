@@ -163,7 +163,7 @@ EOF
 			<?php foreach ($production_list as $p) { ?>
 				<div class="production-item half">
 					<div class="img-box">
-						<a href="<?= $p->link ?>" class="<?= $p->link ? '' : 'disabled' ?>" target="_blank">
+						<a href="<?= $p->img_src ?>" rel="lightbox">
 							<img class="sc" src="<?= $p->img_src ?>" alt="<?= $p->name ?>" />
 						</a>
 					</div>

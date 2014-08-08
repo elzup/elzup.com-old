@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?= base_url(PATH_LIB_ANIME) ?>" />
 <link rel="stylesheet" type="text/css" href="<?= base_url(PATH_LIB_MAGIC) ?>" />
+<link rel="stylesheet" type="text/css" href="<?= base_url(PATH_LIB_LIGHTBOX_CSS) ?>" />
 
 <!-- Bootstrap -->
 <link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_MAIN) ?>" media="only screen" />
