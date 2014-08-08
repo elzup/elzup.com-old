@@ -160,9 +160,20 @@ a {
         .middle-box {
             display: table-cell;
             vertical-align: middle;
-            h1 {
+            .center-box {
                 text-align: center;
-                font-size: 70px;
+                overflow: auto;
+                width: 420px;
+                margin: 0 auto;
+                .top-icon {
+                    height: 89px;
+                    float: left;
+                }
+                h1 {
+                    font-size: 70px;
+                    display: inline;
+                    float: left;
+                }
             }
         }
     }

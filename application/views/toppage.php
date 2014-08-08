@@ -78,8 +78,11 @@ $panes[33] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', T
 		<?php } ?>
         <div class="row-toppane-title">
             <div class="middle-box">
-                <h1>ELZUP.COM</h1>
-<!--<img src="<?= PATH_IMG . "icon.png" ?>" />-->
+				<div class="center-box">
+					<a href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" /></a>
+					<h1>elzup.com</h1>
+
+				</div>
             </div>
         </div>
 		<?php for ($j = 2; $j < 4; $j++) { ?>

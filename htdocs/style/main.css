@@ -128,9 +128,20 @@ a:visited {
   display: table-cell;
   vertical-align: middle;
 }
-.toppane .row-toppane-title .middle-box h1 {
+.toppane .row-toppane-title .middle-box .center-box {
   text-align: center;
+  overflow: auto;
+  width: 420px;
+  margin: 0 auto;
+}
+.toppane .row-toppane-title .middle-box .center-box .top-icon {
+  height: 89px;
+  float: left;
+}
+.toppane .row-toppane-title .middle-box .center-box h1 {
   font-size: 70px;
+  display: inline;
+  float: left;
 }
 .production-box .production-item {
   float: left;
