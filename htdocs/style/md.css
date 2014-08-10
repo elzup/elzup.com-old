@@ -1,0 +1,18 @@
+@charset "utf-8";
+#wrapper {
+  width: 100%;
+}
+.toppane {
+  margin-top: 20px;
+}
+.toppane .row-toppane {
+  overflow: hidden;
+  width: 100%;
+}
+.toppane .row-toppane .cell {
+  float: left;
+  margin: 5px 0.5%;
+  width: 19%;
+  height: 80px;
+  line-height: 80px;
+}
