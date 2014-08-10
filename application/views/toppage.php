@@ -29,7 +29,7 @@ class Pane {
  */
 function tag_cell($k, $pane) {
 	?>
-	<div class="cell cell-<?= $k ?>">
+	<div class="cell cell-<?= $k ?> <?= empty($pane) ? 'hidden-xs' : '' ?>">
 		<?php if (!empty($pane)) { ?>
 			<div class="front">
 				<p>
@@ -52,6 +52,17 @@ function tag_cell($k, $pane) {
 	<?php
 }
 
+function print_titlebox() {
+	?>
+	<div class="middle-box">
+		<div class="center-box">
+			<a href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" /></a>
+			<h1>elzup.com</h1>
+		</div>
+	</div>
+	<?php
+}
+
 /** @var $pane Pane[] */
 $panes = array();
 $panes[01] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
@@ -61,11 +72,9 @@ $panes[21] = new Pane("Portfolio", "制作物", "./port", 'darkorange');
 $panes[23] = new Pane("Profile", "自己紹介", "./me", 'red');
 $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', PATH_IMG_ICON_TUMBLR);
 $panes[33] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', TRUE);
-
 ?>
 <div class="content">
-
-    <div class="toppane">
+    <div class="toppane hidden-xs">
 		<?php for ($j = 0; $j < 2; $j++) { ?>
 			<div class="row-toppane">
 				<?php
@@ -77,13 +86,7 @@ $panes[33] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', T
 			</div>
 		<?php } ?>
         <div class="row-toppane-title">
-            <div class="middle-box">
-				<div class="center-box">
-					<a href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" /></a>
-					<h1>elzup.com</h1>
-
-				</div>
-            </div>
+			<?php print_titlebox(); ?>
         </div>
 		<?php for ($j = 2; $j < 4; $j++) { ?>
 			<div class="row-toppane">
@@ -95,5 +98,18 @@ $panes[33] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', T
 				?>
 			</div>
 		<?php } ?>
+    </div>
+
+    <div class="toppane visible-xs">
+        <div class="row-toppane-title">
+			<?php print_titlebox(); ?>
+        </div>
+		<div class="mini-cell-wrap">
+			<?php
+			foreach ($panes as $p) {
+				tag_cell(99, $p);
+			}
+			?>
+		</div>
     </div>
 </div>

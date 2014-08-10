@@ -6,7 +6,8 @@
 <meta charset="UTF-8" />
 <title><?= $meta->get_title(TRUE) ?></title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href='<?= FONT_GOOGLE_ALDRICH ?>' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?= URL_YAHOO_RESET_CSS ?>">
@@ -17,7 +18,8 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_MAIN) ?>" media="only screen" />
-<link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_XS) ?>"  media="only screen and (max-width: 480px)" />
+<link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_MD) ?>" media="only screen and (min-width: 481px) and (max-width: 910px)" >
+<link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_XS) ?>" media="only screen and (max-width: 480px)" />
 <!--<link rel="stylesheet" charset="UTF-8" type="text/css" href="<?= base_url(PATH_STYLE_CSS_XS) ?>"  media="only screen and (min-width: 480px) and (max-width: 760px)" />-->
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

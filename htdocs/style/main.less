@@ -1,5 +1,4 @@
 @charset "utf-8";
-//@import "../lib/bootstrap/less/variables.less";
 @import "../lib/less/mixins.less";
 
 
@@ -33,6 +32,8 @@ a {
 
 .content {
 /*    margin-top: 30px; */
+    position: relative;
+    overflow: auto;
     h1 {
         font-size: 30px;
 
@@ -47,8 +48,6 @@ a {
     h2 {
         font-size: 20px;
     }
-    position: relative;
-    overflow: hidden;
 
     .left-box {
         width: 50%;
@@ -72,9 +71,9 @@ a {
         table {
             width: 100%;
             tr {
-                height: 1.5em;
+                height: 1.8em;
                 &:nth-child(2n) {
-                    background: #aaa;
+                    background: #fafafa;
                 }
                 td {
                     &.name {
@@ -84,6 +83,7 @@ a {
                     &.value {
                         width: 50%;
                     }
+                    border-bottom: solid 1px #DDD;
                 }
             }
         }
@@ -95,61 +95,61 @@ a {
     .row-toppane {
         overflow: hidden;
         width: 100%;
-        .cell {
-            float: left;
-            margin: 10px 2%;
-            width: 16%;
-            height: 100px;
-            line-height: 100px;
+    }
+    .cell {
+        float: left;
+        margin: 10px 2%;
+        width: 16%;
+        height: 100px;
+        line-height: 100px;
 
-            > div {
-                display:block;
-                background-color: @col_pane_back;
-                height: 100%;
-                border-radius: 3px;
+        > div {
+            display:block;
+            background-color: @col_pane_back;
+            height: 100%;
+            border-radius: 3px;
 
-                p {
-                    text-align: center;
-                    a {
-                        display: block;
-                        color: @col_cell_font;
-                        text-decoration: none;
-                        &:hover {
-                            //                        .animation("btn 2x ease-out 0s 1 normal");
-                        }
-                    }
-                }
-                .link-logo {
-                    width: 40px;
-                    height: 40px;
-                    position: relative;
-                    float: right;
-                    top: -40px;
-                    > img {
-                        width: 70%;
-                        position: absolute;
-                        padding: 15%;
+            p {
+                text-align: center;
+                a {
+                    display: block;
+                    color: @col_cell_font;
+                    text-decoration: none;
+                    &:hover {
+                        //                        .animation("btn 2x ease-out 0s 1 normal");
                     }
                 }
             }
-            .back {
-                display: none;
-                &.on {
-/*                    background: #555; */
-//                    .animation(flip-in 0.1s 0.1s);
-                }
-                &.off { 
-//                    .animation(flip-out 0.1s);
+            .link-logo {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                float: right;
+                top: -40px;
+                > img {
+                    width: 70%;
+                    position: absolute;
+                    padding: 15%;
                 }
             }
-            .front {
-                &.on {
-                    background: #555;
-//                    .animation(flip-out 0.1s);
-                }
-                &.off { 
-//                    .animation(flip-in 0.1s 0.1s);
-                }
+        }
+        .back {
+            display: none;
+            &.on {
+                /*                    background: #555; */
+                //                    .animation(flip-in 0.1s 0.1s);
+            }
+            &.off { 
+                //                    .animation(flip-out 0.1s);
+            }
+        }
+        .front {
+            &.on {
+                background: #555;
+                //                    .animation(flip-out 0.1s);
+            }
+            &.off { 
+                //                    .animation(flip-in 0.1s 0.1s);
             }
         }
     }
@@ -225,6 +225,10 @@ a {
 
 .disabled {
     cursor: default;
+}
+
+.visible-xs {
+    display: none !important;
 }
 
 .tag {

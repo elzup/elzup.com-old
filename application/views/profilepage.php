@@ -24,16 +24,29 @@ $account_list = array(
 	new AccountRecord('Tumblr', 'elzup', '//elzup.tumblr.com'),
 	new AccountRecord('Skype', 'guild0105'),
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
-	new AccountRecord('GameCenter<iOS>', 'elzzup'),
+//	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
+
+$user_name = 'elzup';
+$parameter = array(
+    'user_name' => $user_name,
+    'include_details' => true,
+);
+$url_tail = '?' . http_build_query($parameter);
+$url = 'http://api.elzup.com/birthday/charactors/today.json' . $url_tail;
+$chara_list = json_decode(file_get_contents($url));
+
 
 ?>
 <div class="content">
 	<h1 class="content-title">プロフィール</h1>
 	<div class="content-body">
-		<div class="profile">
+		<div class="profile row-box">
 			<div class="left-box">
-				<img class="elzup-icon" src="<?= PATH_IMG_ICON_ELZUP_PREF ?>01.png">
+				<p class="img-box-absolute">
+					<img class="elzup-icon" src="<?= PATH_IMG_ICON_ELZUP_PREF ?>01.png">
+					<img class="">
+				</p>
 				<h2>えるざっぷ</h2>
 				<span class="rub">elzup</span>
 			</div>
@@ -56,6 +69,20 @@ $account_list = array(
 					</table>
 				</div>
 			</div>
+		</div>
+		<div class="other row-box">
+			<div class="left-box">
+				elzupが見たアニメで本日が誕生日のキャラ
+				<table>
+						<?php foreach ($chara_list as $c) { ?>
+							<tr>
+								<td class="name"><?= $c->name ?></td>
+								<td class="value"><?= $c->title->name ?></td>
+							</tr>
+						<?php } ?>
+				</table>
+			</div>
+			<div class="right-box"></div>
 		</div>
 	</div>
 </div>

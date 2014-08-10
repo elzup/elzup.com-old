@@ -67,6 +67,7 @@ define('PATH_LIB_FLIP', PATH_LIB . 'roncioso/jquery.flip.js');
 define('PATH_LIB_LIGHTBOX_JS', PATH_LIB . 'lightbox/js/lightbox.js');
 define('PATH_STYLE', 'style/');
 define('PATH_STYLE_CSS_MAIN', PATH_STYLE . 'main.css');
+define('PATH_STYLE_CSS_MD', PATH_STYLE . 'md.css');
 define('PATH_STYLE_CSS_XS', PATH_STYLE . 'xs.css');
 //define('PATH_LIB_BOOTSTRAP_JS', PATH_LIB . '/bootstrap/js/bootstrap.min.js');
 //define('PATH_LIB_BOOTSTRAP_CSS', PATH_LIB . '/bootstrap/css/bootstrap.min.css');
@@ -102,6 +103,8 @@ define('PATH_IMG_PRO_CLAUD', PATH_IMG . 'sc_claud.png');
 define('PATH_IMG_PRO_YOPPARATTER', PATH_IMG . 'sc_yopparatter.png');
 define('PATH_IMG_PRO_BIRTHDAY', PATH_IMG . 'sc_birthday.png');
 define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
+
+define('PATH_IMG_RELOAD', PATH_IMG . 'img_reload.png');
 
 define('PATH_IMG_404', PATH_IMG . 'no_found.png');
 
