@@ -45,7 +45,7 @@ $chara_list = json_decode(file_get_contents($url));
 			<div class="left-box">
 				<p class="img-box-absolute">
 					<img class="elzup-icon" src="<?= PATH_IMG_ICON_ELZUP_PREF ?>01.png">
-					<img class="">
+					<img id="reload-icon" class="icon-mini" src="<?= PATH_IMG_RELOAD ?>">
 				</p>
 				<h2>えるざっぷ</h2>
 				<span class="rub">elzup</span>

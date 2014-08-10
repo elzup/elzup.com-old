@@ -87,7 +87,7 @@ define('PATH_IMG_ICON_TWITTER', PATH_IMG .'icon_twitter.png');
 define('PATH_IMG_ICON_GITHUB', PATH_IMG .'icon_github.png');
 define('PATH_IMG_ICON_TUMBLR', PATH_IMG .'icon_tumblr.png');
 define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
-define('PATH_IMG_ICON_ELZUP_PREF', PATH_IMG .'elzup_icon/co');
+define('PATH_IMG_ICON_ELZUP_PREF', '//elzup.com/i/co');
 
 /* icon myapp */
 define('PATH_IMG_PRO_OTHELLO', PATH_IMG . 'sc_othello.png');
@@ -104,7 +104,7 @@ define('PATH_IMG_PRO_YOPPARATTER', PATH_IMG . 'sc_yopparatter.png');
 define('PATH_IMG_PRO_BIRTHDAY', PATH_IMG . 'sc_birthday.png');
 define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
 
-define('PATH_IMG_RELOAD', PATH_IMG . 'img_reload.png');
+define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
 define('PATH_IMG_404', PATH_IMG . 'no_found.png');
 
