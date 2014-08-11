@@ -36,6 +36,21 @@
   width: auto;
   float: none;
 }
+.content h1.content-title {
+  box-shadow: none;
+  width: 90%;
+  border-bottom: solid 1px #555;
+}
+.production-box .production-item {
+  float: left;
+  padding: 0 2% 10px;
+  width: 96%;
+  height: auto;
+  border-bottom: solid 1px;
+}
+.production-box .production-item p.member span.text {
+  font-size: 12px;
+}
 .hidden-xs {
   display: none !important;
 }

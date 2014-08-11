@@ -165,9 +165,16 @@ EOF
 <div class="content">
 	<h1 class="content-title">ポートフォリオ</h1>
 	<div class="content-body">
+		<div class="production-pagelinks">
+			<ul>
+			<?php foreach ($production_list as $i => $p) { ?>
+				<li><a href="#production-item-<?= $i ?>"><?= $p->name ?></a></li>
+			<?php } ?>
+			</ul>
+		</div>
 		<div class="production-box">
-			<?php foreach ($production_list as $p) { ?>
-				<div class="production-item half">
+			<?php foreach ($production_list as $i => $p) { ?>
+				<div id="production-item-<?= $i ?>" class="production-item half">
 					<div class="img-box">
 						<a href="<?= $p->img_src ?>" rel="lightbox">
 							<img class="sc" src="<?= $p->img_src ?>" alt="<?= $p->name ?>" />

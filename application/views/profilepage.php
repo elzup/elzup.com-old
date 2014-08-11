@@ -29,14 +29,12 @@ $account_list = array(
 
 $user_name = 'elzup';
 $parameter = array(
-    'user_name' => $user_name,
-    'include_details' => true,
+	'user_name' => $user_name,
+	'include_details' => true,
 );
 $url_tail = '?' . http_build_query($parameter);
 $url = 'http://api.elzup.com/birthday/charactors/today.json' . $url_tail;
 $chara_list = json_decode(file_get_contents($url));
-
-
 ?>
 <div class="content">
 	<h1 class="content-title">プロフィール</h1>
@@ -74,12 +72,12 @@ $chara_list = json_decode(file_get_contents($url));
 			<div class="left-box">
 				elzupが見たアニメで本日が誕生日のキャラ
 				<table>
-						<?php foreach ($chara_list as $c) { ?>
-							<tr>
-								<td class="name"><?= $c->name ?></td>
-								<td class="value"><?= $c->title->name ?></td>
-							</tr>
-						<?php } ?>
+					<?php foreach ($chara_list as $c) { ?>
+						<tr>
+							<td class="name"><?= $c->name ?></td>
+							<td class="value"><?= $c->title->name ?></td>
+						</tr>
+					<?php } ?>
 				</table>
 			</div>
 			<div class="right-box"></div>

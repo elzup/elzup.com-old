@@ -32,6 +32,7 @@
     }
 }
 
+
 .content {
     padding: 0 6px;
     .right-box, .left-box {
@@ -39,8 +40,31 @@
         width: auto;
         float: none;
     }
-
+    h1 {
+        &.content-title {
+            box-shadow: none;
+            width: 90%;
+            border-bottom: solid 1px #555;
+        }
+    }
 }
+
+.production-box {
+    .production-item {
+        float: left;
+        padding: 0 2% 10px;
+        width: 96%;
+        height: auto;
+        border-bottom: solid 1px;
+
+        p.member {
+            span.text {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
 
 .hidden-xs {
     display: none !important;
