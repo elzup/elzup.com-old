@@ -68,20 +68,6 @@ $chara_list = json_decode(file_get_contents($url));
 				</div>
 			</div>
 		</div>
-		<div class="other row-box">
-			<div class="left-box">
-				elzupが見たアニメで本日が誕生日のキャラ
-				<table>
-					<?php foreach ($chara_list as $c) { ?>
-						<tr>
-							<td class="name"><?= $c->name ?></td>
-							<td class="value"><?= $c->title->name ?></td>
-						</tr>
-					<?php } ?>
-				</table>
-			</div>
-			<div class="right-box"></div>
-		</div>
 	</div>
 </div>
 
