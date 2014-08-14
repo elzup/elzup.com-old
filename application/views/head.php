@@ -4,10 +4,10 @@
 
 <!DOCTYPE HTML>
 <meta charset="UTF-8" />
+<meta name="google-site-verification" content="anaV2tF3v61LjsJB3fPVad63wDwpTNHB6voWPAEIeKE" />
 <title><?= $meta->get_title(TRUE) ?></title>
 
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
-<meta name="google-site-verification" content="anaV2tF3v61LjsJB3fPVad63wDwpTNHB6voWPAEIeKE" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href='<?= FONT_GOOGLE_ALDRICH ?>' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?= URL_YAHOO_RESET_CSS ?>">
