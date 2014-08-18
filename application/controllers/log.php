@@ -25,7 +25,7 @@ class Log extends CI_Controller
 		$this->load->view('navbar');
 		$this->load->view('logpage', array('tl_log' => $tl_log));
 		$this->load->view('bodywrapper_foot');
-		$this->load->view('foot');
+		$this->load->view('foot', array('jss' => array('logpage')));
 	}
 
 }

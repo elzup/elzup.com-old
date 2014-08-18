@@ -16,7 +16,7 @@ function tag_svg_log(array $tl_log) {
 					}
 					?>
 				</div>
-				<svg class="tweet-log-svg svg-panel" style="display: none">
+				<svg class="tweet-log-svg svg-panel">
 				<g transform="translate(5,0)">
 				<?php
 				for ($hour = 0; $hour < 24; $hour++) {
@@ -41,7 +41,7 @@ function tag_svg_log(array $tl_log) {
 				?>
 				</g>
 				</svg>
-				<svg class="tweet-log-svg svg-line" >
+				<svg class="tweet-log-svg svg-line" style="display: none">
 				<g transform="translate(5,0)">
 				<?php
 				$ymax = RECT_SIZE_H * 12;
@@ -53,9 +53,9 @@ function tag_svg_log(array $tl_log) {
 					$h = 150 + 150 * $p;
 					$s = $p * 40 + 40;
 					$v = 90 - (50 * $p);
-					$x = $hour * (RECT_SIZE_W + 2);
+					$x = $hour * (RECT_SIZE_W);
 
-					echo '<rect x="' . $x . '" y="0" width="' . (RECT_SIZE_W + 2) . '" height="' . $ymax . '" style="fill:hsl(' . $h . ', ' . $s . '%, ' . $v . '%);stroke-width:0" />';
+					echo '<rect x="' . $x . '" y="0" width="' . (RECT_SIZE_W + 1) . '" height="' . $ymax . '" style="fill:hsl(' . $h . ', ' . $s . '%, ' . $v . '%);stroke-width:0" />';
 					$sum_par = 0;
 
 					for ($m = 0; $m < 60; $m += 5) {
@@ -69,7 +69,6 @@ function tag_svg_log(array $tl_log) {
 						$sum_par += $log->num_par_max();
 						echo '<line x1="' . $x . '" y1="' . $ymax . '" x2="' . $x . '" y2="' . ($ymax - $y) . '" style="stroke:rgb(10,10,140);stroke-width:1.5" />';
 					}
-					echo '</g>';
 				}
 				?>
 				</g>
