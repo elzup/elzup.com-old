@@ -147,6 +147,17 @@ define('TECHTAG_VIM', 'Vim');
 // version control
 define('TECHTAG_GIT', 'git');
 
+/**
+ * DB constants
+ */
+define('DB_TN_TWEETTIMELOGS', 'tweettimelogs');
+
+define('DB_CN_TWEETTIMELOGS_ID', 'timelog_id');
+define('DB_CN_TWEETTIMELOGS_NUM', 'num');
+define('DB_CN_TWEETTIMELOGS_TIMESTAMP', 'timestamp');
+
+define('MYSQL_DATETIME_FORMAT', 'Y-m-d H:i:s');
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
