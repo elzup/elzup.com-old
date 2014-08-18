@@ -19,4 +19,8 @@ class Tweetlogobj {
 		Tweetlogobj::$num_max = max(Tweetlogobj::$num_max, $this->num);
 	}
 
+	public function num_par_max() {
+		return $this->num / Tweetlogobj::$num_max;
+	}
+
 }

@@ -30,7 +30,8 @@ class Tweetlog_model extends CI_Model
 			$log = new Tweetlogobj($row);
 			$day = date('md', $log->timestamp);
 			$hour = date('G', $log->timestamp);
-			$datas[$day][$hour][] = $log;
+			$m = date('i', $log->timestamp);
+			$datas[$day][$hour][$m + 0] = $log;
 		}
 		return $datas;
 	}
