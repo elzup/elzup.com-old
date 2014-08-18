@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * ページリンクのパネル情報を扱う
+ */
 class Pane {
 
 	public $name;
@@ -23,7 +26,7 @@ class Pane {
 }
 
 /**
- * 
+ * PanelオブジェクトからPanelようのTagを表示する
  * @param int $k
  * @param Pane[] $pane
  */
@@ -31,16 +34,16 @@ function tag_cell($k, $pane) {
 	?>
 	<div class="cell cell-<?= $k ?> <?= empty($pane) ? 'hidden-xs' : '' ?>">
 		<?php if (!empty($pane)) { ?>
-			<div class="front">
+			<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>">
 				<p>
-					<a class="<?= $pane->link_icon ? '' : "" ?>" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->name ?></span></a>
+					<a class="" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->name ?></span></a>
 				</p>
 				<?php if ($pane->link_icon) { ?>
 					<div class="link-logo"><img src="<?= $pane->link_icon ?>"></div>
 				<?php } ?>
 			</div>
-			<div class="back" style="background: <?= $pane->color ?>;">
-				<p><a class="<?= $pane->link_icon ? '' : "" ?>" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->title ?></span></a></p>
+			<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
+				<p><a class="" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->title ?></span></a></p>
 				<?php if ($pane->link_icon) { ?>
 					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>"></div>
 				<?php } ?>
@@ -68,8 +71,8 @@ $panes = array();
 $panes[01] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
 $panes[04] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
 $panes[10] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
-$panes[11] = new Pane("Portfolio", "制作物", "./port", 'darkorange');
-$panes[21] = new Pane("Profile", "自己紹介", "./me", 'red');
+$panes[11] = new Pane("Profile", "自己紹介", "./me", 'red');
+$panes[21] = new Pane("Portfolio", "制作物", "./port", 'darkorange');
 $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', PATH_IMG_ICON_TUMBLR);
 $panes[33] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', TRUE);
 ?>

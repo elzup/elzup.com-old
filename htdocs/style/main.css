@@ -134,6 +134,9 @@ a:visited {
 .toppane .cell .front.on {
   background: #555;
 }
+.toppane .cell .my-hp {
+  border-radius: 3px 3px 20px;
+}
 .toppane .row-toppane-title {
   height: 100px;
   width: 100%;
