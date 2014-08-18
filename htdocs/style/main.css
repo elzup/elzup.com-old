@@ -36,6 +36,10 @@ a:visited {
 .content h2 {
   font-size: 20px;
 }
+.content p.page-discription {
+  margin-bottom: 29px;
+  margin-left: 24px;
+}
 .content .left-box {
   width: 50%;
   float: left;
@@ -194,12 +198,51 @@ a:visited {
 .production-box .production-item .detail-box .member {
   font-size: 0.8em;
 }
+.logs-box .tweet-log-svg-box .row-box {
+  width: 100%;
+  overflow: auto;
+}
+.logs-box .tweet-log-svg-box .row-box .left-side {
+  float: left;
+  width: 50px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side {
+  float: left;
+  width: 320px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span {
+  font-size: 11px;
+  position: relative;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-0 {
+  left: 1px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-6 {
+  left: 66px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-12 {
+  left: 128px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-18 {
+  left: 185px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-24 {
+  left: 243px;
+}
+.logs-box .tweet-log-svg-box .row-box .right-side .tweet-log-svg {
+  float: left;
+  height: 75px;
+}
 /* sub funcs */
 .a-third {
   width: 33%;
 }
 .half {
   width: 50%;
+}
+.half-box {
+  width: 50%;
+  float: left;
 }
 .disabled {
   cursor: default;

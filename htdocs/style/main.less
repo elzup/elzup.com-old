@@ -49,6 +49,11 @@ a {
         font-size: 20px;
     }
 
+    p.page-discription {
+        margin-bottom: 29px;
+        margin-left: 24px;   
+    }
+
     .left-box {
         width: 50%;
         float: left;
@@ -236,7 +241,35 @@ a {
 }
 
 .logs-box {
-    overflow: auto;
+    .tweet-log-svg-box {
+        .row-box {
+            width: 100%;
+            overflow: auto;
+            .left-side {
+                float: left;
+                width: 50px;
+            }
+            .right-side {
+                float: left;
+                width: 320px;
+                .cell-label {
+                    >span {
+                        font-size: 11px;
+                        position: relative;
+                        &.time-0 { left: 1px; }
+                        &.time-6 { left: 66px; }
+                        &.time-12 { left: 128px; }
+                        &.time-18 { left: 185px; }
+                        &.time-24 { left: 243px; }
+                    }
+                }
+                .tweet-log-svg {
+                    float: left;
+                    height: 75px;
+                }
+            }
+        }
+    }
 }
 
 
