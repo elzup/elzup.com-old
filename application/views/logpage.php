@@ -25,16 +25,20 @@ function tag_svg_log(array $tl_log) {
 						/* @var $log Tweetlogobj */
 						$log = @$day[$hour][$m];
 						$y = ($m / 5) * RECT_SIZE_H;
-
+						if ($date == date('md') && $hour == date('h') && $m == date('i') - date('i') % 5) {
+							// 現在時刻
+							echo '<rect y="' . $y . '" fill="orange" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
+							break 2;
+						}
 						if (!$log) {
 							echo '<rect y="' . $y . '" fill="hsl(100, 0%, 95%)" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
-						} else {
-							// 色
-							$h = 150 + 150 * $log->num_par_max();
-							$s = $log->num_par_max() * 50 + 50;
-							$v = 90 - (80 * $log->num_par_max());
-							echo '<rect y="' . $y . '" fill="hsl(' . $h . ', ' . $s . '%, ' . $v . '%)" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
+							continue;
 						}
+						// 色
+						$h = 150 + 150 * $log->num_par_max();
+						$s = $log->num_par_max() * 50 + 50;
+						$v = 90 - (80 * $log->num_par_max());
+						echo '<rect y="' . $y . '" fill="hsl(' . $h . ', ' . $s . '%, ' . $v . '%)" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
 					}
 					echo '</g>';
 				}
@@ -61,6 +65,11 @@ function tag_svg_log(array $tl_log) {
 					for ($m = 0; $m < 60; $m += 5) {
 						/* @var $log Tweetlogobj */
 						$log = @$day[$hour][$m];
+						if ($date == date('md') && $hour == date('h') && $m == date('i') - date('i') % 5) {
+							// 現在時刻
+							echo '<line x1="' . $x . '" y1="0" x2="' . $x . '" y2="' . $ymax . '" style="stroke:orange;stroke-width:1" />';
+							break 2;
+						}
 						if (!$log) {
 							continue;
 						}
@@ -89,7 +98,7 @@ function tag_svg_log(array $tl_log) {
 				<h3 class="sub-title">@arzzupのTLの盛り上がり</h3>
 				<p>Tweet数を集計してるもの</p>
 				<input class="btn btn-mini btn-slope" type="button" id="switch-tweet-log" value="表示チェンジ" />
-				
+
 				<div class="tweet-log-svg-box">
 					<?php tag_svg_log($tl_log) ?>
 				</div>
