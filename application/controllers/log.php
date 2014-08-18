@@ -13,7 +13,7 @@ class Log extends CI_Controller
 
 	public function index()
 	{
-		$this->tweetlog->get_tweet_logs();
+		$tl_log = $this->tweetlog->get_tweet_logs();
 
 		$meta = new Metaobj();
 		$meta->url = base_url();
@@ -24,7 +24,7 @@ class Log extends CI_Controller
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));
 		$this->load->view('navbar');
 		$this->load->view('logpage');
-		$this->load->view('bodywrapper_foot');
+		$this->load->view('bodywrapper_foot', array('tl_log' => $tl_log));
 		$this->load->view('foot');
 	}
 
