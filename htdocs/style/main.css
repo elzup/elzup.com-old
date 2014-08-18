@@ -36,6 +36,10 @@ a:visited {
 .content h2 {
   font-size: 20px;
 }
+.content .sub-title {
+  font-size: 18px;
+  font-weight: bold;
+}
 .content p.page-discription {
   margin-bottom: 29px;
   margin-left: 24px;
@@ -233,6 +237,9 @@ a:visited {
   float: left;
   height: 75px;
 }
+.logs-box input#switch-tweet-log {
+  margin-left: 10px;
+}
 /* sub funcs */
 .a-third {
   width: 33%;
@@ -249,6 +256,25 @@ a:visited {
 }
 .visible-xs {
   display: none !important;
+}
+.btn {
+  background: #6B6B6B;
+  color: white;
+  border: solid 1px black;
+  padding: 0 9px;
+}
+.btn.btn-slope {
+  border-radius: 6px 2px;
+}
+.btn.btn-mini {
+  font-size: 0.8em;
+  padding: 1px 9px;
+}
+.btn:hover {
+  background: #474747;
+  /* border-top: none; */
+  border-bottom: none;
+  margin-top: 2px;
 }
 .tag {
   color: #333;

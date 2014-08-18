@@ -48,7 +48,10 @@ a {
     h2 {
         font-size: 20px;
     }
-
+    .sub-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
     p.page-discription {
         margin-bottom: 29px;
         margin-left: 24px;   
@@ -270,6 +273,10 @@ a {
             }
         }
     }
+
+    input#switch-tweet-log {
+        margin-left: 10px;
+    }
 }
 
 
@@ -291,6 +298,26 @@ a {
 
 .visible-xs {
     display: none !important;
+}
+.btn {
+    background: #6B6B6B;
+    color: white;
+    border: solid 1px black;
+    padding: 0 9px;
+    
+    &.btn-slope {
+        border-radius: 6px 2px;
+    }
+    &.btn-mini {
+        font-size: 0.8em;
+        padding: 1px 9px;
+    }
+    &:hover {
+        background: #474747;
+        /* border-top: none; */
+        border-bottom: none;
+        margin-top: 2px;
+    }
 }
 
 .tag {
