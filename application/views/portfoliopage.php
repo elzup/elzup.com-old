@@ -97,7 +97,7 @@ class Production {
 }
 
 function convert_to_css_class($str) {
-	return strtolower(str_replace(array('.', '+', '形態素解析'), array('-', 'p', ''), $str));
+	return strtolower(str_replace(array('.', '+', ' ', '形態素解析'), array('-', 'p', '_', ''), $str));
 }
 
 $production_list = array(

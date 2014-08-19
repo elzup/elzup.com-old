@@ -4,7 +4,9 @@
 header("Content-type: text/plain; charset=utf-8");
 define('RECT_SIZE_W', 12);
 define('RECT_SIZE_H', 5);
+$day_count = 0;
 foreach ($tl_log as $date => $day) {
+//	if ($day_count++ == 3) break;
 	?>
 	<div class="row-box">
 		<div class="left-side"><span class="date4"><?= $date ?></span></div>

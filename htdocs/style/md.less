@@ -1,24 +1,23 @@
 @charset "utf-8";
-@import "../lib/less/mixins.less";
 
-#wrapper {
-    width: 100%;
-}
-
-.toppane {
-    margin-top: 20px;
-    .row-toppane {
-        overflow: hidden;
+@media screen and (max-width: 760px) {
+    #wrapper {
         width: 100%;
-        .middle-box {
-            .cell {
-                float: left;
-                margin: 5px 0.5%;
-                width: 19%;
-                height: 80px;
-                line-height: 80px;
+    }
+    .toppane {
+        margin-top: 20px;
+        .row-toppane {
+            overflow: hidden;
+            width: 100%;
+            .middle-box {
+                .cell {
+                    float: left;
+                    margin: 5px 0.5%;
+                    width: 19%;
+                    height: 80px;
+                    line-height: 80px;
+                }
             }
         }
     }
 }
-
