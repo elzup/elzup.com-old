@@ -24,12 +24,13 @@
 					<img src="<?= base_url(PATH_IMG_LOADING) ?>" alt="">
 				</div>
 			</div>
-			<br class="clearfix" />
+			<br class="clearboth" />
 			<div class="half">
 				<h3 class="sub-title">アニメキャラの誕生日</h3>
 				<p class="sub-description">俺が見たアニメ限定</p>
 				<!-- 非同期呼び出し -->
-				<div class="birthday-box">
+				<div id="async-birthday" class="birthday-box">
+					<img src="<?= base_url(PATH_IMG_LOADING) ?>" alt="">
 				</div>
 			</div>
 		</div>

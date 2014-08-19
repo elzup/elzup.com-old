@@ -27,14 +27,6 @@ $account_list = array(
 //	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
 
-$user_name = 'elzup';
-$parameter = array(
-	'user_name' => $user_name,
-	'include_details' => true,
-);
-$url_tail = '?' . http_build_query($parameter);
-$url = 'http://api.elzup.com/birthday/charactors/today.json' . $url_tail;
-$chara_list = json_decode(file_get_contents($url));
 ?>
 <div class="content">
 	<h1 class="content-title">プロフィール</h1>

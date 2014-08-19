@@ -8,11 +8,12 @@ class Log extends CI_Controller
 	/** @var Scrape_model */
 	public $scrape;
 
+	/** @var Birthday_model */
+	public $birthday;
+
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Tweetlog_model', 'tweetlog', TRUE);
-		$this->load->model('Scrape_model', 'scrape', TRUE);
 	}
 
 	public function index()
@@ -31,13 +32,21 @@ class Log extends CI_Controller
 	}
 
 	public function dsyogiplain() {
+		$this->load->model('Scrape_model', 'scrape');
 		$ds_log = $this->scrape->get_dobutusyogi();
 		$this->load->view('dsyogitagplain', array('ds_log' => $ds_log));
 	}
 
 	public function tweetlogplain() {
+		$this->load->model('Tweetlog_model', 'tweetlog', TRUE);
 		$tl_log = $this->tweetlog->get_tweet_logs();
 		$this->load->view('tweetlogtagplain', array('tl_log' => $tl_log));
+	}
+
+	public function birthdayplain() {
+		$this->load->model('Birthday_model', 'birthday');
+		$charactors = $this->birthday->get_birthday();
+		$this->load->view('birthdaytagplain', array('charactors' => $charactors));
 	}
 
 }

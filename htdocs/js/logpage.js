@@ -1,7 +1,6 @@
 
 !function ($) {
     $(function() {
-        // Tweetlog 表示切り替えボタン
         // どうぶつしょうぎログ非同期
         $.ajax({
             type: "GET",
@@ -20,10 +19,10 @@
         $.ajax({
             type: "GET",
             url: "./log/tweetlogplain", //PHPを呼び出す
-            data: "", //記入されたデータを渡す
             success: function(plain){
                 $('#async-tweetlog').html(plain);
 
+                // Tweetlog 表示切り替えボタン
                 $('#switch-tweet-log').removeClass('hidden');
                 $('#switch-tweet-log').click(function() {
                     if ($('.svg-panel').css('display') == 'none') {
@@ -39,6 +38,20 @@
                 $('#async-tweetlog').html('読み込みに失敗しました');
             }
         });
+
+        // birthdayAPI処理の呼び出し
+        $.ajax({
+            type: "GET",
+            url: "./log/birthdayplain", //PHPを呼び出す
+            success: function(plain){
+                console.log(plain);
+                $('#async-birthday').html(plain);
+            },
+            error:function(){
+                $('#async-birthday').html('読み込みに失敗しました');
+            }
+        });
+
     });
 }(window.jQuery)
 
