@@ -15,11 +15,17 @@ class Scrape_model extends CI_Model {
 				$td = $prof->find('td', 1);
 				preg_match('#(?<id>\w*)\s(?<dan>.*)$#u', $td->innertext, $m);
 				if ($m['id'] == DOBUTSUSYOGI_NAME) {
+					list($dust, $result_my) = explode(" ", $prof->class);
 					// 勝敗の取得
-					list($dust, $gameinfo->result) = explode(" ", $prof->class);
 				} else {
+					list($dust, $result_op) = explode(" ", $prof->class);
 					$gameinfo->opponent_rank = $m['dan'];
 				}
+			}
+			if ($result_my != $result_op) {
+				$gameinfo->result = $result_my;
+			} else {
+				$gameinfo->result = 'draw';
 			}
 			$gameinfo->time = $cont->find('[style=float:left]', 0)->innertext;
 			$game = new Dsyogilogobj($gameinfo);

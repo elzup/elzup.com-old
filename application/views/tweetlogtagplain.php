@@ -25,7 +25,7 @@ foreach ($tl_log as $date => $day) {
 					/* @var $log Tweetlogobj */
 					$log = @$day[$hour][$m];
 					$y = ($m / 5) * RECT_SIZE_H;
-					if ($date == date('md') && $hour == date('h') && $m == date('i') - date('i') % 5) {
+					if ($date == date('md') && $hour == date('H') && $m == date('i') - date('i') % 5) {
 						// 現在時刻
 						echo '<rect y="' . $y . '" fill="orange" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
 						break 2;
@@ -65,7 +65,7 @@ foreach ($tl_log as $date => $day) {
 				for ($m = 0; $m < 60; $m += 5) {
 					/* @var $log Tweetlogobj */
 					$log = @$day[$hour][$m];
-					if ($date == date('md') && $hour == date('h') && $m == date('i') - date('i') % 5) {
+					if ($date == date('md') && $hour == date('H') && $m == date('i') - date('i') % 5) {
 						// 現在時刻
 						echo '<line x1="' . $x . '" y1="0" x2="' . $x . '" y2="' . $ymax . '" style="stroke:orange;stroke-width:1" />';
 						break 2;

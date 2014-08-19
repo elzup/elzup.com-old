@@ -202,6 +202,9 @@ a:visited {
 .production-box .production-item .detail-box .member {
   font-size: 0.8em;
 }
+#tl-log-box .sub-description {
+  height: 2em;
+}
 .logs-box {
   overflow: auto;
 }
@@ -300,6 +303,9 @@ a:visited {
   width: 50%;
   float: left;
 }
+.floatleft {
+  float: left;
+}
 .disabled {
   cursor: default;
 }
@@ -324,6 +330,11 @@ a:visited {
   /* border-top: none; */
   border-bottom: none;
   margin-top: 2px;
+}
+.date4 {
+  padding: 0 2px;
+  border-bottom: solid 2px;
+  box-shadow: -9px 1px, -18px 2px, -27px 3px;
 }
 .tag {
   color: #333;

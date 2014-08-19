@@ -243,6 +243,12 @@ a {
     }
 }
 
+#tl-log-box {
+    .sub-description {
+        height: 2em;
+    }
+}
+
 .logs-box {
     overflow: auto;
     .half {
@@ -333,6 +339,10 @@ a {
     float: left;
 }
 
+.floatleft {
+    float: left;
+}
+
 .disabled {
     cursor: default;
 }
@@ -345,7 +355,7 @@ a {
     color: white;
     border: solid 1px black;
     padding: 0 9px;
-    
+
     &.btn-slope {
         border-radius: 6px 2px;
     }
@@ -361,6 +371,15 @@ a {
     }
 }
 
+.date4 {
+    padding: 0 2px;
+    .bottom-shadow();
+}
+
+.bottom-shadow() {
+    border-bottom: solid 2px;
+    box-shadow: -9px 1px, -18px 2px, -27px 3px;
+}
 .tag {
     color: #333;
     margin-left: 10px;

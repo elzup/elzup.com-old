@@ -3,9 +3,22 @@
 
 #local
 ## level1
-* db settgin
 ## level2
-+ tumblr アイコン一覧
+
++ 将棋ウォーズのログ
++ 自分のツイートのログ
++ エゴサログ
++ コミットログ
++ atcodeログ
+* 移動: 時みくじ
+
++ ポートフォリオ
+    * 上部分類分け
+    * アイコン
+    * 追加: 時みくじ
+    * 追加: 念写ったー
+
+
 
 ## level3
 
@@ -26,7 +39,7 @@
 // IDE editorTool
 // version control
 
-* +3Dオセロ
+* 3Dオセロ
 // lang
     + C++
 // lib
@@ -36,7 +49,7 @@
 // IDE editorTool
     + VisualStudio
 
-* +タンクゲーム
+* タンクゲーム
 // lang
     + C++
 // lib
@@ -59,7 +72,7 @@
 // IDE editorTool
     + eclipse
 
-* +icon stage
+* icon stage
 // lang
     + PHP
     + js
@@ -135,7 +148,7 @@
     + netbeans
     + vim
 
-* +asn-web
+* asn-web
 // lang
     + PHP
 // metaLang
@@ -206,7 +219,18 @@
     + vim
 
 
-* +birthday api
+* birthday api
+// lang
+    + PHP
+// OS
+    + linux
+// db
+    + mysql
+    + postgresql
+// IDE editorTool
+    + vim
+
+* 念写ったー
 // lang
     + PHP
 // OS
@@ -221,3 +245,4 @@
 
 
 
++ 追加
