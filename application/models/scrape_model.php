@@ -16,7 +16,7 @@ class Scrape_model extends CI_Model {
 				preg_match('#(?<id>\w*)\s(?<dan>.*)$#u', $td->innertext, $m);
 				if ($m['id'] == DOBUTSUSYOGI_NAME) {
 					// 勝敗の取得
-					$gameinfo->result = explode(" ", $prof->class)[1];
+					list($dust, $gameinfo->result) = explode(" ", $prof->class);
 				} else {
 					$gameinfo->opponent_rank = $m['dan'];
 				}

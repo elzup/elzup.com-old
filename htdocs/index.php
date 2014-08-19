@@ -45,12 +45,18 @@ if (defined('ENVIRONMENT'))
 	{
 		case 'testing':
 		case 'development':
-			ini_set("display_errors", 1);
-			error_reporting(E_ALL);
+            ini_set("display_errors", 1);
+            error_reporting(E_ALL);
 			break;
 
 		case 'production':
-			error_reporting(0);
+            if (file_exists('mode_debug')) {
+                ini_set("display_errors", 1);
+                error_reporting(E_ALL);
+            } else {
+
+                error_reporting(0);
+            }
 			break;
 
 		default:
