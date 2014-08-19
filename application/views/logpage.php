@@ -12,13 +12,16 @@
 
 				<!-- 非同期呼び出し -->
 				<div id="async-tweetlog" class="tweet-log-svg-box">
+					<img src="<?= base_url(PATH_IMG_LOADING)?>" alt="">
 				</div>
 			</div>
 			<div class="half">
 				<h3 class="sub-title">どうぶしょうぎ戦績</h3>
 				<p>最近の戦績</p>
 				<!-- 非同期呼び出し -->
-				<div id="async-dsyogi" class="dsyogi-log-box"></div>
+				<div id="async-dsyogi" class="dsyogi-log-box">
+					<img src="<?= base_url(PATH_IMG_LOADING)?>" alt="">
+				</div>
 			</div>
 		</div>
 	</div>

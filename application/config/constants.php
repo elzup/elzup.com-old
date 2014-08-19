@@ -107,6 +107,7 @@ define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
 define('PATH_IMG_404', PATH_IMG . 'no_found.png');
+define('PATH_IMG_LOADING', PATH_IMG .'load.gif');
 
 /* techtag str */
 // lang

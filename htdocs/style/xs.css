@@ -51,6 +51,12 @@
 .production-box .production-item p.member span.text {
   font-size: 12px;
 }
+.logs-box .half {
+  width: 100%;
+}
+.logs-box .row-box .right-side {
+  width: 100%;
+}
 .hidden-xs {
   display: none !important;
 }
