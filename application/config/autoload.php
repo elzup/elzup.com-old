@@ -56,6 +56,7 @@ $autoload['libraries'] = array(
 		'session',
 		'metaobj',
 		'tweetlogobj',
+		'dsyogilogobj',
 );
 
 
