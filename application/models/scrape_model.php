@@ -9,7 +9,6 @@ class Scrape_model extends CI_Model {
 	public function get_dobutusyogi() {
 		$html = file_get_html(URL_DOBUTSUSYOGI_MYHISTORYPAGE);
 		$games = array();
-		echo '<pre>';
 		foreach ($html->find('.contents') as $cont) {
 			$gameinfo = new stdClass();
 			foreach ($cont->find('.history_prof') as $prof) {
@@ -24,7 +23,7 @@ class Scrape_model extends CI_Model {
 			}
 			$gameinfo->time = $cont->find('[style=float:left]', 0)->innertext;
 			$game = new Dsyogilogobj($gameinfo);
-			$games[$game->get_timedate()] = $game;
+			$games[$game->get_timedate()][] = $game;
 		}
 		return $games;
 	}

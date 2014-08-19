@@ -202,40 +202,89 @@ a:visited {
 .production-box .production-item .detail-box .member {
   font-size: 0.8em;
 }
-.logs-box .tweet-log-svg-box .row-box {
+.logs-box {
+  overflow: auto;
+}
+.logs-box .half {
+  float: left;
+}
+.logs-box .row-box {
   width: 100%;
   overflow: auto;
 }
-.logs-box .tweet-log-svg-box .row-box .left-side {
+.logs-box .row-box .left-side {
   float: left;
   width: 50px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side {
+.logs-box .row-box .right-side {
   float: left;
   width: 320px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span {
+.logs-box .tweet-log-svg-box .cell-label > span {
   font-size: 11px;
   position: relative;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-0 {
+.logs-box .tweet-log-svg-box .cell-label > span.time-0 {
   left: 1px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-6 {
+.logs-box .tweet-log-svg-box .cell-label > span.time-6 {
   left: 66px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-12 {
+.logs-box .tweet-log-svg-box .cell-label > span.time-12 {
   left: 128px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-18 {
+.logs-box .tweet-log-svg-box .cell-label > span.time-18 {
   left: 185px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .cell-label > span.time-24 {
+.logs-box .tweet-log-svg-box .cell-label > span.time-24 {
   left: 243px;
 }
-.logs-box .tweet-log-svg-box .row-box .right-side .tweet-log-svg {
+.logs-box .tweet-log-svg-box .tweet-log-svg {
   float: left;
   height: 75px;
+}
+.logs-box .dsyogi-log-box .row-box {
+  margin-bottom: 10px;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane {
+  float: left;
+  width: 67px;
+  height: 2.6em;
+  border-bottom: solid 1px;
+  border-right: solid 1px;
+  margin: 1px;
+  padding: 0.2em;
+  border-radius: 0 0 17px 0;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane.win {
+  background: #ffdddd;
+  border-color: #ff0000;
+  box-shadow: -5px -1px 5px rgba(255, 255, 255, 0.5) inset;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane.win > .result {
+  color: #ff0000;
+  text-shadow: 4px 2px 0px white;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane.lose {
+  background: #ddddff;
+  border-color: #0000ff;
+  box-shadow: -5px -1px 5px rgba(255, 255, 255, 0.5) inset;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane.lose > .result {
+  color: #0000ff;
+  text-shadow: 4px 2px 0px white;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane.draw {
+  background: #ddffdd;
+  border-color: #008000;
+  box-shadow: -5px -1px 5px rgba(255, 255, 255, 0.5) inset;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane.draw > .result {
+  color: #008000;
+  text-shadow: 4px 2px 0px white;
+}
+.logs-box .dsyogi-log-box .dsyogi-log-pane .vs {
+  float: right;
 }
 .logs-box input#switch-tweet-log {
   margin-left: 10px;

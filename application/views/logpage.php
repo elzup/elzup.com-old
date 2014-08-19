@@ -1,5 +1,6 @@
 <?php
 /* @var $tl_log Tweetlogobj[][][] */
+/* @var $ds_log Dsyogilogobj[][] */
 
 function tag_svg_log(array $tl_log) {
 	define('RECT_SIZE_W', 12);
@@ -7,7 +8,7 @@ function tag_svg_log(array $tl_log) {
 	foreach ($tl_log as $date => $day) {
 		?>
 		<div class="row-box">
-			<div class="left-side"><?= $date ?></div>
+			<div class="left-side"><span class="date4"><?= $date ?></span></div>
 			<div class="right-side">
 				<div class="cell-label">
 					<?php
@@ -87,6 +88,32 @@ function tag_svg_log(array $tl_log) {
 		<?php
 	}
 }
+
+function tag_dsyogi_box(array $ds_log) {
+	/* @var $logs Dsyogilogobj[] */
+	foreach ($ds_log as $date => $logs) {
+		?>
+		<div class="row-box">
+			<div class="left-side"><span class="date"><?= $date ?></span></div>
+			<div class="right-side">
+				<?php
+				foreach ($logs as $log) {
+					?>
+					<div class="dsyogi-log-pane <?= $log->result ?>">
+						<span class="result"><?= $log->result ?></span>
+						<br />
+						<span class="vs">
+							vs<span class="rank"><?= $log->opponent_rank ?></span>
+						</span>
+					</div>
+					<?php
+				}
+				?> 
+			</div>
+		</div>
+		<?php
+	}
+}
 ?>
 
 <div class="content">
@@ -104,6 +131,11 @@ function tag_svg_log(array $tl_log) {
 				</div>
 			</div>
 			<div class="half">
+				<h3 class="sub-title">どうぶしょうぎ戦績</h3>
+				<p>最近の戦績</p>
+				<div class="dsyogi-log-box">
+					<?php tag_dsyogi_box($ds_log) ?>
+				</div>
 			</div>
 		</div>
 	</div>
