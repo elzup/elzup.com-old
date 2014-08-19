@@ -55,6 +55,9 @@ a {
         margin-bottom: 29px;
         margin-left: 24px;   
     }
+    .content-body {
+        padding-bottom: 50px;
+    }
 
     .left-box {
         width: 50%;
@@ -229,8 +232,8 @@ a {
         float: left;
         padding: 1%;
         width: 48%;
-        height: 600px;
-        border-bottom: solid 1px;
+        border-top: solid 1px;
+        padding-bottom: 25px;
 
         .img-box {
             display: table-cell;
@@ -257,6 +260,16 @@ a {
                 font-size: 0.8em;
             }
         }
+    }
+}
+
+.pro-group {
+    float: left;
+    padding-left: 5px;
+    &:before {
+        content: "";
+        box-shadow: 0 20px gray, 0 40px gray;
+        border-left: 3px solid gray;
     }
 }
 
@@ -418,25 +431,25 @@ a {
     font-size: 13px;
 
     /* lang */
-    &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing { .techtag-style(red); }
+    &.techtag-language, &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing { .techtag-style(red); }
     /* metalang */
-    &.techtag-jquery, &.techtag-less, &.techtag-processing-js { .techtag-style(orange); }
+    &.techtag-metalang, &.techtag-jquery, &.techtag-less, &.techtag-processing-js { .techtag-style(orange); }
     /* framework */
-    &.techtag-codeigniter, &.techtag-bootstrap { .techtag-style(yellow); }
+    &.techtag-framework, &.techtag-codeigniter, &.techtag-bootstrap { .techtag-style(yellow); }
     /* lib */
-    &.techtag-dxlib, &.techtag-java_servlet { .techtag-style(lime); }
+    &.techtag-lib, &.techtag-dxlib, &.techtag-java_servlet { .techtag-style(lime); }
     /* api */
-    &.techtag-twitterapi, &.techtag-twitterwebapi, &.techtag-ustreamapi, &.techtag-yahooapi { .techtag-style(lightblue); }
+    &.techtag-api, &.techtag-twitterapi, &.techtag-twitterwebapi, &.techtag-ustreamapi, &.techtag-yahooapi { .techtag-style(lightblue); }
     /* opt service */
-    &.techtag-googlescript { .techtag-style(lightblue); }
+    &.techtag-service, &.techtag-googlescript { .techtag-style(lightblue); }
     /* os */
-    &.techtag-windows, &.techtag-linux { .techtag-style(); } 
+    &.techtag-os, &.techtag-windows, &.techtag-linux { .techtag-style(); } 
     /* db */
-    &.techtag-mysql, &.techtag-postgresql { .techtag-style(green); }
+    &.techtag-db, &.techtag-mysql, &.techtag-postgresql { .techtag-style(green); }
     /* ide,editor */
-    &.techtag-visualstudio, &.techtag-eclipse, &.techtag-netbeans, &.techtag-vim, &.techtag-intellij_idea { .techtag-style(orchid); }
+    &.techtag-editor, &.techtag-visualstudio, &.techtag-eclipse, &.techtag-netbeans, &.techtag-vim, &.techtag-intellij_idea { .techtag-style(orchid); }
     /* version control */ 
-    &.techtag-git { .techtag-style(darkgray); }
+    &.techtag-version, &.techtag-git { .techtag-style(darkgray); }
 }
 .techtag-style(@base-color: gray) {
     border-bottom: @base-color solid 4px;
@@ -444,6 +457,19 @@ a {
 
 .clearboth {
     clear: both;
+}
+
+
+.help-panel {
+    width: 40%;
+    ul.help-list {
+        >li {
+            .description {
+                float: right;
+            }
+            line-height: 1.6em;
+        }
+    }
 }
 
 .shift-top {

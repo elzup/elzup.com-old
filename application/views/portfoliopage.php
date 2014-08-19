@@ -62,7 +62,6 @@ class Production {
 	 * @var string[]
 	 */
 	public $members;
-
 	private static $id_stamp;
 
 	/**
@@ -78,7 +77,7 @@ class Production {
 	 * memberName => comment
 	 */
 	public function __construct($name, $light_detail, $type, $detail, $tech_list, $date, $img_src = NULL, $link = NULL, array $members = array()) {
-		$this->id = Production::$id_stamp++; 
+		$this->id = Production::$id_stamp++;
 		$this->name = $name;
 		$this->light_detail = $light_detail;
 		$this->type = $type;
@@ -102,13 +101,13 @@ function convert_to_css_class($str) {
 
 $production_list = array(
 	new Production(
-		'3Dオセロ', 'XYZ3次元に石を置けるオセロ', PRO_TYPE_SOFTWARE,<<<EOF
+		'3Dオセロ', 'XYZ3次元に石を置けるオセロ', PRO_TYPE_SOFTWARE, <<<EOF
 		可視化をテーマに初めて作った3Dゲーム
 EOF
 		, array(TECHTAG_CPP, TECHTAG_DXLIB, TECHTAG_WINDOWS, TECHTAG_VISUALSTUDIO), '2011年8月', PATH_IMG_PRO_OTHELLO
 	),
 	new Production(
-		'タンクゲーム', '2Pシューティングアクションゲーム', PRO_TYPE_SOFTWARE,<<<EOF
+		'タンクゲーム', '2Pシューティングアクションゲーム', PRO_TYPE_SOFTWARE, <<<EOF
 		ボンバーマン風ステージでシューティングするアクションゲーム.同じキーボードで2P対戦ができる.様々な武器アイテムが用意した
 EOF
 		, array(TECHTAG_CPP, TECHTAG_DXLIB, TECHTAG_WINDOWS, TECHTAG_VISUALSTUDIO), '2012年8月', PATH_IMG_PRO_TANK, NULL, array('Lamia_inase' => 'ステージ上のドット絵全般', 'karura820' => 'サウンド全般')
@@ -120,7 +119,7 @@ EOF
 		, array(TECHTAG_PHP, TECHTAG_GOOGLESCRIPT, TECHTAG_TWITTERAPI, TECHTAG_YAHOOAPI, TECHTAG_WINDOWS, TECHTAG_ECLIPSE), '2013年3月', PATH_IMG_PRO_TREND, '//twitter.com/TDU_Trend'
 	),
 	new Production(
-		'IconStage', 'Twitterアイコン上でシューティングゲーム', PRO_TYPE_SERIVICE,<<<EOF
+		'IconStage', 'Twitterアイコン上でシューティングゲーム', PRO_TYPE_SERIVICE, <<<EOF
 		Twitterと連携してフレンドなどのTwitterアイコンからステージを生成して,敵を倒すシューティングゲーム.非同期にProcessing.jsのcanvasに情報を送るところや,ステージを生成するアルゴリズムや敵のAPIのゲームバランスで苦労した
 EOF
 		, array(TECHTAG_PHP, TECHTAG_JS, TECHTAG_PROCESSING, TECHTAG_PROCESSING_JS, TECHTAG_JQUERY, TECHTAG_TWITTERAPI, TECHTAG_TWITTERWEBAPI, TECHTAG_WINDOWS, TECHTAG_ECLIPSE), '2013年3月', PATH_IMG_PRO_ICONSTAGE, '//iconstages.elzup.com/'
@@ -132,7 +131,7 @@ EOF
 		, array(TECHTAG_PHP, TECHTAG_JQUERY, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_MYSQL, TECHTAG_ECLIPSE, TECHTAG_VIM), '2013年11月', PATH_IMG_PRO_JENGA /* PATH_IMG_PRO_JENGA */, 'todo'
 	),
 	new Production(
-		'一夜人狼', '端末一台でワンナイト人狼をできるWebアプリ', PRO_TYPE_SERIVICE,<<<EOF
+		'一夜人狼', '端末一台でワンナイト人狼をできるWebアプリ', PRO_TYPE_SERIVICE, <<<EOF
 		オーナー役無しで一つのスマホを回しあってゲームできるように作った.CGIは使わずJQueryやBootstrapを中心に作った.当時人狼にはまっていて,スマホで使えるようにレスポンシブデザインに凝った.
 EOF
 		, array(TECHTAG_JS, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_ECLIPSE, TECHTAG_VIM), '2013年12月', PATH_IMG_PRO_ICHIYA, '//elzzup.yuta-ri.net/wolf/'
@@ -194,10 +193,24 @@ EOF
 	),
 );
 
+// 種類分け
 $production_kinds = array();
 foreach ($production_list as $pro) {
 	$production_kinds[$pro->type][] = $pro;
 }
+
+// タグの説明定義
+$tag_helps = array();
+$tag_helps[] = array('Language', 'プログラミング言語');
+$tag_helps[] = array('MetaLang', 'メタ言語など');
+$tag_helps[] = array('Framework', 'フレームワークなど');
+$tag_helps[] = array('Lib', '主要ライブラリ');
+$tag_helps[] = array('API', 'API');
+$tag_helps[] = array('Service', 'その他サービス');
+$tag_helps[] = array('OS', '作業PCのOS');
+$tag_helps[] = array('DB', 'データベース');
+$tag_helps[] = array('Editor', 'IDEやエディタ');
+$tag_helps[] = array('Version', 'バージョン管理システム');
 ?>
 
 <div class="content">
@@ -206,18 +219,20 @@ foreach ($production_list as $pro) {
 	<div class="content-body">
 		<div class="production-pagelinks">
 			<?php foreach ($production_kinds as $type => $pl) { ?>
-			<span class="sub-title"><?= $type ?></span>
-			<ul>
-				<?php foreach ($pl as $p) { ?>
-					<li>
-						<div class="btn-jump" for="#pi<?= $p->id ?>">
-							<img class="icon" src="<?= base_url($p->get_icon_url()) ?>" />
-							<span class="name"><?= $p->name ?></span>
-						</div>
-					</li>
-				<?php } ?>
-			</ul>
-				<?php } ?>
+				<div class="pro-group">
+					<span class="sub-title"><?= $type ?></span>
+					<ul>
+						<?php foreach ($pl as $p) { ?>
+							<li>
+								<div class="btn-jump" for="#pi<?= $p->id ?>">
+									<img class="icon" src="<?= base_url($p->get_icon_url()) ?>" />
+									<span class="name"><?= $p->name ?></span>
+								</div>
+							</li>
+						<?php } ?>
+					</ul>
+				</div>
+			<?php } ?>
 		</div>
 		<div class="production-box">
 			<?php foreach ($production_list as $i => $p) { ?>
@@ -251,7 +266,21 @@ foreach ($production_list as $pro) {
 						<?php } ?>
 					</div>
 				</div>
+				<?php if ($i % 2 == 1) { ?>
+					<br class="clearboth" />
+				<?php } ?>
 			<?php } ?>
+		</div>
+		<div class="help-panel">
+			<h3 class="sub-title">タグColorについて</h3>
+			<ul class="help-list">
+				<?php foreach ($tag_helps as $help) { ?>
+					<li>
+						<span class="techtag techtag-<?= strtolower($help[0]) ?>"><?= $help[0] ?></span>
+						<span class="description"><?= $help[1] ?></span>
+					</li>
+				<?php } ?>
+			</ul>
 		</div>
 	</div>
 </div>

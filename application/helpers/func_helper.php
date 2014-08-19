@@ -299,3 +299,16 @@ if (!function_exists('mb_multi_strlen'))
 		return count(multi_split($str));
 	}
 }
+
+if (!function_exists('get_defined_constants_fillter'))
+{
+	function get_defined_constants_fillter($needle) {
+		$arr = array();
+		foreach (get_defined_constants(TRUE) as $key => $value) {
+			if (strpos($key, $needle) !== FALSE) {
+				$arr[$key] = $value;
+			}
+		}
+		return $arr;
+	}
+}
