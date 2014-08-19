@@ -1,7 +1,6 @@
 @charset "utf-8";
 html,
 body {
-  height: 100%;
   background: #ffffff;
   /*    font-family:"Times New Roman",Georgia,Serif; */
   font-family: 'Avenir', 'Arial', 'Helvetica', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -169,8 +168,22 @@ a:visited {
   display: inline;
   float: left;
 }
-.production-pagelinks ul > li {
-  padding-bottom: 5px;
+.production-pagelinks ul {
+  overflow: auto;
+}
+.production-pagelinks ul > * {
+  float: left;
+}
+.production-pagelinks ul li {
+  cursor: pointer;
+  width: 100px;
+  height: 140px;
+  padding: 5px;
+  margin: 5px;
+}
+.production-pagelinks ul li .icon {
+  width: 100%;
+  border-radius: 10px;
 }
 .production-box .production-item {
   float: left;

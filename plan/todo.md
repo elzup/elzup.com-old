@@ -9,14 +9,12 @@
 + 自分のツイートのログ
 + エゴサログ
 + コミットログ
-+ atcodeログ
++ atcoderログ
 * 移動: 時みくじ
 
 + ポートフォリオ
     * 上部分類分け
     * アイコン
-    * 追加: 時みくじ
-    * 追加: 念写ったー
 
 
 
@@ -234,14 +232,16 @@
 // lang
     + PHP
     + Java
+    + Processing
 // framework
     + Bootstrap
+// api
+    + TwitterWebAPI
 // OS
     + linux
-// db
-    + mysql
-    + postgresql
 // IDE editorTool
+    + Netbeans
+    + IntelliJ
     + vim
 
 * 時みくじ
@@ -255,9 +255,6 @@
     + Bootstrap
 // OS
     + windows
-// db
-    + mysql
-    + postgresql
 // IDE editorTool
     + eclipse
 
@@ -266,3 +263,8 @@
 
 
 + 追加
+Webサービス
+小ネタ
+ソフトウェア
+bot
+API

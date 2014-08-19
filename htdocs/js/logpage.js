@@ -22,7 +22,6 @@
             url: "./log/tweetlogplain", //PHPを呼び出す
             data: "", //記入されたデータを渡す
             success: function(plain){
-                console.log(plain);
                 $('#async-tweetlog').html(plain);
 
                 $('#switch-tweet-log').removeClass('hidden');
