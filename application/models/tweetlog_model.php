@@ -13,7 +13,7 @@ class Tweetlog_model extends CI_Model
 	 */
 	public function get_tweet_logs() {
 		// TODO: 7day
-		$this->db->where(DB_CN_TWEETTIMELOGS_TIMESTAMP . ' >', date(MYSQL_DATETIME_FORMAT, strtotime("-3 day")));
+		$this->db->where(DB_CN_TWEETTIMELOGS_TIMESTAMP . ' >', date(MYSQL_DATETIME_FORMAT, strtotime("-4 day")));
 		$this->db->order_by(DB_CN_TWEETTIMELOGS_TIMESTAMP, 'asc');
 		// 整形してから
 		$tweet_logsr = Tweetlog_model::_adjust_tweet_log($this->db->get(DB_TN_TWEETTIMELOGS)->result());

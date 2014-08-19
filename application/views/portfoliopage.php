@@ -106,7 +106,7 @@ EOF
 	),
 	new Production(
 		'Jenga Note', '大学の講義を掲示板風にオンラインでまとめて共有サイト', <<<EOF
-		授業についてのメモを講義ごとのページで共有できるサービス.その時間に行われてる講義をわかりやすくしたり,メモが整理できるように特化した掲示板にした,Bootstrapを初めて使った。現在停止中
+		授業についてのメモを講義ごとのページで共有できるサービス.その時間に行われてる講義をわかりやすくしたり,メモが整理できるように特化した掲示板にした,Bootstrapを初めて使った.現在停止中
 EOF
 		, array(TECHTAG_PHP, TECHTAG_JQUERY, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_MYSQL, TECHTAG_ECLIPSE, TECHTAG_VIM), '2013年11月', PATH_IMG_404 /*PATH_IMG_PRO_JENGA*/, 'todo'
 	),
@@ -115,6 +115,12 @@ EOF
 		オーナー役無しで一つのスマホを回しあってゲームできるように作った.CGIは使わずJQueryやBootstrapを中心に作った.当時人狼にはまっていて,スマホで使えるようにレスポンシブデザインに凝った.
 EOF
 		, array(TECHTAG_JS, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_ECLIPSE, TECHTAG_VIM), '2013年12月', PATH_IMG_PRO_ICHIYA, '//elzzup.yuta-ri.net/wolf/'
+	),
+	new Production(
+		'時みくじ', '小さなおみくじサイト', <<<EOF
+		年明けに遊びで作ったおみくじ.BootstrapとJavascriptとLESSの練習がメイン.自分ではいいデザインだと思ってるサイトの一つ
+EOF
+		, array(TECHTAG_PHP, TECHTAG_JS, TECHTAG_LESS, TECHTAG_JQUERY, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_ECLIPSE), '2014年1月', PATH_IMG_PRO_TOKIMIKUJI, '//app.elzup.com/tk'
 	),
 	new Production(
 		'RollCakeRSS', 'Feed登録や管理ができるソフト', <<<EOF
@@ -154,8 +160,14 @@ EOF
 		, array(TECHTAG_PHP, TECHTAG_LINUX, TECHTAG_MYSQL, TECHTAG_POSTGRESQL, TECHTAG_VIM, TECHTAG_GIT), '2014年7月', PATH_IMG_PRO_BIRTHDAY, '//github.com/elzzup/CharactorBirthdayAPI'
 	),
 	new Production(
+		'念写ったー', 'Twitterアイコンを全角文字AA化', <<<EOF
+		100文字でつぶやければ流行ると思ったが10×10の解像度じゃ限界があるのが誤算だった.Processing側で全角漢字や記号について2*2分割のマップでサンプル化してPHPでアイコン画像を解析して生成している.PHPのGDに初めて触れた
+EOF
+		, array(TECHTAG_PHP, TECHTAG_JAVA, TECHTAG_PROCESSING, TECHTAG_BOOTSTRAP, TECHTAG_CODEIGNITER, TECHTAG_TWITTERAPI, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_INTELLIJIDEA, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_NENSYATTER, '//app.elzup.com/nn'
+	),
+	new Production(
 		'elzup.com', 'このホームページ', <<<EOF
-		Bootstrapは使わずに,できるだけライブラリに頼らないように作った
+		Bootstrapは使わずに,できるだけライブラリに頼らないように作った.これからも進化を続けていく
 EOF
 		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_JQUERY, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_ELZUP
 	),

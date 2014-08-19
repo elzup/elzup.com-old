@@ -96,12 +96,14 @@ define('PATH_IMG_PRO_TREND', PATH_IMG . 'sc_trend.png');
 define('PATH_IMG_PRO_ICONSTAGE', PATH_IMG . 'sc_iconstage.png');
 define('PATH_IMG_PRO_JENGA', PATH_IMG . 'sc_jenga.png');
 define('PATH_IMG_PRO_ICHIYA', PATH_IMG . 'sc_wolf.png');
+define('PATH_IMG_PRO_TOKIMIKUJI', PATH_IMG . 'sc_tokimikuji.png');
 define('PATH_IMG_PRO_ROLLCAKE', PATH_IMG . 'sc_rollcake.png');
 define('PATH_IMG_PRO_TOHYO', PATH_IMG . 'sc_tohyo.png');
 define('PATH_IMG_PRO_ASN', PATH_IMG . 'sc_asn.png');
 define('PATH_IMG_PRO_CLAUD', PATH_IMG . 'sc_claud.png');
 define('PATH_IMG_PRO_YOPPARATTER', PATH_IMG . 'sc_yopparatter.png');
 define('PATH_IMG_PRO_BIRTHDAY', PATH_IMG . 'sc_birthday.png');
+define('PATH_IMG_PRO_NENSYATTER', PATH_IMG . 'sc_nensya.png');
 define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
@@ -144,6 +146,7 @@ define('TECHTAG_POSTGRESQL', 'PostgreSQL');
 define('TECHTAG_VISUALSTUDIO', 'VisualStudio');
 define('TECHTAG_ECLIPSE', 'Eclipse');
 define('TECHTAG_NETBEANS', 'NetBeans');
+define('TECHTAG_INTELLIJIDEA', 'IntelliJ IDEA');
 define('TECHTAG_VIM', 'Vim');
 // version control
 define('TECHTAG_GIT', 'git');

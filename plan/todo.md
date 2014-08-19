@@ -233,6 +233,9 @@
 * 念写ったー
 // lang
     + PHP
+    + Java
+// framework
+    + Bootstrap
 // OS
     + linux
 // db
@@ -240,6 +243,23 @@
     + postgresql
 // IDE editorTool
     + vim
+
+* 時みくじ
+// lang
+    + PHP
+    + JS
+// metaLang
+    + LESS
+    + jQuery
+// framework
+    + Bootstrap
+// OS
+    + windows
+// db
+    + mysql
+    + postgresql
+// IDE editorTool
+    + eclipse
 
 
 
