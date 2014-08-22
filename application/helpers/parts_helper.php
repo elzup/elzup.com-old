@@ -32,7 +32,7 @@ if (!function_exists('tag_icon'))
 if (!function_exists('attr_href'))
 {
 
-	function attr_href($type = PATH_TOP, $values = NULL, $is_wrap_base = TRUE)
+	function attr_href($type = PATH_TOP, $values = NULL, $is_wrap_base = FALSE)
 	{
 		$link = $type;
 		// TODO: support array $option_value args
