@@ -128,7 +128,7 @@ EOF
 		'Jenga Note', '大学の講義を掲示板風にオンラインでまとめて共有サイト', PRO_TYPE_SERIVICE, <<<EOF
 		授業についてのメモを講義ごとのページで共有できるサービス.その時間に行われてる講義をわかりやすくしたり,メモが整理できるように特化した掲示板にした,Bootstrapを初めて使った.現在停止中
 EOF
-		, array(TECHTAG_PHP, TECHTAG_JQUERY, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_MYSQL, TECHTAG_ECLIPSE, TECHTAG_VIM), '2013年11月', PATH_IMG_PRO_JENGA /* PATH_IMG_PRO_JENGA */, 'todo'
+		, array(TECHTAG_PHP, TECHTAG_JQUERY, TECHTAG_LESS, TECHTAG_BOOTSTRAP, TECHTAG_WINDOWS, TECHTAG_MYSQL, TECHTAG_ECLIPSE, TECHTAG_VIM), '2013年11月', PATH_IMG_PRO_JENGA /* PATH_IMG_PRO_JENGA */, '//elzzup.yuta-ri.net/fillup/'
 	),
 	new Production(
 		'一夜人狼', '端末一台でワンナイト人狼をできるWebアプリ', PRO_TYPE_SERIVICE, <<<EOF
@@ -191,6 +191,12 @@ EOF
 EOF
 		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_JQUERY, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_ELZUP
 	),
+	new Production(
+		'言えるかな？', '言えるかなゲーム', PRO_TYPE_SERIVICE, <<<EOF
+		言えるかなゲーム(山手線ゲーム)を作ったり遊んだりできるサイト	
+EOF
+		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_BOOTSTRAP, TECHTAG_JQUERY, TECHTAG_COFFEESCRIPT, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT, TECHTAG_GRUNT), '2014年8月', PATH_IMG_PRO_IERUKANA
+	),
 );
 
 // 種類分け
@@ -210,7 +216,7 @@ $tag_helps[] = array('Service', 'その他サービス');
 $tag_helps[] = array('OS', '作業PCのOS');
 $tag_helps[] = array('DB', 'データベース');
 $tag_helps[] = array('Editor', 'IDEやエディタ');
-$tag_helps[] = array('Version', 'バージョン管理システム');
+$tag_helps[] = array('Admin', 'プロジェクト管理システム');
 ?>
 
 <div class="content">

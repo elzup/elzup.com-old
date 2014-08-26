@@ -105,6 +105,7 @@ define('PATH_IMG_PRO_YOPPARATTER', PATH_IMG . 'sc_yopparatter.png');
 define('PATH_IMG_PRO_BIRTHDAY', PATH_IMG . 'sc_birthday.png');
 define('PATH_IMG_PRO_NENSYATTER', PATH_IMG . 'sc_nensya.png');
 define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
+define('PATH_IMG_PRO_IERUKANA', PATH_IMG . 'sc_ierukana.png');
 
 define('PATH_IMG_PRO_M_OTHELLO', PATH_IMG . 'sm_othello.png');
 define('PATH_IMG_PRO_M_TANK', PATH_IMG . 'sm_tank.png');
@@ -121,6 +122,7 @@ define('PATH_IMG_PRO_M_YOPPARATTER', PATH_IMG . 'sm_yopparatter.png');
 define('PATH_IMG_PRO_M_BIRTHDAY', PATH_IMG . 'sm_birthday.png');
 define('PATH_IMG_PRO_M_NENSYATTER', PATH_IMG . 'sm_nensya.png');
 define('PATH_IMG_PRO_M_ELZUP', PATH_IMG . 'sm_elzup.png');
+define('PATH_IMG_PRO_M_IERUKANA', PATH_IMG . 'sm_ierukana.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
@@ -137,6 +139,7 @@ define('TECHTAG_PROCESSING', 'processing');
 // metaLang
 define('TECHTAG_JQUERY', 'jQuery');
 define('TECHTAG_LESS', 'LESS');
+define('TECHTAG_COFFEESCRIPT', 'CoffeeScript');
 define('TECHTAG_PROCESSING_JS', 'processing.js');
 // framework
 define('TECHTAG_CODEIGNITER', 'CodeIgniter');
@@ -166,6 +169,7 @@ define('TECHTAG_INTELLIJIDEA', 'IntelliJ IDEA');
 define('TECHTAG_VIM', 'Vim');
 // version control
 define('TECHTAG_GIT', 'git');
+define('TECHTAG_GRUNT', 'grunt');
 
 /**
  * production type
