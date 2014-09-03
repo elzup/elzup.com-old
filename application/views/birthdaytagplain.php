@@ -5,7 +5,7 @@ define('RECT_SIZE_W', 40);
 define('RECT_SIZE_H', 10);
 ?>
 
-<svg class="svg-panel birthday-log-svg">
+<svg class="birthday-log-svg">
 <g transform="translate(5,0)">
 <?php
 $all_num = 2;
