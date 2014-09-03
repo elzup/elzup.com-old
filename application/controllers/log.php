@@ -25,7 +25,7 @@ class Log extends CI_Controller
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));
-		$this->load->view('navbar');
+		$this->load->view('navbar', array('current_path' => PATH_LOG));
 		$this->load->view('logpage');
 		$this->load->view('bodywrapper_foot');
 		$this->load->view('foot', array('jss' => array('logpage')));

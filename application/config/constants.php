@@ -54,6 +54,9 @@ define('META_KEYWORDS', 'elzup,えるざっぷ');
 
 /* path */
 define('PATH_TOP', './');
+define('PATH_ME', './me');
+define('PATH_PORT', './port');
+define('PATH_LOG', './log');
 
 define('PATH_JS', 'js/');
 define('PATH_GOOGLE', 'google');

@@ -38,6 +38,7 @@ for ($i = -1; $i <= 7; $i++) {
 			if ($date == date('md')) {
 				$td_class = 'today';
 			}
+			$url = 'https://www.google.co.jp/search?q=' . urlencode($c->name) . '&ie=UTF-8&hl=ja&tbm=isch';
 			?>
 			<tr>
 				<?php if ($j == 0) { ?>
@@ -46,7 +47,7 @@ for ($i = -1; $i <= 7; $i++) {
 					</td>
 				<?php } ?>
 				<td>
-					<p class="name"><?= $c->name ?></p>
+					<p class="name"><a href="<?= $url ?>" target="_blank"><?= $c->name ?></a></p>
 					<p class="title"><?= $c->title ?></p>
 				</td>
 			</tr>

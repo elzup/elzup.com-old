@@ -1,6 +1,17 @@
 <?php
 // TODO: import json
-$tags = explode(",", 'Webサイト制作,ゲームプログラミング,Vim,Firefox,ArchLinux,Minecraft,オセロ,将棋,ルービックキューブ,アニメ');
+$tags = array(
+	'Webサイト制作' => './port',
+	'ゲームプログラミング' => '',
+	'Vim' => '//github.com/elzzup/dotfiles/blob/master/.vimrc',
+	'Firefox' => '',
+	'ArchLinux' => '',
+	'Minecraft' => '//elzup.tumblr.com/minecraft',
+	'オセロ' => '',
+	'将棋' => '',
+	'ルービックキューブ' => '//elzup.tumblr.com/cube',
+	'アニメ' => '',
+);
 
 class AccountRecord {
 
@@ -26,7 +37,6 @@ $account_list = array(
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
 //	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
-
 ?>
 <div class="content">
 	<h1 class="content-title">プロフィール</h1>
@@ -43,8 +53,8 @@ $account_list = array(
 			<div class="right-box">
 				<div class="param">
 					<h4>趣味</h4>
-					<?php foreach ($tags as $tag) { ?>
-						<span class="tag"><?= $tag ?></span>
+					<?php foreach ($tags as $tag => $url) { ?>
+						<span class="tag"><?= $url ? '<a href="' . $url . '">' . $tag . '</a>' : $tag ?></span>
 					<?php } ?>
 				</div>
 				<div class="param">

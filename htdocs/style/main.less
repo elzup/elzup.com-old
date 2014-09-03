@@ -27,6 +27,35 @@ a {
     &:visited {
         color: #222;
     }
+
+    &.active {
+        pointer-events: none;
+        text-decoration: none;
+    }
+}
+
+#navbar {
+    a.menu {
+        padding-left: 5px;
+        margin-left: 15px;
+
+        &.me {
+            .menu-item(red);
+        }
+        &.port {
+            .menu-item(darkorange);
+        }
+        &.log {
+            .menu-item(gold);
+        }
+    }
+}
+
+.menu-item(@col) {
+    &:hover {
+        color: @col;
+    }
+    border-left: solid 1px @col;
 }
 
 .content {
@@ -360,7 +389,8 @@ a {
                 }
                 padding-left: 5px;
                 .title {
-                    margin-left: 10px;
+                    margin-left: 0.8px;
+                    font-size: 10px;
                 }
 
                 &.today {
