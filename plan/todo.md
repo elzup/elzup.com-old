@@ -1,27 +1,24 @@
 #TODO's without source code
 ---
+#task
++ 見たアニメの誕生日-修正
++ logpageデザイン統一
 
-#local
-## level1
-+ 見たアニメの誕生日
 
-## level2
+##todo
 + 趣味からリンク
 
-
-+ 将棋ウォーズのログ
-+ エゴサログ
 + コミットログ
 
-
-## level3
-+ 見たアニメの誕生日
-
 + 自分のツイートのログ
+
+##option
 + atcoderログ
++ 将棋ウォーズのログ
++ エゴサログ
 
-#server
-
+#end
++ 見たアニメの誕生日
 ---
 
 ## portfolio list

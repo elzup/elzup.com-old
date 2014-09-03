@@ -29,6 +29,8 @@ class Scrape_model extends CI_Model {
 					$gameinfo->result = 'draw';
 				}
 				$gameinfo->time = $cont->find('[style=float:left]', 0)->innertext;
+				$a = $cont->find('.short_btn1', 0)->find('a', 0);
+				$gameinfo->url = $a->href;
 				$game = new Dsyogilogobj($gameinfo);
 				$games[$game->get_timedate()][] = $game;
 			}

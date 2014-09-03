@@ -174,7 +174,7 @@ a {
             }
         }
         .my-hp {
-            border-radius: 3px 3px 20px;
+            border-radius: 20px 3px;
         }
     }
     .row-toppane-title {
@@ -319,31 +319,42 @@ a {
         }
         .dsyogi-log-pane {
             float: left;
-            .size(67px, 2.6em);
-            border-bottom: solid 1px;
-            border-right: solid 1px;
+            .size(2em, 2.4em);
+            border-top: solid 3px;
             margin: 1px;
-            padding: 0.2em;
-            border-radius: 0 0 17px 0;
+            padding: none;
+            border-radius: 0.2em;
             &.win {
-                .result-pane(red, #FFD7DD);
+                .result-pane(orange);
             }
             &.lose {
-                .result-pane(blue, #D7DDFF);
+                .result-pane(darkslateblue);
             }
             &.draw {
-                .result-pane(green, #D7FFDD);
+                .result-pane(seagreen);
+            }
+
+            a {
+                text-decoration: none;
+                display: block;
             }
 
             .vs {
-                float: right;
+                text-align: center;
+                display: block;
+                .rank {
+                    font-size: 15px;
+                }
             }
         }
     }
 
     .birthday-box {
+        .birthday-log-svg {
+            height: 10px;
+        }
         table.birthday-log {
-            td[colspan] {
+            td[rowspan] {
                 vertical-align: top;
             }
             td {
@@ -360,14 +371,19 @@ a {
     }
 }
 
-.result-pane(@color, @bgcolor) {
-    >.result {
-        color: @color;
-        text-shadow: 4px 2px 0px white;
+.result-pane(@color) {
+    > a >.result {
+        text-align: center;
+        color: #fff;
+        background: @color;
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+/*        text-shadow: 4px 2px 0px white; */
     }
-    background: @color + #DDD;
+    background: @color + #aaa;
     border-color: @color;
-    box-shadow: -5px -1px 5px rgba(256,256,256,.5) inset;
+/*    box-shadow: -5px -1px 5px rgba(256,256,256,.5) inset; */
 }
 
 

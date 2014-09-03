@@ -1,25 +1,12 @@
 
 !function ($) {
     $(function() {
-        // どうぶつしょうぎログ非同期
-        $.ajax({
-            type: "GET",
-            url: "./log/dsyogiplain", //PHPを呼び出す
-            data: "", //記入されたデータを渡す
-            success: function(plain){
-                console.log(plain);
-                $('#async-dsyogi').html(plain);
-            },
-            error:function(){
-                $('#async-dsyogi').html('読み込みに失敗しました');
-            }
-        });
-
         // Tweetlog非同期
         $.ajax({
             type: "GET",
             url: "./log/tweetlogplain", //PHPを呼び出す
             success: function(plain){
+                console.log(plain);
                 $('#async-tweetlog').html(plain);
 
                 // Tweetlog 表示切り替えボタン
@@ -39,12 +26,24 @@
             }
         });
 
+        // どうぶつしょうぎログ非同期
+        $.ajax({
+            type: "GET",
+            url: "./log/dsyogiplain", //PHPを呼び出す
+            data: "", //記入されたデータを渡す
+            success: function(plain){
+                $('#async-dsyogi').html(plain);
+            },
+            error:function(){
+                $('#async-dsyogi').html('読み込みに失敗しました');
+            }
+        });
+
         // birthdayAPI処理の呼び出し
         $.ajax({
             type: "GET",
             url: "./log/birthdayplain", //PHPを呼び出す
             success: function(plain){
-                console.log(plain);
                 $('#async-birthday').html(plain);
             },
             error:function(){
