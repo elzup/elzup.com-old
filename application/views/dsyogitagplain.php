@@ -12,7 +12,7 @@ foreach ($ds_log as $date => $logs) {
 			foreach ($logs as $log) {
 				?>
 				<div class="dsyogi-log-pane <?= $log->result ?>">
-					<a href="<?= $log->url ?>">
+					<a href="<?= $log->url ?>" target="_blank">
 						<span class="result"><?= $log->get_result_char() ?></span>
 						<span class="vs">
 							<span class="rank"><?= $log->opponent_rank ?></span>

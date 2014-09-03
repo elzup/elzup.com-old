@@ -9,6 +9,8 @@ define('RECT_SIZE_H', 10);
 <g transform="translate(5,0)">
 <?php
 $all_num = 2;
+$x = RECT_SIZE_W + 10;
+echo '<rect y="0" x="' . $x . '" fill="orange" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H / 2 . '" />';
 for ($i = -1; $i <= 7; $i++) {
 	$date = date('md', strtotime($i . 'day'));
 	$p = 0;
@@ -19,7 +21,7 @@ for ($i = -1; $i <= 7; $i++) {
 	$s = $p * 100 + 0;
 	$v = 90 - (50 * $p);
 	$x = ($i + 1) * (RECT_SIZE_W + 10);
-	echo '<rect y="0" x="' . $x . '" fill="hsl(' . $h . ', ' . $s . '%, ' . $v . '%)" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
+	echo '<rect y="8" x="' . $x . '" fill="hsl(' . $h . ', ' . $s . '%, ' . $v . '%)" stroke="#fff" width="' . RECT_SIZE_W . '" height="' . RECT_SIZE_H . '" />';
 }
 ?>
 </g>
@@ -32,10 +34,14 @@ for ($i = -1; $i <= 7; $i++) {
 			continue;
 		}
 		foreach ($charactors[$date] as $j => $c) {
+			$td_class = '';
+			if ($date == date('md')) {
+				$td_class = 'today';
+			}
 			?>
 			<tr>
 				<?php if ($j == 0) { ?>
-					<td rowspan="<?= count($charactors[$date]) ?>">
+				<td rowspan="<?= count($charactors[$date]) ?>" class="<?= $td_class ?>">
 						<span class="date4"><?= $date ?></span>
 					</td>
 				<?php } ?>

@@ -351,16 +351,20 @@ a {
 
     .birthday-box {
         .birthday-log-svg {
-            height: 10px;
+            height: 20px;
         }
         table.birthday-log {
-            td[rowspan] {
-                vertical-align: top;
-            }
             td {
+                &[rowspan] {
+                    vertical-align: top;
+                }
                 padding-left: 5px;
                 .title {
                     margin-left: 10px;
+                }
+
+                &.today {
+                    border-right: solid orange;
                 }
             }
         }
@@ -504,6 +508,11 @@ a {
 
 .icon-jump {
     font-size: 25px;
+    text-decoration: none;
+    text-shadow: 1px 2px 1px;
+    &.icon-jump-min {
+        font-size: 1em;
+    }
 }
 
 .shift-top {

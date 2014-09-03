@@ -4,6 +4,7 @@
 + 見たアニメの誕生日-修正
 + logpageデザイン統一
 
++ birthdaylog todayの確認
 
 ##todo
 + 趣味からリンク

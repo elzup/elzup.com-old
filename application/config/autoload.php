@@ -92,8 +92,8 @@ $autoload['helper'] = array(
 */
 
 $autoload['config'] = array(
+	'my_googleapis',
 );
-
 
 /*
 | -------------------------------------------------------------------
