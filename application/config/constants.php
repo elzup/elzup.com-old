@@ -198,7 +198,8 @@ define('MYSQL_DATETIME_FORMAT', 'Y-m-d H:i:s');
  * URLs
  */
 
-define('URL_DOBUTSUSYOGI_MYHISTORYPAGE', 'http://shogiwars.heroz.jp/a/users/history/elzup?gtype=a');
+define('URL_DOBUTSUSYOGI_MYHISTORYPAGE', 'http://shogiwars.heroz.jp/a/users/elzup');
+define('URL_DOBUTSUSYOGI_MYHISTORYPAGE_HISTORY', 'http://shogiwars.heroz.jp/a/users/history/elzup?gtype=a');
 define('DOBUTSUSYOGI_NAME',  'elzup');
 
 /* End of file constants.php */

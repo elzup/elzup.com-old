@@ -1,6 +1,7 @@
 $ ->
     $async_tweetlog = $('#async-tweetlog')
     $async_dsyogi = $('#async-dsyogi')
+    $async_dsyogi_prof = $('#async-dsyogi-prof')
     $async_birthday = $('#async-birthday')
     # Tweetlog非同期
     $.ajax({
@@ -20,6 +21,17 @@ $ ->
                     $('.svg-panel').hide()
         error: ->
             $async_tweetlog.html('読み込みに失敗しました')
+    })
+
+        # どうぶつしょうぎログプロフィール非同期
+    $.ajax({
+        type: "GET"
+        url: "./log/dsyogiprofplain" #PHPを呼び出す
+        data: "" #記入されたデータを渡す
+        success: (plain) ->
+            $async_dsyogi_prof.html(plain)
+        error: ->
+            $async_dsyogi_prof.html('読み込みに失敗しました')
     })
 
         # どうぶつしょうぎログ非同期

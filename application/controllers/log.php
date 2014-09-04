@@ -37,6 +37,12 @@ class Log extends CI_Controller
 		$this->load->view('dsyogitagplain', array('ds_log' => $ds_log));
 	}
 
+	public function dsyogiprofplain() {
+		$this->load->model('Scrape_model', 'scrape');
+		$prof = $this->scrape->get_dobutusyogi_prof();
+		$this->load->view('dsyogiproftagplain', array('prof' => $prof));
+	}
+
 	public function tweetlogplain() {
 		$this->load->model('Tweetlog_model', 'tweetlog', TRUE);
 		$tl_log = $this->tweetlog->get_tweet_logs();
