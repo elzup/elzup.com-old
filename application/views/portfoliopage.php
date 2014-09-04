@@ -231,7 +231,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム');
 						<?php foreach ($pl as $p) { ?>
 							<li>
 								<div class="btn-jump" for="#pi<?= $p->id ?>">
-									<img class="icon" src="<?= base_url($p->get_icon_url()) ?>" />
+									<div class="icon icon-<?= "" + $p->id ?>"></div>
 									<span class="name"><?= $p->name ?></span>
 								</div>
 							</li>
