@@ -1,2 +1,3 @@
 User-Agent : *
 Sitemap : http://elzup.com/sitemap.xml
+Sitemap : http://elzup.com/mobile/sitemap.xml

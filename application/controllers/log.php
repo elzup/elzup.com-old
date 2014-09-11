@@ -1,7 +1,7 @@
 <?php
 
-class Log extends CI_Controller
-{
+class Log extends CI_Controller {
+
 	/** @var Tweetlog_model */
 	public $tweetlog;
 
@@ -11,13 +11,11 @@ class Log extends CI_Controller
 	/** @var Birthday_model */
 	public $birthday;
 
-	public function __construct()
-	{
+	public function __construct() {
 		parent::__construct();
 	}
 
-	public function index()
-	{
+	public function index() {
 		$meta = new Metaobj();
 		$meta->url = base_url();
 		$meta->set_title("ログ");

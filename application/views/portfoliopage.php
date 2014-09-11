@@ -245,7 +245,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム');
 				<div id="pi<?= $p->id ?>" class="production-item half">
 					<div class="img-box">
 						<a href="<?= $p->img_src ?>" rel="lightbox">
-							<img class="sc" src="<?= $p->img_src ?>" alt="<?= $p->name ?>" />
+							<img class="sc" src="<?= $p->img_src ?>" alt="elzup.com <?= $p->name ?>" />
 						</a>
 					</div>
 					<div class="detail-box">

@@ -2,6 +2,7 @@
 system/
 
 htdocs/google/
+htdocs/mobile/
 htdocs/pro/
 htdocs/images/dust/
 application/controllers/admin.php

@@ -39,13 +39,13 @@ function tag_cell($k, $pane) {
 					<a class="" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->name ?></span></a>
 				</p>
 				<?php if ($pane->link_icon) { ?>
-					<div class="link-logo"><img src="<?= $pane->link_icon ?>"></div>
+					<div class="link-logo"><img src="<?= $pane->link_icon ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
 				<?php } ?>
 			</div>
 			<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
 				<p><a class="" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->title ?></span></a></p>
 				<?php if ($pane->link_icon) { ?>
-					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>"></div>
+					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
 				<?php } ?>
 			</div>
 		<?php } else { ?>
@@ -59,7 +59,7 @@ function print_titlebox() {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
-			<a href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" /></a>
+			<a href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
 			<h1>elzup.com</h1>
 		</div>
 	</div>
@@ -71,7 +71,7 @@ $panes = array();
 $panes[01] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
 $panes[04] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
 $panes[10] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
-$panes[11] = new Pane("Profile", "自己紹介", PATH_ME, 'red');
+$panes[11] = new Pane("Profile", "<strong>elzup</strng>について", PATH_ME, 'red');
 $panes[12] = new Pane("Portfolio", "制作物", PATH_PORT, 'darkorange');
 $panes[13] = new Pane("Log", "ログ", PATH_LOG, 'gold');
 $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', PATH_IMG_ICON_TUMBLR);

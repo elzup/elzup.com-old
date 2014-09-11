@@ -19,6 +19,25 @@
  *
  */
 
+/**
+ * url正規化
+ */
+if($_SERVER['REQUEST_URI'] != "/" && substr($_SERVER['REQUEST_URI'],-1) == '/'){
+    header("Location: http://elzup.com".substr($_SERVER['REQUEST_URI'],0,-1), TRUE, 301);
+    exit;
+}
+
+if(substr($_SERVER['SERVER_NAME'],0,3) == "www"){
+    header("Location: http://elzup.com".$_SERVER['REQUEST_URI'], TRUE, 301);
+    exit;
+}
+
+if(substr($_SERVER['REQUEST_URI'],-10) == "index.html"){
+    header("Location: http://elzup.com".substr($_SERVER['REQUEST_URI'],0,-10), TRUE, 301);
+    exit;
+}
+
+
 $home = '../';
 
 $environment_path = $home . 'application/config/environment.php';
