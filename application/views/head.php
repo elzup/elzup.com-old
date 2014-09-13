@@ -28,7 +28,7 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], "MSIE 8")) {
 
 		<?php
 		if (ENVIRONMENT !== 'development') {
-			include_once(PATH_GOOGLE_ANALYTICS);
+			echo tag_script_js(PATH_GOOGLE_ANALYTICS);
 		}
 		?>
 	</head>

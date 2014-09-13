@@ -35,17 +35,19 @@ function tag_cell($k, $pane) {
 	<div class="cell cell-<?= $k ?> <?= empty($pane) ? 'hidden-xs' : '' ?>">
 		<?php if (!empty($pane)) { ?>
 			<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>">
-				<p>
-					<a class="" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->name ?></span></a>
-				</p>
 				<?php if ($pane->link_icon) { ?>
+					<p><a class="" data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
 					<div class="link-logo"><img src="<?= $pane->link_icon ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
+				<?php } else { ?>
+					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
 				<?php } ?>
 			</div>
 			<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
-				<p><a class="" href="<?= $pane->url ?>"<?= $pane->link_icon ? ' target="_blank"' : "" ?>><span><?= $pane->title ?></span></a></p>
 				<?php if ($pane->link_icon) { ?>
+					<p><a class="" data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
 					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
+				<?php } else { ?>
+					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
 				<?php } ?>
 			</div>
 		<?php } else { ?>
@@ -59,7 +61,7 @@ function print_titlebox() {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
-			<a href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
+			<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
 			<h1>elzup.com</h1>
 		</div>
 	</div>

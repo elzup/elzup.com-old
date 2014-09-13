@@ -19,6 +19,7 @@ class Metaobj
 	{
 		$this->title = SITE_NAME;
 		$this->title_meta = SITE_NAME;
+		$this->url = base_url(uri_string());
 		$this->keywords = META_KEYWORDS ? explode(',', META_KEYWORDS) : array();
 		$this->type = 'article';
 		$this->no_meta = FALSE;
@@ -62,7 +63,6 @@ class Metaobj
 // call methods to setup several page case
 	public function setup_top()
 	{
-		$this->url = base_url();
 		$this->description = SITE_DESCRIPTION;
 		$this->type = 'website';
 	}

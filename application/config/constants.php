@@ -60,7 +60,7 @@ define('PATH_LOG', './log');
 
 define('PATH_JS', 'js/');
 define('PATH_GOOGLE', 'google');
-define('PATH_GOOGLE_ANALYTICS', PATH_GOOGLE . '/analyticstracking.php');
+define('PATH_GOOGLE_ANALYTICS', PATH_GOOGLE . '/analyticstracking.js');
 define('PATH_IMG', 'images/');
 define('PATH_LIB', 'lib/');
 define('PATH_LIB_MAGIC', PATH_LIB . 'magic.css');

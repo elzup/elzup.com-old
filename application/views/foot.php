@@ -14,10 +14,12 @@
 
 <?php
 if (!empty($jss)) {
-    foreach ($jss as $js) {
-        ?>
-        <script src="<?= base_url(PATH_JS . "{$js}.js") ?>" type="text/javascript"></script>
-        <?php
-    }
+	foreach ($jss as $js) {
+		?>
+		<script src="<?= base_url(PATH_JS . "{$js}.js") ?>" type="text/javascript"></script>
+		<?php
+	}
 }
 ?>
+</body>
+</html>
