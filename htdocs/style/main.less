@@ -153,6 +153,21 @@ a {
         height: 100px;
         line-height: 100px;
 
+        &.message {
+            line-height: 30px;
+            >div {
+                padding: 10px;
+                height: 80px;
+            }
+
+            &.cell-col-2 {
+                width: 36%;
+            }
+            &.cell-col-3 {
+                width: 56%;
+            }
+        }
+
         > div {
             display:block;
             background-color: @col_pane_back;
@@ -576,6 +591,14 @@ a {
 
 .shift-top {
     margin-top: 30px !important;
+}
+
+.hide {
+    display:none;
+}
+
+.message {
+    color: white;
 }
 
 @import "./md.less";

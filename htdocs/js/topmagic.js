@@ -6,21 +6,25 @@
     $('.front').show();
     $('.back').hide();
     $(".cell").hover(function() {
-      var back, front;
+      var back, front, id;
       $(this).children('div').removeClass("off");
       front = $(this).children('.front');
       back = $(this).children('.back');
       front.addClass("on");
+      id = $(this).attr('data-id');
+      $('.message-' + id).show();
       return setTimeout(function() {
         front.hide();
         return back.show().addClass("on");
       }, STOP_TIME);
     }, function() {
-      var back, front;
+      var back, front, id;
       $(this).children('div').removeClass("on");
       front = $(this).children('.front');
       back = $(this).children('.back');
       back.addClass("off");
+      id = $(this).attr('data-id');
+      $('.message-' + id).hide();
       return setTimeout(function() {
         back.hide();
         return front.show().addClass("off");

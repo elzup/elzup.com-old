@@ -31,28 +31,59 @@ class Pane {
  * @param Pane[] $pane
  */
 function tag_cell($k, $pane) {
+	$classs = "cell cell-{$k} ";
+	$classs .= empty($pane) ? 'hidden-xs ' : '';
+	if ($k == '13') {
+		$classs .= 'cell-col-2 message message-top';
+	} else if ($k == '30') {
+		$classs .= 'cell-col-3 message message-under';
+	}
+	if ($k == '14' || $k == '31' || $k == '32') {
+		return;
+	}
 	?>
-	<div class="cell cell-<?= $k ?> <?= empty($pane) ? 'hidden-xs' : '' ?>">
+	<div class="<?= $classs ?>" data-id="<?= $k ?>">
 		<?php if (!empty($pane)) { ?>
-			<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>">
-				<?php if ($pane->link_icon) { ?>
+			<?php if ($pane->link_icon) { ?>
+				<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>">
 					<p><a class="" data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
 					<div class="link-logo"><img src="<?= $pane->link_icon ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
-				<?php } else { ?>
-					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
-				<?php } ?>
-			</div>
-			<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
-				<?php if ($pane->link_icon) { ?>
+				</div>
+				<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
 					<p><a class="" data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
 					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
-				<?php } else { ?>
+				</div>
+			<?php } else { ?>
+				<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>" data-id="<?= $k ?>">
+					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
+				</div>
+				<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
 					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
-				<?php } ?>
+				</div>
+				<?php
+			}
+		} elseif ($k == '13') {
+			?>
+			<div>
+				<div class="hide message-0">自己紹介<br />アカウント一覧など</div>
+				<div class="hide message-1">今までに作った作品の紹介<br />随時追加</div>
+				<div class="hide message-2">記録したものや取ってきた<br />自分用のログを表示するページ</div>
 			</div>
-		<?php } else { ?>
-			<div></div>
-		<?php } ?>
+			<?php
+		} else if ($k == '30') {
+			?>
+			<div>
+				<div class="hide message-22">コード置き場</div>
+				<div class="hide message-23">主に大学のことなどでつぶやいてるアカウント</div>
+				<div class="hide message-24">画像倉庫<br />アイコン,マイクラ,ルーびっ級キューブなど</div>
+				<div class="hide message-33">ネタで作ったもの置き場</div>
+				<div class="hide message-34">技術メモなどをしているブログ</div>
+			</div>
+			<?php
+		} else {
+			echo '<div></div>';
+		}
+		?>
 	</div>
 	<?php
 }
@@ -61,7 +92,8 @@ function print_titlebox() {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
-			<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
+			<a href="#" href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
+			<!--<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>-->
 			<h1>elzup.com</h1>
 		</div>
 	</div>
@@ -70,14 +102,15 @@ function print_titlebox() {
 
 /** @var $pane Pane[] */
 $panes = array();
-$panes[01] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
-$panes[04] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
-$panes[10] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
-$panes[11] = new Pane("Profile", "<strong>elzup</strng>について", PATH_ME, 'red');
-$panes[12] = new Pane("Portfolio", "制作物", PATH_PORT, 'darkorange');
-$panes[13] = new Pane("Log", "ログ", PATH_LOG, 'gold');
+$panes[00] = new Pane("Profile", "<strong>elzup</strong>について", PATH_ME, 'red');
+$panes[01] = new Pane("Portfolio", "制作物", PATH_PORT, 'darkorange');
+$panes[02] = new Pane("Log", "ログ", PATH_LOG, 'gold');
+
+$panes[22] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
+$panes[23] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
 $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', PATH_IMG_ICON_TUMBLR);
-$panes[33] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', TRUE);
+$panes[33] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
+$panes[34] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', TRUE);
 ?>
 <div class="content">
     <div class="toppane hidden-xs">

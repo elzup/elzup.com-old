@@ -10,6 +10,8 @@ $ ->
         front = $(@).children('.front')
         back = $(@).children('.back')
         front.addClass("on")
+        id = $(@).attr('data-id')
+        $('.message-' + id).show()
         setTimeout( ->
             front.hide()
             back.show().addClass("on")
@@ -19,6 +21,8 @@ $ ->
         front = $(@).children('.front')
         back = $(@).children('.back')
         back.addClass("off")
+        id = $(@).attr('data-id')
+        $('.message-' + id).hide()
         setTimeout( ->
             back.hide()
             front.show().addClass("off")
