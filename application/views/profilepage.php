@@ -39,7 +39,7 @@ $account_list = array(
 );
 ?>
 <div class="content">
-	<h1 class="content-title">プロフィール</h1>
+	<h1 class="content-title">プロフィール of elzup</h1>
 	<div class="content-body">
 		<div class="profile row-box">
 			<div class="left-box">
@@ -48,7 +48,7 @@ $account_list = array(
 					<img id="reload-icon" class="icon-mini" src="<?= PATH_IMG_RELOAD ?>">
 				</p>
 				<h2>えるざっぷ</h2>
-				<span class="rub">elzup</span>
+				<span class="rub"><strong>elzup</strong></span>
 			</div>
 			<div class="right-box">
 				<div class="param">

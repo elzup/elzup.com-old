@@ -186,14 +186,14 @@ EOF
 		, array(TECHTAG_PHP, TECHTAG_JAVA, TECHTAG_PROCESSING, TECHTAG_BOOTSTRAP, TECHTAG_CODEIGNITER, TECHTAG_TWITTERAPI, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_INTELLIJIDEA, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_NENSYATTER, '//app.elzup.com/nn'
 	),
 	new Production(
-		'elzup.com', 'このホームページ', PRO_TYPE_SERIVICE, <<<EOF
+		'<strong>elzup.com</strong>', 'このホームページ', PRO_TYPE_SERIVICE, <<<EOF
 		Bootstrapは使わずに,できるだけライブラリに頼らないように作った.これからも進化を続けていく
 EOF
 		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_JQUERY, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_ELZUP
 	),
 	new Production(
 		'言えるかな？', '言えるかなゲーム', PRO_TYPE_SERIVICE, <<<EOF
-		言えるかなゲーム(山手線ゲーム)を作ったり遊んだりできるサイト	
+		言えるかなゲーム(山手線ゲーム)を作ったり遊んだりできるサイト	,seo対策やRSS配信ping送信などや非同期通信での登録フォームUIなど力を入れた
 EOF
 		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_BOOTSTRAP, TECHTAG_JQUERY, TECHTAG_COFFEESCRIPT, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT, TECHTAG_GRUNT), '2014年8月', PATH_IMG_PRO_IERUKANA, '//ierukana.elzup.com'
 	),
@@ -220,7 +220,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム');
 ?>
 
 <div class="content">
-	<h1 class="content-title">ポートフォリオ</h1>
+	<h1 class="content-title">ポートフォリオ of elzup</h1>
 	<p class="page-discription">今までに作ったもの</p>
 	<div class="content-body">
 		<div class="production-pagelinks">

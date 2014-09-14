@@ -18,9 +18,8 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], "MSIE 8")) {
 		<link href='<?= FONT_GOOGLE_ALDRICH ?>' rel='stylesheet' type='text/css' />
 		<link rel="stylesheet" type="text/css" href="<?= URL_YAHOO_RESET_CSS ?>" />
 
+		<link rel="shortcut icon" href="<?= base_url('favicon.ico') ?>">
 		<link rel="stylesheet" type="text/css" href="<?= base_url(PATH_LIB_LIGHTBOX_CSS) ?>" />
-
-		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="<?= base_url(PATH_STYLE_CSS_MAIN) ?>" media="only screen" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

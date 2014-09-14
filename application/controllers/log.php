@@ -18,8 +18,8 @@ class Log extends CI_Controller {
 	public function index() {
 		$meta = new Metaobj();
 		$meta->url = base_url();
-		$meta->set_title("ログ");
-		$meta->description = "えるざっぷについてのログ";
+		$meta->set_title("ログ - elzup.com");
+		$meta->description = "えるざっぷについてのログ elzup.com";
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));

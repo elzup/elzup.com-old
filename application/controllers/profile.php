@@ -13,8 +13,8 @@ class Profile extends CI_Controller
 
 		$meta = new Metaobj();
 		$meta->url = base_url();
-		$meta->set_title("プロフィール");
-		$meta->description = "えるざっぷという人物";
+		$meta->set_title("プロフィール - elzup.com");
+		$meta->description = "えるざっぷという人物について elzup.com";
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));

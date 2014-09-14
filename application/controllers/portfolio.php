@@ -13,8 +13,8 @@ class Portfolio extends CI_Controller
 
 		$meta = new Metaobj();
 		$meta->url = base_url();
-		$meta->set_title("ポートフォリオ");
-		$meta->description = "えるざっぷの制作物";
+		$meta->set_title("ポートフォリオ - elzup.com");
+		$meta->description = "えるざっぷの制作物の紹介 elzup.com";
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));

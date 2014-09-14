@@ -73,11 +73,11 @@ function tag_cell($k, $pane) {
 		} else if ($k == '30') {
 			?>
 			<div>
-				<div class="hide message-22">コード置き場</div>
+				<div class="hide message-22">コード置き場<br />portfolioで紹介しているものなど</div>
 				<div class="hide message-23">主に大学のことなどでつぶやいてるアカウント</div>
-				<div class="hide message-24">画像倉庫<br />アイコン,マイクラ,ルーびっ級キューブなど</div>
-				<div class="hide message-33">ネタで作ったもの置き場</div>
-				<div class="hide message-34">技術メモなどをしているブログ</div>
+				<div class="hide message-24">画像倉庫<br />アイコン,マイクラ,ルービックキューブなど</div>
+				<div class="hide message-33">技術メモなどをしているブログ</div>
+				<div class="hide message-34">ネタで作ったもの置き場</div>
 			</div>
 			<?php
 		} else {
@@ -92,7 +92,7 @@ function print_titlebox() {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
-			<a href="#" href="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
+			<a href="//elzup.tumblr.com/icons" target="_blank"><span class="hide">elzup icon </span><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
 			<!--<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>-->
 			<h1>elzup.com</h1>
 		</div>
