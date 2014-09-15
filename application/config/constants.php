@@ -109,6 +109,7 @@ define('PATH_IMG_PRO_BIRTHDAY', PATH_IMG . 'sc_birthday.png');
 define('PATH_IMG_PRO_NENSYATTER', PATH_IMG . 'sc_nensya.png');
 define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
 define('PATH_IMG_PRO_IERUKANA', PATH_IMG . 'sc_ierukana.png');
+define('PATH_IMG_PRO_LABOATTEND', PATH_IMG . 'sc_laboattend.png');
 
 define('PATH_IMG_PRO_M_OTHELLO', PATH_IMG . 'sm_othello.png');
 define('PATH_IMG_PRO_M_TANK', PATH_IMG . 'sm_tank.png');
@@ -126,6 +127,7 @@ define('PATH_IMG_PRO_M_BIRTHDAY', PATH_IMG . 'sm_birthday.png');
 define('PATH_IMG_PRO_M_NENSYATTER', PATH_IMG . 'sm_nensya.png');
 define('PATH_IMG_PRO_M_ELZUP', PATH_IMG . 'sm_elzup.png');
 define('PATH_IMG_PRO_M_IERUKANA', PATH_IMG . 'sm_ierukana.png');
+define('PATH_IMG_PRO_M_LABOATTEND', PATH_IMG . 'sm_laboattend.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 

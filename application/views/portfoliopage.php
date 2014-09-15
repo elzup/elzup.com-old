@@ -192,13 +192,19 @@ EOF
 		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_JQUERY, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT), '2014年8月', PATH_IMG_PRO_ELZUP
 	),
 	new Production(
-		'言えるかな？', '言えるかなゲーム', PRO_TYPE_SERIVICE, <<<EOF
+		'言えるかな？', '言えるかなゲームで遊ぼう', PRO_TYPE_SERIVICE, <<<EOF
 		言えるかなゲーム(山手線ゲーム)を作ったり遊んだりできるサイト	,seo対策やRSS配信ping送信などや非同期通信での登録フォームUIなど力を入れた
 EOF
 		, array(TECHTAG_PHP, TECHTAG_CODEIGNITER, TECHTAG_BOOTSTRAP, TECHTAG_JQUERY, TECHTAG_COFFEESCRIPT, TECHTAG_LINUX, TECHTAG_NETBEANS, TECHTAG_VIM, TECHTAG_GIT, TECHTAG_GRUNT), '2014年8月', PATH_IMG_PRO_IERUKANA, '//ierukana.elzup.com'
 	),
+	new Production(
+		'TDU12FI研究室希望bot', '研究室希望登録があるたびに通知', PRO_TYPE_BOT, <<<EOF
+		14年度研究室配属希望があるとその研究室の志望者人数と定員数をツイートするTwitterBot.3時間ぐらいで作った
+EOF
+		, array(TECHTAG_PHP, TECHTAG_TWITTERAPI, TECHTAG_LINUX, TECHTAG_VIM), '2014年9月', PATH_IMG_PRO_LABOATTEND, '//twitter.com/tdu12fi'
+	),
 );
-
+http://twitter.com/tdu12fi
 // 種類分け
 $production_kinds = array();
 foreach ($production_list as $pro) {
