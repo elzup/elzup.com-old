@@ -2,4 +2,4 @@
 /** @var $is_shift boolean */
 ?>
 <body>
-	<div id="wrapper" class="<?= @$is_shift ? ' shift-top' : '' ?>">
+	<div id="wrapper"  itemscope itemtype="http://schema.org/SoftwareApplication" class="<?= @$is_shift ? ' shift-top' : '' ?>">

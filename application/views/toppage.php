@@ -45,20 +45,20 @@ function tag_cell($k, $pane) {
 	<div class="<?= $classs ?>" data-id="<?= $k ?>">
 		<?php if (!empty($pane)) { ?>
 			<?php if ($pane->link_icon) { ?>
-				<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>">
-					<p><a class="" data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
+				<div class="front">
+					<p><a data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
 					<div class="link-logo"><img src="<?= $pane->link_icon ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
 				</div>
-				<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
-					<p><a class="" data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
+				<div class="back" style="background: <?= $pane->color ?>;">
+					<p><a data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
 					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
 				</div>
 			<?php } else { ?>
-				<div class="front <?= $pane->link_icon ? '' : "my-hp" ?>" data-id="<?= $k ?>">
-					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
+				<div class="front my-hp" data-id="<?= $k ?>">
+					<p><a itemprop="applicationCategory" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
 				</div>
-				<div class="back <?= $pane->link_icon ? '' : "my-hp" ?>" style="background: <?= $pane->color ?>;">
-					<p><a class="" href="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
+				<div class="back my-hp" style="background: <?= $pane->color ?>;">
+					<p><a href="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
 				</div>
 				<?php
 			}
@@ -92,9 +92,9 @@ function print_titlebox() {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
-			<a href="//elzup.tumblr.com/icons" target="_blank"><span class="hide">elzup icon </span><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
+			<a href="//elzup.tumblr.com/icons" target="_blank"><span class="hide">elzup icon </span><img itemprop="image" class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
 			<!--<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>-->
-			<h1>elzup.com</h1>
+			<h1 itemprop="name">elzup.com</h1>
 		</div>
 	</div>
 	<?php
@@ -152,3 +152,7 @@ $panes[34] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', T
 		</div>
     </div>
 </div>
+<meta itemprop="screenshot" content="<?= PATH_IMG_PRO_ELZUP ?>">
+<meta itemprop="datePublished" content="2014-08-01">
+<span itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="elzup"></span>
+<meta itemprop="url" content="http://elzup.com/">
