@@ -203,6 +203,12 @@ EOF
 EOF
 		, array(TECHTAG_PHP, TECHTAG_TWITTERAPI, TECHTAG_LINUX, TECHTAG_VIM), '2014年9月', PATH_IMG_PRO_LABOATTEND, '//twitter.com/tdu12fi'
 	),
+	new Production(
+		'どうぶつしょうぎ解析', 'どうぶつしょうぎ棋譜評価ソフト', PRO_TYPE_SOFTWARE, <<<EOF
+		どうぶつしょうぎの上級者の棋譜を収集して評価値を作った.
+EOF
+		, array(TECHTAG_PHP, TECHTAG_LINUX, TECHTAG_LESS, TECHTAG_JQUERY, TECHTAG_COFFEESCRIPT, TECHTAG_MYSQL, TECHTAG_VIM, TECHTAG_GIT), '2014年9月', PATH_IMG_PRO_DSHOGI, '//dshogi.elzup.com'
+	),
 );
 http://twitter.com/tdu12fi
 // 種類分け

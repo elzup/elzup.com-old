@@ -110,24 +110,7 @@ define('PATH_IMG_PRO_NENSYATTER', PATH_IMG . 'sc_nensya.png');
 define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
 define('PATH_IMG_PRO_IERUKANA', PATH_IMG . 'sc_ierukana.png');
 define('PATH_IMG_PRO_LABOATTEND', PATH_IMG . 'sc_laboattend.png');
-
-define('PATH_IMG_PRO_M_OTHELLO', PATH_IMG . 'sm_othello.png');
-define('PATH_IMG_PRO_M_TANK', PATH_IMG . 'sm_tank.png');
-define('PATH_IMG_PRO_M_TREND', PATH_IMG . 'sm_trend.png');
-define('PATH_IMG_PRO_M_ICONSTAGE', PATH_IMG . 'sm_iconstage.png');
-define('PATH_IMG_PRO_M_JENGA', PATH_IMG . 'sm_jenga.png');
-define('PATH_IMG_PRO_M_ICHIYA', PATH_IMG . 'sm_wolf.png');
-define('PATH_IMG_PRO_M_TOKIMIKUJI', PATH_IMG . 'sm_tokimikuji.png');
-define('PATH_IMG_PRO_M_ROLLCAKE', PATH_IMG . 'sm_rollcake.png');
-define('PATH_IMG_PRO_M_TOHYO', PATH_IMG . 'sm_tohyo.png');
-define('PATH_IMG_PRO_M_ASN', PATH_IMG . 'sm_asn.png');
-define('PATH_IMG_PRO_M_CLAUD', PATH_IMG . 'sm_claud.png');
-define('PATH_IMG_PRO_M_YOPPARATTER', PATH_IMG . 'sm_yopparatter.png');
-define('PATH_IMG_PRO_M_BIRTHDAY', PATH_IMG . 'sm_birthday.png');
-define('PATH_IMG_PRO_M_NENSYATTER', PATH_IMG . 'sm_nensya.png');
-define('PATH_IMG_PRO_M_ELZUP', PATH_IMG . 'sm_elzup.png');
-define('PATH_IMG_PRO_M_IERUKANA', PATH_IMG . 'sm_ierukana.png');
-define('PATH_IMG_PRO_M_LABOATTEND', PATH_IMG . 'sm_laboattend.png');
+define('PATH_IMG_PRO_DSHOGI', PATH_IMG . 'sc_dshogi.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
