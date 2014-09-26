@@ -253,6 +253,7 @@ a {
     ul {
         .float-wrap();
         li {
+            list-style: none;
             cursor: pointer;
             width: @w;
             height: 140px;
@@ -573,13 +574,29 @@ a {
 
 
 .help-panel {
-    width: 40%;
+    width: 100%;
     ul.help-list {
         >li {
-            .description {
-                float: right;
-            }
+            list-style: none;
             line-height: 1.6em;
+            height: 3em;
+            >div {
+                >div {
+                    float: left;
+                    &.help-top {
+                        width: 15%;
+                    }
+                    &.description {
+                        width: 30%;
+                    }
+                    &.tags {
+                        width: 55%;
+                        a {
+                            float: left;
+                        }
+                    }
+                }
+            }
         }
     }
 }

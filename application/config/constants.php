@@ -119,45 +119,45 @@ define('PATH_IMG_LOADING', PATH_IMG .'load.gif');
 
 /* techtag str */
 // lang
-define('TECHTAG_CPP', 'C++');
-define('TECHTAG_PHP', 'PHP');
-define('TECHTAG_JAVA', 'Java');
-define('TECHTAG_JS', 'JavaScript');
-define('TECHTAG_PROCESSING', 'processing');
+define('TECHTAG_LANG_CPP', 'C++');
+define('TECHTAG_LANG_PHP', 'PHP');
+define('TECHTAG_LANG_JAVA', 'Java');
+define('TECHTAG_LANG_JS', 'JavaScript');
+define('TECHTAG_LANG_PROCESSING', 'processing');
 // metaLang
-define('TECHTAG_JQUERY', 'jQuery');
-define('TECHTAG_LESS', 'LESS');
-define('TECHTAG_COFFEESCRIPT', 'CoffeeScript');
-define('TECHTAG_PROCESSING_JS', 'processing.js');
+define('TECHTAG_MLANG_JQUERY', 'jQuery');
+define('TECHTAG_MLANG_LESS', 'LESS');
+define('TECHTAG_MLANG_COFFEESCRIPT', 'CoffeeScript');
+define('TECHTAG_MLANG_PROCESSING_JS', 'processing.js');
 // framework
-define('TECHTAG_CODEIGNITER', 'CodeIgniter');
-define('TECHTAG_BOOTSTRAP', 'Bootstrap');
+define('TECHTAG_FW_CODEIGNITER', 'CodeIgniter');
+define('TECHTAG_FW_BOOTSTRAP', 'Bootstrap');
 // lib
-define('TECHTAG_DXLIB', 'DxLib');
-define('TECHTAG_JAVASERVLET', 'Java servlet');
+define('TECHTAG_LIB_DXLIB', 'DxLib');
+define('TECHTAG_LIB_JAVASERVLET', 'Java servlet');
 // api
-define('TECHTAG_TWITTERAPI', 'TwitterAPI');
-define('TECHTAG_TWITTERWEBAPI', 'TwitterWebAPI');
-define('TECHTAG_USTREAMAPI', 'UstreamAPI');
-define('TECHTAG_YAHOOAPI', 'Yahoo形態素解析API');
+define('TECHTAG_API_TWITTERAPI', 'TwitterAPI');
+define('TECHTAG_API_TWITTERWEBAPI', 'TwitterWebAPI');
+define('TECHTAG_API_USTREAMAPI', 'UstreamAPI');
+define('TECHTAG_API_YAHOOAPI', 'Yahoo形態素解析API');
 // opt service
-define('TECHTAG_GOOGLESCRIPT', 'GoogleScript');
+define('TECHTAG_OPT_GOOGLESCRIPT', 'GoogleScript');
 
 // OS
-define('TECHTAG_WINDOWS', 'Windows');
-define('TECHTAG_LINUX', 'linux');
+define('TECHTAG_OS_WINDOWS', 'Windows');
+define('TECHTAG_OS_LINUX', 'linux');
 // db
-define('TECHTAG_MYSQL', 'mysql');
-define('TECHTAG_POSTGRESQL', 'PostgreSQL');
+define('TECHTAG_DB_MYSQL', 'mysql');
+define('TECHTAG_DB_POSTGRESQL', 'PostgreSQL');
 // IDE,editor
-define('TECHTAG_VISUALSTUDIO', 'VisualStudio');
-define('TECHTAG_ECLIPSE', 'Eclipse');
-define('TECHTAG_NETBEANS', 'NetBeans');
-define('TECHTAG_INTELLIJIDEA', 'IntelliJ IDEA');
-define('TECHTAG_VIM', 'Vim');
+define('TECHTAG_EDIT_VISUALSTUDIO', 'VisualStudio');
+define('TECHTAG_EDIT_ECLIPSE', 'Eclipse');
+define('TECHTAG_EDIT_NETBEANS', 'NetBeans');
+define('TECHTAG_EDIT_INTELLIJIDEA', 'IntelliJ IDEA');
+define('TECHTAG_EDIT_VIM', 'Vim');
 // version control
-define('TECHTAG_GIT', 'git');
-define('TECHTAG_GRUNT', 'grunt');
+define('TECHTAG_VC_GIT', 'git');
+define('TECHTAG_VC_GRUNT', 'grunt');
 
 /**
  * production type
