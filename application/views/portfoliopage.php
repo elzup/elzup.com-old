@@ -228,13 +228,13 @@ foreach ($production_list as $pro) {
 
 $constans = get_defined_constants(TRUE);
 $techtags = array();
-foreach ($constans['user'] as $key => $tag) {
+foreach ($constans['user'] as $key => $tag_text) {
 	if (preg_match('#^TECHTAG_(?<cate>.*?)_#u', $key, $m)) {
 		$c = $m['cate'];
 		if (!isset($techtags[$c])) {
 			$techtags[$c] = array();
 		}
-		$techtags[$c][] = $tag;
+		$techtags[$c][] = $tag_text;
 	}
 }
 // タグの説明定義
@@ -253,10 +253,13 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム', $techtags[
 
 <div class="content">
 	<h1 class="content-title">ポートフォリオ of elzup</h1>
-	<p class="page-discription">今までに作ったもの</p>
-	<?php if (!!$tag) { ?>
-		<p ><a href="<?= base_url(PATH_PORT) ?>">タグ解除</a></p>
-	<?php } ?>
+	<p class="page-discription">今までに作ったもの
+		<?php if (!!$tag) { var_dump($tag);?>
+			<br>
+			フィルター中: <?= $tag ?>
+			<a href="<?= base_url(PATH_PORT) ?>">タグ解除</a>
+		<?php } ?>
+	</p>
 	<div class="content-body">
 		<div class="production-pagelinks">
 			<?php foreach ($production_kinds as $type => $pl) { ?>
@@ -265,7 +268,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム', $techtags[
 					<ul>
 						<?php
 						foreach ($pl as $i => $p) {
-							if (!$tag && !in_array($tag, $p->tech_list)) {
+							if ($tag && !in_array($tag, $p->tech_list)) {
 								continue;
 							}
 							?>
@@ -296,7 +299,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム', $techtags[
 			<?php
 			$c = 0;
 			foreach ($production_list as $i => $p) {
-				if (!$tag && !in_array($tag, $p->tech_list)) {
+				if ($tag && !in_array($tag, $p->tech_list)) {
 					continue;
 				}
 				?>
