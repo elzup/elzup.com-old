@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @var $tag string
+ */
 class Production {
 
 	/**
@@ -207,7 +209,7 @@ EOF
 		'どうぶつしょうぎ解析', 'どうぶつしょうぎ棋譜評価ソフト', PRO_TYPE_SOFTWARE, <<<EOF
 		どうぶつしょうぎの上級者の棋譜を収集して評価値を作った.
 EOF
-		, array(TECHTAG_PHP, TECHTAG_LINUX, TECHTAG_LESS, TECHTAG_JQUERY, TECHTAG_COFFEESCRIPT, TECHTAG_MYSQL, TECHTAG_VIM, TECHTAG_GIT), '2014年9月', PATH_IMG_PRO_DSHOGI, '//dshogi.elzup.com'
+		, array(TECHTAG_PHP, TECHTAG_LESS, TECHTAG_JQUERY, TECHTAG_COFFEESCRIPT, TECHTAG_LINUX, TECHTAG_GIT, TECHTAG_MYSQL, TECHTAG_VIM), '2014年9月', PATH_IMG_PRO_DSHOGI, '//dshogi.elzup.com'
 	),
 );
 http://twitter.com/tdu12fi
@@ -234,26 +236,52 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム');
 <div class="content">
 	<h1 class="content-title">ポートフォリオ of elzup</h1>
 	<p class="page-discription">今までに作ったもの</p>
+	<?php if (!!$tag) { ?>
+		<p ><a href="<?= base_url(PATH_PORT) ?>">タグ解除</a></p>
+	<?php } ?>
 	<div class="content-body">
 		<div class="production-pagelinks">
 			<?php foreach ($production_kinds as $type => $pl) { ?>
 				<div class="pro-group">
 					<span class="sub-title"><?= $type ?></span>
 					<ul>
-						<?php foreach ($pl as $p) { ?>
+						<?php
+						foreach ($pl as $i => $p) {
+							if ($tag && !in_array($tag, $p->tech_list)) {
+								continue;
+							}
+							?>
 							<li>
 								<div class="btn-jump" for="#pi<?= $p->id ?>">
 									<div class="icon icon-<?= "" + $p->id ?>"></div>
 									<span class="name"><?= $p->name ?></span>
 								</div>
 							</li>
-						<?php } ?>
+							<?php
+						}
+						if ($i < 2) {
+							?>
+							<li>
+								<div>
+									<div class="icon"></div>
+									<span class="name"></span>
+								</div>
+							</li>
+							<?php
+						}
+						?>
 					</ul>
 				</div>
 			<?php } ?>
 		</div>
 		<div class="production-box">
-			<?php foreach ($production_list as $i => $p) { ?>
+			<?php
+			$c = 0;
+			foreach ($production_list as $i => $p) {
+				if ($tag && !in_array($tag, $p->tech_list)) {
+					continue;
+				}
+				?>
 				<div id="pi<?= $p->id ?>" class="production-item half">
 					<div class="img-box">
 						<a href="<?= $p->img_src ?>" rel="lightbox">
@@ -280,11 +308,11 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム');
 					</div>
 					<div class="tags">
 						<?php foreach ($p->tech_list as $tech) { ?>
-							<span class="techtag techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></span>
+							<a href="<?= base_url(PATH_PORT . '?tag=' . $tech) ?>" class="techtag techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></a>
 						<?php } ?>
 					</div>
 				</div>
-				<?php if ($i % 2 == 1) { ?>
+				<?php if ($c++ % 2 == 1) { ?>
 					<br class="clearboth" />
 				<?php } ?>
 			<?php } ?>
@@ -302,3 +330,10 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム');
 		</div>
 	</div>
 </div>
+<pre>
+	<?php
+	$constans = get_defined_constants(TRUE);
+	$tags = array_flip(array_filter(@array_flip($constans['user']), function($str) {
+			return strpos($str, 'TECHTAG') !== FALSE;
+		}));
+//var_dump($tags);
