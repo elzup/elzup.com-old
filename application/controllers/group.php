@@ -9,7 +9,7 @@ class Group extends CI_Controller {
 		$meta = new Metaobj();
 		$meta->url = base_url();
 		$meta->set_title("所属 - elzup.com");
-		$meta->description = "えるざっぷの所属一覧 elzup.com";
+		$meta->description = "えるざっぷの所属しているグループの一覧";
 
 		$this->load->view('head', array('meta' => $meta));
 		$this->load->view('bodywrapper_head', array('is_shift' => TRUE));

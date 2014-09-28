@@ -48,8 +48,8 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 /* site meta */
 define('SITE_NAME', 'elzup.com');
-define('SITE_DESCRIPTION', 'elzup(えるざっぷ)の創作物などのHP');
-define('META_KEYWORDS', 'elzup,えるざっぷ');
+define('SITE_DESCRIPTION', 'elzup(えるざっぷ)のプロフィールやポートフォリオをまとめて公開しているいるホームページです');
+define('META_KEYWORDS', 'elzup,えるざっぷ,エルザップ');
 
 
 /* path */
