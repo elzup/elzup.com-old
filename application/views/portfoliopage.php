@@ -104,7 +104,7 @@ function convert_to_css_class($str) {
 
 function tag_techtag($tech) {
 	?>
-	<a href="<?= base_url(PATH_PORT . '?tag=' . $tech) ?>" class="techtag techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></a>
+	<a href="<?= base_url(PATH_PORT . '?tag=' . urlencode($tech)) ?>" class="techtag techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></a>
 	<?php
 }
 
@@ -222,7 +222,11 @@ EOF
 http://twitter.com/tdu12fi
 // 種類分け
 $production_kinds = array();
-foreach ($production_list as $pro) {
+foreach ($production_list as $key => $pro) {
+	if ($tag && !in_array($tag, $pro->tech_list)) {
+		unset($production_list[$key]);
+		continue;
+	}
 	$production_kinds[$pro->type][] = $pro;
 }
 
@@ -254,9 +258,12 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム', $techtags[
 <div class="content">
 	<h1 class="content-title">ポートフォリオ of elzup</h1>
 	<p class="page-discription">今までに作ったもの
-		<?php if (!!$tag) { var_dump($tag);?>
+		<?php
+		if (!!$tag) {
+			var_dump($tag);
+			?>
 			<br>
-			フィルター中: <?= $tag ?>
+			フィルター中: <?= tag_techtag($tag) ?>
 			<a href="<?= base_url(PATH_PORT) ?>">タグ解除</a>
 		<?php } ?>
 	</p>
@@ -268,9 +275,6 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム', $techtags[
 					<ul>
 						<?php
 						foreach ($pl as $i => $p) {
-							if ($tag && !in_array($tag, $p->tech_list)) {
-								continue;
-							}
 							?>
 							<li>
 								<div class="btn-jump" for="#pi<?= $p->id ?>">
@@ -299,9 +303,6 @@ $tag_helps[] = array('Admin', 'プロジェクト管理システム', $techtags[
 			<?php
 			$c = 0;
 			foreach ($production_list as $i => $p) {
-				if ($tag && !in_array($tag, $p->tech_list)) {
-					continue;
-				}
 				?>
 				<div id="pi<?= $p->id ?>" class="production-item half">
 					<div class="img-box">

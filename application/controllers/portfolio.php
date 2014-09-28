@@ -24,4 +24,8 @@ class Portfolio extends CI_Controller
 		$this->load->view('foot');
 	}
 
+	private function _to_tagstr($str) {
+		return str_replace(array(' '), array('+'), $str);
+	}
+
 }
