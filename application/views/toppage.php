@@ -67,7 +67,8 @@ function tag_cell($k, $pane) {
 			<div>
 				<div class="hide message-0">自己紹介<br />アカウント一覧など</div>
 				<div class="hide message-1">今までに作った作品の紹介<br />随時追加</div>
-				<div class="hide message-2">記録したものや取ってきた<br />自分用のログを表示するページ</div>
+				<div class="hide message-2">所属しているグループの一覧</div>
+				<div class="hide message-3">記録したものや取ってきた<br />自分用のログを表示するページ</div>
 			</div>
 			<?php
 		} else if ($k == '30') {
