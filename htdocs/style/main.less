@@ -209,8 +209,13 @@ a {
             &.off { 
 /*                .animation(flip-out 0.1s); */
             }
+/*            .rotate(270deg); */
+            &:hover {
+/*                .rotate(360deg); */
+            }
         }
         .front {
+/*            transition: all 500ms ease 0s; */
             &.on {
                 background: #555;
 /*                .animation(flip-out 0.1s); */
@@ -218,9 +223,9 @@ a {
             &.off { 
 /*                .animation(flip-in 0.1s 0.1s); */
             }
-        }
-        .my-hp {
-            border-radius: 20px 3px;
+            &:hover {
+/*                .rotate(90deg); */
+            }
         }
     }
     .row-toppane-title {
