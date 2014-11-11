@@ -14,22 +14,17 @@ $ ->
         $('.message-' + id).show()
         for i in [0..(STOP_TIME / 2)]
             setTimeout((i) ->
-                $front.css('transform', "rotate(" + (i * 180 / (STOP_TIME)) + "deg)")
+                $front.css('transform', "rotate(" + (- i * 180 / (STOP_TIME)) + "deg)")
             (i), i)
         setTimeout(->
             $front.hide()
             $back.show().addClass("on")
             for i in [0..(STOP_TIME / 2)]
                 setTimeout((i) ->
-                    $back.css('transform', "rotate(" + (i * 180 / (STOP_TIME) - 90) + "deg)")
+                    $back.css('transform', "rotate(" + (90 - i * 180 / (STOP_TIME)) + "deg)")
                 (i), i)
         ,STOP_TIME / 2)
 
-#        flip_on($front, $back, STOP_TIME)
-#        setTimeout( ->
-#            $front.hide()
-#            $back.show().addClass("on")
-#        , STOP_TIME)
     , ->
         $(@).children('div').removeClass("on")
         $front = $(@).children('.front')
@@ -39,22 +34,47 @@ $ ->
         $('.message-' + id).hide()
         for i in [0..(STOP_TIME / 2)]
             setTimeout((i) ->
-                $back.css('transform', "rotate(" + (-i * 180 / (STOP_TIME)) + "deg)")
+                $back.css('transform', "rotate(" + (i * 180 / (STOP_TIME)) + "deg)")
             (i), i)
         setTimeout(->
             $back.hide()
-            $front.show().addClass("on")
+            $front.show().addClass("off")
             for i in [0..(STOP_TIME / 2)]
                 setTimeout((i) ->
-                    $front.css('transform', "rotate(" + (90 - i * 180 / (STOP_TIME)) + "deg)")
+                    $front.css('transform', "rotate(" + (i * 180 / (STOP_TIME) - 90) + "deg)")
                 (i), i)
         ,STOP_TIME / 2)
 
-#    $('.cell').hover ->
-#        $(@).addClass('pulse')
-#    , ->
-#        $(@).removeClass('pulse')
-#
+    # icon magic
+    $('.cell-11').children('div').hover ->
+        $(@).css('background-color', 'red')
+    , ->
+        $(@).css('background-color', 'black')
+    $('.cell-11').children('div').click ->
+        num = ("0" + (Math.floor(Math.random() * 66) + 1)).slice(-2)
+        num = "53" if Math.random() < 0.5
+        console.log(num)
+        url = '//elzup.com/i/co' + num + '.png'
+        $img = $('<img/>').attr('src', url).addClass('drop-img')
+        pos = $('.top-icon').offset()
+        offset_y = 12
+        offset_x = 7
+        $img.css
+            'position': 'absolute'
+            'top': (pos.top + offset_y - 140) + 'px'
+            'left': (pos.left + offset_x) + 'px'
+        $('body').append($img)
+        $img.animate
+            'top': (pos.top + offset_y) + 'px'
+            'left': (pos.left + offset_x) + 'px'
+        $('.drop-img')[0].remove() if $('.drop-img').size() > 3
+        if num == "53"
+            $img.animate
+                'top': (pos.top + offset_y) + 'px'
+                'left': (pos.left + offset_x + 305) + 'px'
+            $img.removeClass('drop-img')
+            $img.addClass('drop-img2')
+
 #    setStartAnime(".cell-1", "fadeIn", 1)
 #    setStartAnime(".cell-10", "fadeIn", 2)
 #    setStartAnime(".cell-13", "fadeIn", 90)
@@ -66,14 +86,6 @@ $ ->
         setTimeout(->
             $(selector).addClass(addClass)
         , starttime)
-
-flip_on = ($front, $back, time) ->
-    $front.css('transform', "rotate(" + time + "deg)")
-    if time == 0
-        $front.hide()
-        $back.show().addClass("on")
-        return
-    setTimeout("flip_on($front, $back, " + (time - 1) + ")", 1)
 
 wait = (time) ->
     $.Deferred (defer) ->

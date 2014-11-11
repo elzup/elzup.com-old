@@ -200,6 +200,11 @@ a {
                 }
             }
         }
+
+        &.cell-11 div {
+            z-index: 100;
+        }
+
         .back {
             display: none;
             &.on {
@@ -217,7 +222,7 @@ a {
         .front {
 /*            transition: all 500ms ease 0s; */
             &.on {
-                background: #555;
+                background: #222;
 /*                .animation(flip-out 0.1s); */
             }
             &.off { 
@@ -616,6 +621,12 @@ a {
     &.icon-jump-min {
         font-size: 1em;
     }
+}
+
+img.drop-img,img.drop-img2 {
+    height: 70px;
+    border-radius: 50%;
+    z-index: 99;
 }
 
 .shift-top {
