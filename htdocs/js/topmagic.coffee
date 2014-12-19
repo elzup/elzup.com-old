@@ -52,7 +52,6 @@ $ ->
         $(@).css('background-color', 'black')
     $('.cell-11').children('div').click ->
         num = ("0" + (Math.floor(Math.random() * 66) + 1)).slice(-2)
-        num = "53" if Math.random() < 0.5
         console.log(num)
         url = '//elzup.com/i/co' + num + '.png'
         $img = $('<img/>').attr('src', url).addClass('drop-img')

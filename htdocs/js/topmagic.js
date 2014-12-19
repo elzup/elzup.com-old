@@ -66,9 +66,6 @@
     $('.cell-11').children('div').click(function() {
       var $img, num, offset_x, offset_y, pos, url;
       num = ("0" + (Math.floor(Math.random() * 66) + 1)).slice(-2);
-      if (Math.random() < 0.5) {
-        num = "53";
-      }
       console.log(num);
       url = '//elzup.com/i/co' + num + '.png';
       $img = $('<img/>').attr('src', url).addClass('drop-img');

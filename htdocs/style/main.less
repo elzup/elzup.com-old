@@ -7,7 +7,6 @@
 
 @col_cell_font: white;
 
-
 html,body {
     background: @col_back;
     font-family: 'Raleway', "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Noto Sans Japanese Regular", sans-serif;
@@ -644,6 +643,27 @@ img.drop-img,img.drop-img2 {
 .clear-text {
     color: rgba(0,0,0,0);
 }
+
+body {
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+}
+
+@-webkit-keyframes bg-color {
+    .bg_iterate(0);
+}
+@keyframes bg-color {
+    .bg_iterate(0);
+}
+
+.bg_iterate(@i) when not (@i <= 100) { } // ループを抜けるために必要
+.bg_iterate(@i) when (@i <= 100) {
+    @{i}% { background-color: hsl(@i, 100%, 100%); }
+    .bg_iterate(@i + 20); // 次のループへ
+}
+
+
 
 @import "./md.less";
 @import "./xs.less";
