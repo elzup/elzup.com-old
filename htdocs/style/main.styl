@@ -23,6 +23,10 @@ a
     pointer-events none
     text-decoration none
 
+size (w, h)
+  width w
+  height h
+
 #navbar
   a.menu
     padding-left 5px
@@ -468,6 +472,31 @@ techtag-style(base-color=gray)
             a
               float left
 
+.help-table 
+  tr
+    &.top
+      border-top solid 1px
+    > td
+      vertical-align top
+      &.count
+        text-align center
+      &.activ
+        .pro_icon
+          float left
+          size(20px, 20px)
+          &.gold
+            color: rgba(255,255,0,.8);
+            text-shadow: 1px 1px 2px red;
+          &.silver
+            color silver
+            text-shadow: 1px 1px 5px blue;
+    height 1.8em
+  .help-top
+    margin-bottom 14px
+  td.cate
+    vertical-align top
+/*            background url('../images/icon_product.png') 48px 0 */
+
 .icon-jump
   font-size 25px
   text-decoration none
@@ -501,10 +530,6 @@ html
     p = i * 20
     {p}\%
       background-color hsl(p * 3.6, 100%, 50%)
-
-size (w, h)
-  width: w;
-  height: h;
 
 @import "./md.styl"
 @import "./xs.styl"

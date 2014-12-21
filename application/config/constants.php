@@ -112,6 +112,7 @@ define('PATH_IMG_PRO_ELZUP', PATH_IMG . 'sc_elzup.png');
 define('PATH_IMG_PRO_IERUKANA', PATH_IMG . 'sc_ierukana.png');
 define('PATH_IMG_PRO_LABOATTEND', PATH_IMG . 'sc_laboattend.png');
 define('PATH_IMG_PRO_DSHOGI', PATH_IMG . 'sc_dshogi.png');
+define('PATH_IMG_PRO_HAPPY', PATH_IMG . 'sc_happy.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
