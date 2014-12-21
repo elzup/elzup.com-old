@@ -1,8 +1,10 @@
 @charset "utf-8"
-@import url(http//fonts.googleapis.com/css?family=Raleway600)
+@import "../../node_modules/nib"
+@import url(http://fonts.googleapis.com/css?family=Raleway600)
 col_back #fff
 col_pane_back black
 col_cell_font white
+
 html,body
   background col_back
   font-family 'Raleway', "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Noto Sans Japanese Regular", sans-serif
@@ -27,16 +29,16 @@ a
     padding-left 5px
     margin-left 15px
     &.me
-      @extend .menu-item(red)
+      menu-item red
     &.port
-      @extend .menu-item(darkorange)
+      menu-item darkorange
     &.group
-      @extend .menu-item(gold)
+      menu-item gold
     &.log
-      @extend .menu-item(green)
+      menu-item green
 
 
-.menu-item(cl)
+menu-item(cl)
   &:hover
     color cl
   border-left solid 1px cl
@@ -73,12 +75,12 @@ a
 
   p.img-box-absolute
     position relative
-    @extend .size(300px, 300px)
+    size 300px 300px
     img.elzup-icon
       position absolute
     img.icon-mini
       position absolute
-      @extend .size(20px, 20px)
+      size 20px 20px
       right 3px
       bottom 3px
 
@@ -126,6 +128,7 @@ a
         width 56%
 
     > div
+      background black
       displayblock
       background-color col_pane_back
       height 100%
@@ -205,10 +208,10 @@ a
             for j in (0..7)
                 index = i * j
                 &.icon-{index}
-                    @extend .icon-back(i, j)
+                    icon-back i, j
 
 
-.icon-back(y, x)
+icon-back(y, x)
 //  background url('../images/sms.png') (-100px * x) (-100px * y)
 
 .float-wrap(fl = left)
@@ -301,17 +304,17 @@ a
       margin-bottom 10px
     .dsyogi-log-pane
       float left
-      @extend .size(2.2em, 2.4em)
+      size 2.2em 2.4em
       border-top solid 3px
       margin 1px
       padding none
       border-radius 0.2em
       &.win
-        @extend .result-pane(orange)
+        result-pane orange
       &.lose
-        @extend .result-pane(darkslateblue)
+        result-pane darkslateblue
       &.draw
-        @extend .result-pane(seagreen)
+        result-pane seagreen
 
       a
         text-decoration none
@@ -343,7 +346,7 @@ a
   input#switch-tweet-log
     margin-left 10px
 
-.result-pane(col)
+result-pane(col)
   background add(col, #aaa)
   border-color col
   > a >.result
@@ -387,10 +390,10 @@ a
 
 .date4
   padding 0 2px
-  @extend .bottom-shadow()
+  bottom-shadow
 
-.bottom-shadow()
-  box-shadow -9px 1px, -18px 2px, -27px 3px; */
+bottom-shadow()
+  box-shadow -9px 1px, -18px 2px, -27px 3px
 .tag
   color #333
   margin-left 10px
@@ -410,35 +413,36 @@ a
   font-size 13px
   /* lang */
   &.techtag-language, &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing
-      @extend .techtag-style(red)
+      techtag-style red
   /* metalang */
   &.techtag-metalang, &.techtag-jquery, &.techtag-less, &.techtag-processing-js, &.techtag-coffeescript
-      @extend .techtag-style(orange)
+      techtag-style orange
   /* framework */
   &.techtag-framework, &.techtag-codeigniter, &.techtag-bootstrap
-      @extend .techtag-style(yellow)
+      techtag-style yellow
   /* lib */
   &.techtag-lib, &.techtag-dxlib, &.techtag-java_servlet
-      @extend .techtag-style(lime)
+      techtag-style lime
   /* api */
   &.techtag-api, &.techtag-twitterapi, &.techtag-twitterwebapi, &.techtag-ustreamapi, &.techtag-yahooapi
-      @extend .techtag-style(lightblue)
+      techtag-style lightblue
   /* opt service */
   &.techtag-service, &.techtag-googlescript
-      @extend .techtag-style(lightblue)
+      techtag-style lightblue
   /* os */
   &.techtag-os, &.techtag-windows, &.techtag-linux
-      @extend .techtag-style()
+      techtag-style 
   /* db */
   &.techtag-db, &.techtag-mysql, &.techtag-postgresql
-      @extend .techtag-style(green)
+      techtag-style green
   /* ide,editor */
   &.techtag-editor, &.techtag-visualstudio, &.techtag-eclipse, &.techtag-netbeans, &.techtag-vim, &.techtag-intellij_idea
-      @extend .techtag-style(orchid)
+      techtag-style orchid
   /* version control */
   &.techtag-admin, &.techtag-git, &.techtag-grunt
-      @extend .techtag-style(darkgray)
-.techtag-style(base-color gray)
+      techtag-style darkgray
+
+techtag-style(base-color gray)
   border-bottom base-color solid 4px
 
 .clearboth
@@ -463,9 +467,6 @@ a
             a
               float left
 
-
-
-
 .icon-jump
   font-size 25px
   text-decoration none
@@ -482,7 +483,7 @@ img.drop-img,img.drop-img2
   margin-top 30px !important
 
 .hide
-  displaynone
+  display none
 
 .message
   color white
@@ -490,26 +491,19 @@ img.drop-img,img.drop-img2
 .clear-text
   color rgba(0,0,0,0)
 
-body
-  background-color #e74c3c
+html
+  background-color white
   animation bg-color 10s infinite
-  -webkit-animation bg-color 10s infinite
-
-@-webkit-keyframes bg-color
-  for i in (0..5)
-      p = i * 20
-//      {p}\%
-//          background-color hsl(p * 36, 100%, 100%)
 
 @keyframes bg-color
-  for i in (0..5)
-      p = i * 20
-//      {p}\%
-//          background-color hsl(p * 36, 100%, 100%)
+  for i in 0..5
+    p = i * 20
+    {p}\%
+      background-color hsl(p * 3.6, 100%, 50%)
 
-.size (w, h)
-    width: w;
-    height: h;
+size (w, h)
+  width: w;
+  height: h;
 
 @import "./md.styl"
 @import "./xs.styl"
