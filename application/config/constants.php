@@ -185,6 +185,7 @@ define('PRO_TYPE_SERIVICE', 'WEBサービスやHP');
 define('PRO_TYPE_SOFTWARE', 'ソフトウェアやゲーム');
 define('PRO_TYPE_BOT', 'Bot');
 define('PRO_TYPE_API', 'API');
+define('PRO_TYPE_ROBOT', '機体・制御・マイコン');
 define('PRO_TYPE_NETA', '小ネタ');
 
 /**

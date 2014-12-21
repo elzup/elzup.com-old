@@ -128,14 +128,14 @@ EOF
         , array(TECHTAG_LANG_PHP, TECHTAG_MLANG_LESS, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_DB_MYSQL, TECHTAG_EDIT_VIM), '2014年9月', PATH_IMG_PRO_DSHOGI, '//dshogi.elzup.com'
     ),
     new Productionobj(
-        'Happy days', '知人の誕生日お祝いページ', PRO_TYPE_SERIVICE, <<<EOF
+        'Happy days', '知人の誕生日お祝いページ', PRO_TYPE_NETA, <<<EOF
 		身内を祝うスペース.基本のサイト構成はBootstrap.jQueryの数々のプラグインを使ってみる練習も兼ねて.三日坊主.
 EOF
         , array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_LESS, TECHTAG_MLANG_JQUERY, TECHTAG_OS_WINDOWS, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM), '2014年1月', PATH_IMG_PRO_HAPPY, '//happy.elzup.com'
     ),
     new Productionobj(
-        '東京メトロRailway Map', '東京メトロコンテストに出した作品', PRO_TYPE_SERIVICE, <<<EOF
-		<a href="//tokyometro10th.jp/future/opendata/">東京メトロオープンデータコンテスト</a>に出品した作品.東京メトロの運行情報をGoogleMapで可視化した.API権限が欲しくてほぼ締め切り間際に焦って完成させた.
+        '東京メトロRailway Map', '東京メトロコンテストに出した作品', PRO_TYPE_SOFTWARE, <<<EOF
+		<a href="//tokyometro10th.jp/future/opendata/" target="_blank">東京メトロオープンデータコンテスト</a>に出品した作品.東京メトロの運行情報をGoogleMapで可視化した.API権限が欲しくてほぼ締め切り間際に焦って完成させた.
 EOF
         , array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_JQUERY, TECHTAG_API_METROAPI, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_DB_MYSQL, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_EDIT_VIM), '2014年11月', PATH_IMG_PRO_METRO, '//metro.elzup.com'
     ),
@@ -146,8 +146,8 @@ EOF
         , array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_SASS, TECHTAG_DB_MYSQL, TECHTAG_FW_SLIM, TECHTAG_FW_MATERIALIZE, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_VC_BOWER, TECHTAG_VC_NPM, TECHTAG_EDIT_VIM, TECHTAG_EDIT_NETBEANS), '2014年12月', PATH_IMG_PRO_TRENDWEB, '//trend.elzup.com'
     ),
     new Productionobj(
-        'EV3 ライントレースカー', 'レゴマインドストームでスマデバGP出場', PRO_TYPE_SERIVICE, <<<EOF
-        <a href="//www.afrel.co.jp/sdgp2014/info">スマートデバイスGP2014</a>に出場した.何気なく2014年で一番頑張った気がする.PID制御を求める計測の繰り返しが辛かった.地区予選3位,決勝惨敗.
+        'EV3 ライントレースカー', 'レゴマインドストームでスマデバGP出場', PRO_TYPE_ROBOT, <<<EOF
+        <a href="//www.afrel.co.jp/sdgp2014/info" target="_blank">スマートデバイスGP2014</a>に出場した.何気なく2014年で一番頑張った気がする.PID制御を求める計測の繰り返しが辛かった.地区予選3位,決勝惨敗.
 EOF
         , array(TECHTAG_LANG_C, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM), '2014年12月', PATH_IMG_PRO_EV3, '//github.com/elzzup/ev3_linetrace'
     ),
