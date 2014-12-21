@@ -1,12 +1,11 @@
 @charset "utf-8"
 @import "../../node_modules/nib"
 @import url(http://fonts.googleapis.com/css?family=Raleway600)
-col_back #fff
-col_pane_back black
-col_cell_font white
+col_back = #fff
+col_pane_back = black
+col_cell_font = white
 
-html,body
-  background col_back
+html, body
   font-family 'Raleway', "Hiragino Kaku Gothic Pro W3", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Noto Sans Japanese Regular", sans-serif
   overflow auto
 
@@ -103,7 +102,10 @@ menu-item(cl)
             width 50%
           border-bottom solid 1px #DDD
 
-
+cell-action(col)
+  >div:hover
+    cursor pointer
+    background-color col
 
 .toppane
   margin-top 50px
@@ -128,8 +130,7 @@ menu-item(cl)
         width 56%
 
     > div
-      background black
-      displayblock
+      display block
       background-color col_pane_back
       height 100%
       border-radius 3px
@@ -151,9 +152,11 @@ menu-item(cl)
           position absolute
           padding 15%
 
+    &.cell-10
+      cell-action(red)
 
-    &.cell-11 div
-      z-index 100
+    &.cell-11
+      cell-action(orange)
 
     .back
       display none
@@ -187,13 +190,14 @@ menu-item(cl)
           display inline
           float left
 
-
+icon-back(y, x)
+  background url('../images/sms.png') (-100px * x) (-100px * y)
 
 .production-pagelinks
   w = 100px
   overflow auto
   ul
-    .float-wrap()
+    float-wrap()
     li
       list-style none
       cursor pointer
@@ -204,17 +208,13 @@ menu-item(cl)
       .icon
         width w
         height w
-        for i in (0..2)
-            for j in (0..7)
-                index = i * j
-                &.icon-{index}
-                    icon-back i, j
+        for y in 0..2
+          for x in 0..7
+            index = y * 8 + x
+            &.icon-{index}
+              icon-back(y, x)
 
-
-icon-back(y, x)
-//  background url('../images/sms.png') (-100px * x) (-100px * y)
-
-.float-wrap(fl = left)
+float-wrap(fl = left)
   overflow auto
   >*
     float fl
@@ -402,6 +402,10 @@ bottom-shadow()
 
 .tags
   line-height 1.4em
+
+techtag-style(base-color=gray)
+  border-bottom base-color solid 4px
+
 .techtag
   color white !important
   text-decoration none
@@ -413,7 +417,7 @@ bottom-shadow()
   font-size 13px
   /* lang */
   &.techtag-language, &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing
-      techtag-style red
+      techtag-style(red)
   /* metalang */
   &.techtag-metalang, &.techtag-jquery, &.techtag-less, &.techtag-processing-js, &.techtag-coffeescript
       techtag-style orange
@@ -441,9 +445,6 @@ bottom-shadow()
   /* version control */
   &.techtag-admin, &.techtag-git, &.techtag-grunt
       techtag-style darkgray
-
-techtag-style(base-color gray)
-  border-bottom base-color solid 4px
 
 .clearboth
   clear both
@@ -492,8 +493,8 @@ img.drop-img,img.drop-img2
   color rgba(0,0,0,0)
 
 html
-  background-color white
-  animation bg-color 10s infinite
+  background-color col_back
+//  animation bg-color 10s infinite
 
 @keyframes bg-color
   for i in 0..5

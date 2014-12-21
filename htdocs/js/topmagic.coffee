@@ -46,10 +46,6 @@ $ ->
         ,STOP_TIME / 2)
 
     # icon magic
-    $('.cell-11').children('div').hover ->
-        $(@).css('background-color', 'red')
-    , ->
-        $(@).css('background-color', 'black')
     $('.cell-11').children('div').click ->
         num = ("0" + (Math.floor(Math.random() * 66) + 1)).slice(-2)
         console.log(num)
@@ -73,6 +69,32 @@ $ ->
                 'left': (pos.left + offset_x + 305) + 'px'
             $img.removeClass('drop-img')
             $img.addClass('drop-img2')
+
+    # icon magic
+    $('.cell-11').children('div').click ->
+        num = ("0" + (Math.floor(Math.random() * 66) + 1)).slice(-2)
+        console.log(num)
+        url = '//elzup.com/i/co' + num + '.png'
+        $img = $('<img/>').attr('src', url).addClass('drop-img')
+        pos = $('.top-icon').offset()
+        offset_y = 12
+        offset_x = 7
+        $img.css
+            'position': 'absolute'
+            'top': (pos.top + offset_y - 140) + 'px'
+            'left': (pos.left + offset_x) + 'px'
+        $('body').append($img)
+        $img.animate
+            'top': (pos.top + offset_y) + 'px'
+            'left': (pos.left + offset_x) + 'px'
+        $('.drop-img')[0].remove() if $('.drop-img').size() > 3
+        if num == "53"
+            $img.animate
+                'top': (pos.top + offset_y) + 'px'
+                'left': (pos.left + offset_x + 305) + 'px'
+            $img.removeClass('drop-img')
+            $img.addClass('drop-img2')
+
 
 #    setStartAnime(".cell-1", "fadeIn", 1)
 #    setStartAnime(".cell-10", "fadeIn", 2)
