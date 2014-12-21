@@ -95,7 +95,8 @@ $ ->
             $img.removeClass('drop-img')
             $img.addClass('drop-img2')
 
-
+    $('.cell-10').children('div').click ->
+        $('html').css('animation', 'bg-color 10s infinite')
 #    setStartAnime(".cell-1", "fadeIn", 1)
 #    setStartAnime(".cell-10", "fadeIn", 2)
 #    setStartAnime(".cell-13", "fadeIn", 90)

@@ -108,8 +108,9 @@ $panes[01] = new Pane("Portfolio", "制作物", PATH_PORT, 'darkorange');
 $panes[02] = new Pane("Group", "所属団体", PATH_GROUP, 'gold');
 $panes[03] = new Pane("Log", "ログ", PATH_LOG, 'green');
 
-$panes[22] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
-$panes[23] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
+$panes[21] = new Pane("GitHub", "git@elzzup", "//github.com/elzzup", '#555', PATH_IMG_ICON_GITHUB);
+$panes[22] = new Pane("Twitter", "@Arzzup", "//twitter.com/arzzup", '#55acee', PATH_IMG_ICON_TWITTER);
+$panes[23] = new Pane("Qiita", "elzup", "//qiita.com/elzup", '#64c914', PATH_IMG_ICON_QIITA);
 $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', PATH_IMG_ICON_TUMBLR);
 $panes[33] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
 $panes[34] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', TRUE);

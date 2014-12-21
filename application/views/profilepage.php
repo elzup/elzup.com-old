@@ -31,7 +31,9 @@ class AccountRecord {
 $account_list = array(
 	new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzzup'),
 	new AccountRecord('Github', 'elzzup', '//github.com/elzzup'),
+	new AccountRecord('Facebook', '高橋洸人', '//www.facebook.com/hiroto.takahashi.96'),
 	new AccountRecord('SlideShare', 'elzup', '//www.slideshare.net/elzup/'),
+	new AccountRecord('Qiita', 'elzup', '//qiita.com/elzup'),
 	new AccountRecord('Tumblr', 'elzup', '//elzup.tumblr.com'),
 	new AccountRecord('Skype', 'guild0105'),
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
