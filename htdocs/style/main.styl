@@ -194,8 +194,14 @@ cell-action(col)
           display inline
           float left
 
+float-wrap(fl = left)
+  overflow auto
+  >*
+    float fl
+
 icon-back(y, x)
   background url('../images/sms.png') (-100px * x) (-100px * y)
+
 
 .production-pagelinks
   w = 100px
@@ -217,11 +223,6 @@ icon-back(y, x)
             index = y * 8 + x
             &.icon-{index}
               icon-back(y, x)
-
-float-wrap(fl = left)
-  overflow auto
-  >*
-    float fl
 
 .production-box
   overflow auto
@@ -254,10 +255,12 @@ float-wrap(fl = left)
 .pro-group
   float left
   padding-left 5px
-  &before
+  &:before
     content ""
     box-shadow 0 20px gray, 0 40px gray
     border-left 3px solid gray
+    ul li
+      float left
 
 #tl-log-box
   .sub-description
@@ -401,7 +404,7 @@ bottom-shadow()
 .tag
   color #333
   margin-left 10px
-  &before
+  &:before
     content '#'
 
 .tags
@@ -420,19 +423,19 @@ techtag-style(base-color=gray)
   border-radius 3px
   font-size 13px
   /* lang */
-  &.techtag-language, &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing
+  &.techtag-language, &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing, &.techtag-c
       techtag-style(red)
   /* metalang */
-  &.techtag-metalang, &.techtag-jquery, &.techtag-less, &.techtag-processing-js, &.techtag-coffeescript
+  &.techtag-metalang, &.techtag-jquery, &.techtag-less, &.techtag-processing-js, &.techtag-coffeescript, &.techtag-sass, &.techtag-stylus
       techtag-style orange
   /* framework */
-  &.techtag-framework, &.techtag-codeigniter, &.techtag-bootstrap
+  &.techtag-framework, &.techtag-codeigniter, &.techtag-bootstrap, &.techtag-slim, &.techtag-pure, &.techtag-materiaize, &.techtag-foundation
       techtag-style yellow
   /* lib */
-  &.techtag-lib, &.techtag-dxlib, &.techtag-java_servlet
+  &.techtag-lib, &.techtag-dxlib, &.techtag-java_servlet, &.techtag-mecab
       techtag-style lime
   /* api */
-  &.techtag-api, &.techtag-twitterapi, &.techtag-twitterwebapi, &.techtag-ustreamapi, &.techtag-yahooapi
+  &.techtag-api, &.techtag-twitterapi, &.techtag-twitterwebapi, &.techtag-ustreamapi, &.techtag-yahooapi, &.techtag-metroapi, &.techtag-googlemapapi
       techtag-style lightblue
   /* opt service */
   &.techtag-service, &.techtag-googlescript
@@ -447,7 +450,7 @@ techtag-style(base-color=gray)
   &.techtag-editor, &.techtag-visualstudio, &.techtag-eclipse, &.techtag-netbeans, &.techtag-vim, &.techtag-intellij_idea
       techtag-style orchid
   /* version control */
-  &.techtag-admin, &.techtag-git, &.techtag-grunt
+  &.techtag-admin, &.techtag-git, &.techtag-grunt, &.techtag-composer, &.techtag-npm, &.techtag-gem, &.techtag-bower
       techtag-style darkgray
 
 .clearboth

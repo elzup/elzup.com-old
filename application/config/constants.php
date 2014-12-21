@@ -113,6 +113,9 @@ define('PATH_IMG_PRO_IERUKANA', PATH_IMG . 'sc_ierukana.png');
 define('PATH_IMG_PRO_LABOATTEND', PATH_IMG . 'sc_laboattend.png');
 define('PATH_IMG_PRO_DSHOGI', PATH_IMG . 'sc_dshogi.png');
 define('PATH_IMG_PRO_HAPPY', PATH_IMG . 'sc_happy.png');
+define('PATH_IMG_PRO_METRO', PATH_IMG . 'sc_metro.png');
+define('PATH_IMG_PRO_TRENDWEB', PATH_IMG . 'sc_trendweb.png');
+define('PATH_IMG_PRO_EV3', PATH_IMG . 'sc_ev3.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
@@ -121,6 +124,7 @@ define('PATH_IMG_LOADING', PATH_IMG .'load.gif');
 
 /* techtag str */
 // lang
+define('TECHTAG_LANG_C', 'C');
 define('TECHTAG_LANG_CPP', 'C++');
 define('TECHTAG_LANG_PHP', 'PHP');
 define('TECHTAG_LANG_JAVA', 'Java');
@@ -129,22 +133,30 @@ define('TECHTAG_LANG_PROCESSING', 'processing');
 // metaLang
 define('TECHTAG_MLANG_JQUERY', 'jQuery');
 define('TECHTAG_MLANG_LESS', 'LESS');
+define('TECHTAG_MLANG_SASS', 'SASS');
+define('TECHTAG_MLANG_STYLUS', 'Stylus');
 define('TECHTAG_MLANG_COFFEESCRIPT', 'CoffeeScript');
 define('TECHTAG_MLANG_PROCESSING_JS', 'processing.js');
 // framework
 define('TECHTAG_FW_CODEIGNITER', 'CodeIgniter');
+define('TECHTAG_FW_SLIM', 'Slim');
 define('TECHTAG_FW_BOOTSTRAP', 'Bootstrap');
+define('TECHTAG_FW_PURE', 'Pure');
+define('TECHTAG_FW_MATERIALIZE', 'Materialize');
+define('TECHTAG_FW_Foundation', 'Foundation');
 // lib
 define('TECHTAG_LIB_DXLIB', 'DxLib');
 define('TECHTAG_LIB_JAVASERVLET', 'Java servlet');
+define('TECHTAG_LIB_MECAB', 'Mecab');
 // api
 define('TECHTAG_API_TWITTERAPI', 'TwitterAPI');
 define('TECHTAG_API_TWITTERWEBAPI', 'TwitterWebAPI');
 define('TECHTAG_API_USTREAMAPI', 'UstreamAPI');
 define('TECHTAG_API_YAHOOAPI', 'Yahoo形態素解析API');
+define('TECHTAG_API_METROAPI', 'MetroAPI');
+define('TECHTAG_API_GOOGLEMAPAPI', 'GoogleMapAPI');
 // opt service
 define('TECHTAG_OPT_GOOGLESCRIPT', 'GoogleScript');
-
 // OS
 define('TECHTAG_OS_WINDOWS', 'Windows');
 define('TECHTAG_OS_LINUX', 'linux');
@@ -160,6 +172,10 @@ define('TECHTAG_EDIT_VIM', 'Vim');
 // version control
 define('TECHTAG_VC_GIT', 'git');
 define('TECHTAG_VC_GRUNT', 'grunt');
+define('TECHTAG_VC_COMPOSER', 'composer');
+define('TECHTAG_VC_NPM', 'npm');
+define('TECHTAG_VC_GEM', 'gem');
+define('TECHTAG_VC_BOWER', 'bower');
 
 /**
  * production type
