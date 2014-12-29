@@ -218,7 +218,7 @@ icon-back(y, x)
       .icon
         width w
         height w
-        for y in 0..2
+        for y in 0..3
           for x in 0..7
             index = y * 8 + x
             &.icon-{index}
@@ -412,6 +412,10 @@ bottom-shadow()
 
 techtag-style(base-color=gray)
   border-bottom base-color solid 4px
+techtag-roop(labels color)
+  for tag_name in labels
+    &.techtag-{tag_name}
+      techtag-style color
 
 .techtag
   color white !important
@@ -423,35 +427,49 @@ techtag-style(base-color=gray)
   border-radius 3px
   font-size 13px
   /* lang */
-  &.techtag-language, &.techtag-cpp, &.techtag-php, &.techtag-java, &.techtag-javascript, &.techtag-processing, &.techtag-c
-      techtag-style(red)
+  label_lang = language cpp php java javascript processing c ruby
+  techtag-roop label_lang red
   /* metalang */
-  &.techtag-metalang, &.techtag-jquery, &.techtag-less, &.techtag-processing-js, &.techtag-coffeescript, &.techtag-sass, &.techtag-stylus
-      techtag-style orange
+  label_metalang = metalang jquery less processing-js coffeescript sass stylus
+  techtag-roop label_meta orange
   /* framework */
-  &.techtag-framework, &.techtag-codeigniter, &.techtag-bootstrap, &.techtag-slim, &.techtag-pure, &.techtag-materiaize, &.techtag-foundation
-      techtag-style yellow
+  label_framework = codeigniter bootstrap slim pure metarialize foundation
+  techtag-roop label_framework yellow
   /* lib */
-  &.techtag-lib, &.techtag-dxlib, &.techtag-java_servlet, &.techtag-mecab
-      techtag-style lime
+  label_lib = lib dxlib java_servlet mecab
+  techtag-roop label_lib lime
   /* api */
-  &.techtag-api, &.techtag-twitterapi, &.techtag-twitterwebapi, &.techtag-ustreamapi, &.techtag-yahooapi, &.techtag-metroapi, &.techtag-googlemapapi
-      techtag-style lightblue
+  label_api = api twitterapi twitterwebapi ustreamapi yahooapi metroapi googlemapapi
+  techtag-roop label_api lightblue
   /* opt service */
-  &.techtag-service, &.techtag-googlescript
-      techtag-style lightblue
+  label_service = service googlescript
+  techtag-roop label_service lightblue
   /* os */
-  &.techtag-os, &.techtag-windows, &.techtag-linux
-      techtag-style 
+  label_os = os windows linux
+  techtag-roop label_os ghostwhite
   /* db */
-  &.techtag-db, &.techtag-mysql, &.techtag-postgresql
-      techtag-style green
+  label_db = db mysql postgresql
+  techtag-roop label_db green
   /* ide,editor */
-  &.techtag-editor, &.techtag-visualstudio, &.techtag-eclipse, &.techtag-netbeans, &.techtag-vim, &.techtag-intellij_idea
-      techtag-style orchid
+  label_editor = editor visualstudio eclipse netbeans vim intellij_idea
+  techtag-roop label_editor orchid
   /* version control */
-  &.techtag-admin, &.techtag-git, &.techtag-grunt, &.techtag-composer, &.techtag-npm, &.techtag-gem, &.techtag-bower
-      techtag-style darkgray
+  label_admin = admin git grunt composer npm gem bower
+  techtag-roop label_admin darkgray
+
+  /*
+  glue = __
+  labels = label_lang glue label_metalang glue label_framework
+
+  colors = red orange yellow lime lightblue lightblue ghostwhite green orchid darkgray
+  i = 0
+  for tag_name in labels
+    if tag_name = glue
+      i = i + 1
+    else
+      &.techtag-{tag_name}
+        techtag-style colors[i]
+  */
 
 .clearboth
   clear both

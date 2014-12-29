@@ -7,9 +7,9 @@ function convert_to_css_class($str) {
     return strtolower(str_replace(array('.', '+', ' ', '形態素解析'), array('-', 'p', '_', ''), $str));
 }
 
-function tag_techtag($tech) {
+function tag_techtag($tech, $cate = NULL) {
     ?>
-    <a href="<?= base_url(PATH_PORT . '?tag=' . urlencode($tech)) ?>" class="techtag techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></a>
+    <a href="<?= base_url(PATH_PORT . '?tag=' . urlencode($tech)) ?>" class="techtag <?= $cate ? "techtag-{$cate} ": ""?>techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></a>
     <?php
 }
 
@@ -150,6 +150,12 @@ EOF
         <a href="//www.afrel.co.jp/sdgp2014/info" target="_blank">スマートデバイスGP2014</a>に出場した.何気なく2014年で一番頑張った気がする.PID制御を求める計測の繰り返しが辛かった.地区予選3位,決勝惨敗.
 EOF
         , array(TECHTAG_LANG_C, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM), '2014年12月', PATH_IMG_PRO_EV3, '//github.com/elzzup/ev3_linetrace'
+    ),
+    new Productionobj(
+        '東京エリアストレス', 'リアルタイムエリアストレス', PRO_TYPE_NETA, <<<EOF
+        Geoタグツイートを収集してネガポジ判定,GoogleMapで可視化した
+EOF
+        , array(TECHTAG_LANG_RUBY, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_API_TWITTERAPI, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM), '2014年12月', PATH_IMG_PRO_AREA, 'http://areastress.cps.im.dendai.ac.jp/'
     ),
 );
 // 種類分け

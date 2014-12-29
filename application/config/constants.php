@@ -117,6 +117,7 @@ define('PATH_IMG_PRO_HAPPY', PATH_IMG . 'sc_happy.png');
 define('PATH_IMG_PRO_METRO', PATH_IMG . 'sc_metro.png');
 define('PATH_IMG_PRO_TRENDWEB', PATH_IMG . 'sc_trendweb.png');
 define('PATH_IMG_PRO_EV3', PATH_IMG . 'sc_ev3.png');
+define('PATH_IMG_PRO_AREA', PATH_IMG . 'sc_area.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
@@ -129,6 +130,7 @@ define('TECHTAG_LANG_C', 'C');
 define('TECHTAG_LANG_CPP', 'C++');
 define('TECHTAG_LANG_PHP', 'PHP');
 define('TECHTAG_LANG_JAVA', 'Java');
+define('TECHTAG_LANG_RUBY', 'Ruby');
 define('TECHTAG_LANG_JS', 'JavaScript');
 define('TECHTAG_LANG_PROCESSING', 'processing');
 // metaLang
