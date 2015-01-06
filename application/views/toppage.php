@@ -115,7 +115,8 @@ $panes[24] = new Pane("Tumblr", "elzup.tumbr", "//elzup.tumblr.com", '#34526f', 
 $panes[33] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange', TRUE);
 $panes[34] = new Pane("ElzApp", "簡易アプリ", "//app.elzup.com", 'green', TRUE);
 ?>
-<div class="content">
+<canvas id="c"></canvas>
+<div class="content" id="container">
     <div class="toppane hidden-xs">
 		<?php for ($j = 0; $j < 2; $j++) { ?>
 			<div class="row-toppane">

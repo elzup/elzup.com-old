@@ -10,8 +10,8 @@ if (!function_exists('tag_script_js'))
 	{
 		// TODO: check full url
 		// TODO: check exists extension
-//		return '<script src="' . $src . '" type="text/javascript" charset="' . $charset . '"></script>';
-        require_once($src);
+		return '<script src="' . $src . '" type="text/javascript" charset="' . $charset . '"></script>';
+//        require_once($src);
 	}
 }
 

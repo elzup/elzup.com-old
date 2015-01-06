@@ -17,7 +17,7 @@ class Index extends CI_Controller
 		$this->load->view('bodywrapper_head');
 		$this->load->view('toppage');
 		$this->load->view('bodywrapper_foot');
-		$this->load->view('foot', array('jss' => array('topmagic')));
+		$this->load->view('foot', array('jss' => array('topmagic', 'back')));
 	}
 
 }
