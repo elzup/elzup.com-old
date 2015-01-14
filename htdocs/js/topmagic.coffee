@@ -3,6 +3,7 @@ $ ->
 
     # init variables
     STOP_TIME = 180
+    ROTATE_TO = 30
     $('.front').show()
     $('.back').hide()
     $(".cell").hover ->
@@ -14,14 +15,14 @@ $ ->
         $('.message-' + id).show()
         for i in [0..(STOP_TIME / 2)]
             setTimeout((i) ->
-                $front.css('transform', "rotate(" + (- i * 180 / (STOP_TIME)) + "deg)")
+                $front.css('transform', "rotate(" + (- i * ROTATE_TO / (STOP_TIME)) + "deg)")
             (i), i)
         setTimeout(->
             $front.hide()
             $back.show().addClass("on")
             for i in [0..(STOP_TIME / 2)]
                 setTimeout((i) ->
-                    $back.css('transform', "rotate(" + (90 - i * 180 / (STOP_TIME)) + "deg)")
+                    $back.css('transform', "rotate(" + ((ROTATE_TO / 2) - i * ROTATE_TO / (STOP_TIME)) + "deg)")
                 (i), i)
         ,STOP_TIME / 2)
 
@@ -34,14 +35,14 @@ $ ->
         $('.message-' + id).hide()
         for i in [0..(STOP_TIME / 2)]
             setTimeout((i) ->
-                $back.css('transform', "rotate(" + (i * 180 / (STOP_TIME)) + "deg)")
+                $back.css('transform', "rotate(" + (i * ROTATE_TO / (STOP_TIME)) + "deg)")
             (i), i)
         setTimeout(->
             $back.hide()
             $front.show().addClass("off")
             for i in [0..(STOP_TIME / 2)]
                 setTimeout((i) ->
-                    $front.css('transform', "rotate(" + (i * 180 / (STOP_TIME) - 90) + "deg)")
+                    $front.css('transform', "rotate(" + (i * ROTATE_TO / (STOP_TIME) - (ROTATE_TO / 2)) + "deg)")
                 (i), i)
         ,STOP_TIME / 2)
 

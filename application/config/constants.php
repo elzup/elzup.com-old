@@ -118,6 +118,7 @@ define('PATH_IMG_PRO_METRO', PATH_IMG . 'sc_metro.png');
 define('PATH_IMG_PRO_TRENDWEB', PATH_IMG . 'sc_trendweb.png');
 define('PATH_IMG_PRO_EV3', PATH_IMG . 'sc_ev3.png');
 define('PATH_IMG_PRO_AREA', PATH_IMG . 'sc_area.png');
+define('PATH_IMG_PRO_DOMI', PATH_IMG . 'sc_domi.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
@@ -146,7 +147,7 @@ define('TECHTAG_FW_SLIM', 'Slim');
 define('TECHTAG_FW_BOOTSTRAP', 'Bootstrap');
 define('TECHTAG_FW_PURE', 'Pure');
 define('TECHTAG_FW_MATERIALIZE', 'Materialize');
-define('TECHTAG_FW_Foundation', 'Foundation');
+define('TECHTAG_FW_FOUNDATION', 'Foundation');
 // lib
 define('TECHTAG_LIB_DXLIB', 'DxLib');
 define('TECHTAG_LIB_JAVASERVLET', 'Java servlet');

@@ -157,6 +157,12 @@ EOF
 EOF
         , array(TECHTAG_LANG_RUBY, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_API_TWITTERAPI, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM), '2014年12月', PATH_IMG_PRO_AREA, 'http://areastress.cps.im.dendai.ac.jp/'
     ),
+    new Productionobj(
+        'ドミネーター', '犯罪係数を測る', PRO_TYPE_SERIVICE, <<<EOF
+        Twitterユーザの色相と犯罪係数を計測できる.予想より人気で公開した一晩でレンタル鯖の転送量制限を越して閉鎖.
+EOF
+        , array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_LIB_MECAB, TECHTAG_FW_FOUNDATION, TECHTAG_FW_CODEIGNITER, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_MLANG_STYLUS, TECHTAG_OS_LINUX, TECHTAG_API_TWITTERAPI, TECHTAG_VC_GIT, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM), '2015年01', PATH_IMG_PRO_DOMI, 'http://dominator.elzup.com/'
+    ),
 );
 // 種類分け
 $production_kinds = array();
