@@ -92,6 +92,7 @@ define('PATH_IMG_ICON_GITHUB', PATH_IMG .'icon_github.png');
 define('PATH_IMG_ICON_QIITA', PATH_IMG .'icon_qiita.png');
 define('PATH_IMG_ICON_TUMBLR', PATH_IMG .'icon_tumblr.png');
 define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
+define('PATH_IMG_ICON_HATENABLOG', PATH_IMG .'icon_hatenablog.png');
 define('PATH_IMG_ICON_ELZUP_PREF', '//elzup.com/i/co');
 
 /* icon myapp */
