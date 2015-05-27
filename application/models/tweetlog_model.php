@@ -1,9 +1,7 @@
 <?php
 
-class Tweetlog_model extends CI_Model
-{
-	public function __construct()
-	{
+class Tweetlog_model extends CI_Model {
+	public function __construct() {
 		parent::__construct();
 	}
 
@@ -28,7 +26,7 @@ class Tweetlog_model extends CI_Model
 	 */
 	private static function _adjust_tweet_log($rows) {
 		$datas = array();
-		foreach($rows as $row) {
+		foreach ($rows as $row) {
 			$log = new Tweetlogobj($row);
 			$day = date('md', $log->timestamp);
 			$hour = date('G', $log->timestamp);

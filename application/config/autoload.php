@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -52,14 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array(
-		'session',
-		'metaobj',
-		'productionobj',
-		'tweetlogobj',
-		'dsyogilogobj',
-		'dsyogiprofobj',
-);
+$autoload['libraries'] = array('session', 'metaobj', 'productionobj', 'tweetlogobj', 'dsyogilogobj', 'dsyogiprofobj',);
 
 
 /*
@@ -71,13 +64,7 @@ $autoload['libraries'] = array(
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array(
-		'url',
-		'func',
-		'parts',
-		'partstwitter',
-		'partsex',
-);
+$autoload['helper'] = array('url', 'func', 'parts', 'partstwitter', 'partsex',);
 
 
 /*
@@ -93,9 +80,7 @@ $autoload['helper'] = array(
 |
 */
 
-$autoload['config'] = array(
-	'my_googleapis',
-);
+$autoload['config'] = array('my_googleapis',);
 
 /*
 | -------------------------------------------------------------------

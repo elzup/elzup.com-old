@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
@@ -27,14 +27,14 @@ define('DIR_WRITE_MODE', 0777);
 |
 */
 
-define('FOPEN_READ',							'rb');
-define('FOPEN_READ_WRITE',						'r+b');
-define('FOPEN_WRITE_CREATE_DESTRUCTIVE',		'wb'); // truncates existing file data, use with care
-define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE',	'w+b'); // truncates existing file data, use with care
-define('FOPEN_WRITE_CREATE',					'ab');
-define('FOPEN_READ_WRITE_CREATE',				'a+b');
-define('FOPEN_WRITE_CREATE_STRICT',				'xb');
-define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
+define('FOPEN_READ', 'rb');
+define('FOPEN_READ_WRITE', 'r+b');
+define('FOPEN_WRITE_CREATE_DESTRUCTIVE', 'wb'); // truncates existing file data, use with care
+define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE', 'w+b'); // truncates existing file data, use with care
+define('FOPEN_WRITE_CREATE', 'ab');
+define('FOPEN_READ_WRITE_CREATE', 'a+b');
+define('FOPEN_WRITE_CREATE_STRICT', 'xb');
+define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
 
 
 /*
@@ -87,12 +87,12 @@ define('URL_JQUERY', 'https://code.jquery.com/jquery.js');
 define('URL_YUI', 'http://yui.yahooapis.com/3.16.0/build/yui/yui-min.js');
 
 /* icon my */
-define('PATH_IMG_ICON_TWITTER', PATH_IMG .'icon_twitter.png');
-define('PATH_IMG_ICON_GITHUB', PATH_IMG .'icon_github.png');
-define('PATH_IMG_ICON_QIITA', PATH_IMG .'icon_qiita.png');
-define('PATH_IMG_ICON_TUMBLR', PATH_IMG .'icon_tumblr.png');
-define('PATH_IMG_ICON_LINK', PATH_IMG .'icon_link.png');
-define('PATH_IMG_ICON_HATENABLOG', PATH_IMG .'icon_hatenablog.png');
+define('PATH_IMG_ICON_TWITTER', PATH_IMG . 'icon_twitter.png');
+define('PATH_IMG_ICON_GITHUB', PATH_IMG . 'icon_github.png');
+define('PATH_IMG_ICON_QIITA', PATH_IMG . 'icon_qiita.png');
+define('PATH_IMG_ICON_TUMBLR', PATH_IMG . 'icon_tumblr.png');
+define('PATH_IMG_ICON_LINK', PATH_IMG . 'icon_link.png');
+define('PATH_IMG_ICON_HATENABLOG', PATH_IMG . 'icon_hatenablog.png');
 define('PATH_IMG_ICON_ELZUP_PREF', '//elzup.com/i/co');
 
 /* icon myapp */
@@ -124,7 +124,7 @@ define('PATH_IMG_PRO_DOMI', PATH_IMG . 'sc_domi.png');
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 
 define('PATH_IMG_404', PATH_IMG . 'no_found.png');
-define('PATH_IMG_LOADING', PATH_IMG .'load.gif');
+define('PATH_IMG_LOADING', PATH_IMG . 'load.gif');
 
 /* techtag str */
 // lang
@@ -209,7 +209,7 @@ define('MYSQL_DATETIME_FORMAT', 'Y-m-d H:i:s');
 
 define('URL_DOBUTSUSYOGI_MYHISTORYPAGE', 'http://shogiwars.heroz.jp/a/users/elzup');
 define('URL_DOBUTSUSYOGI_MYHISTORYPAGE_HISTORY', 'http://shogiwars.heroz.jp/a/users/history/elzup?gtype=a');
-define('DOBUTSUSYOGI_NAME',  'elzup');
+define('DOBUTSUSYOGI_NAME', 'elzup');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

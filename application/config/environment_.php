@@ -18,6 +18,4 @@
  *
  */
 
-
-    define('ENVIRONMENT', 'production');
-?>
+define('ENVIRONMENT', 'production');

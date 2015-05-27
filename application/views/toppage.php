@@ -47,58 +47,64 @@ function tag_cell($k, $pane) {
 			<?php if ($pane->link_icon) { ?>
 				<div class="front">
 					<p><a data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
-					<div class="link-logo"><img src="<?= $pane->link_icon ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
+
+					<div class="link-logo"><img src="<?= $pane->link_icon ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>"/>
+					</div>
 				</div>
 				<div class="back" style="background: <?= $pane->color ?>;">
 					<p><a data-toggle="jumpopen" data-url="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
-					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>" alt="elzup.com リンクロゴ <?= $pane->name ?>" /></div>
+
+					<div class="link-logo"><img src="<?= PATH_IMG_ICON_LINK ?>"
+												alt="elzup.com リンクロゴ <?= $pane->name ?>"/></div>
 				</div>
 			<?php } else { ?>
 				<div class="front my-hp" data-id="<?= $k ?>">
-					<p><a itemprop="applicationCategory" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a></p>
+					<p><a itemprop="applicationCategory" href="<?= $pane->url ?>"><span><?= $pane->name ?></span></a>
+					</p>
 				</div>
 				<div class="back my-hp" style="background: <?= $pane->color ?>;">
 					<p><a href="<?= $pane->url ?>"><span><?= $pane->title ?></span></a></p>
 				</div>
-				<?php
+			<?php
 			}
 		} elseif ($k == '13') {
 			?>
 			<div>
-				<div class="hide message-0">自己紹介<br />アカウント一覧など</div>
-				<div class="hide message-1">今までに作った作品の紹介<br />随時追加</div>
+				<div class="hide message-0">自己紹介<br/>アカウント一覧など</div>
+				<div class="hide message-1">今までに作った作品の紹介<br/>随時追加</div>
 				<div class="hide message-2">所属しているグループの一覧</div>
-				<div class="hide message-3">記録したものや取ってきた<br />自分用のログを表示するページ</div>
+				<div class="hide message-3">記録したものや取ってきた<br/>自分用のログを表示するページ</div>
 			</div>
-			<?php
+		<?php
 		} else if ($k == '30') {
 			?>
 			<div>
-				<div class="hide message-22">コード置き場<br />portfolioで紹介しているものなど</div>
+				<div class="hide message-22">コード置き場<br/>portfolioで紹介しているものなど</div>
 				<div class="hide message-23">主に大学のことなどでつぶやいてるアカウント</div>
-				<div class="hide message-24">画像倉庫<br />アイコン,マイクラ,ルービックキューブなど</div>
+				<div class="hide message-24">画像倉庫<br/>アイコン,マイクラ,ルービックキューブなど</div>
 				<div class="hide message-33">技術メモなどをしているブログ</div>
 				<div class="hide message-34">ネタで作ったもの置き場</div>
 			</div>
-			<?php
+		<?php
 		} else {
 			echo '<div></div>';
 		}
 		?>
 	</div>
-	<?php
+<?php
 }
 
 function print_titlebox() {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
-			<a href="//elzup.tumblr.com/icons" target="_blank"><span class="hide">elzup icon </span><img itemprop="image" class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>
+			<a href="//elzup.tumblr.com/icons" target="_blank"><span class="hide">elzup icon </span><img
+					itemprop="image" class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ"/></a>
 			<!--<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>-->
 			<h1 itemprop="name">elzup.com</h1>
 		</div>
 	</div>
-	<?php
+<?php
 }
 
 /** @var $pane Pane[] */
@@ -117,7 +123,7 @@ $panes[34] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange'
 ?>
 <canvas id="c"></canvas>
 <div class="content" id="container">
-    <div class="toppane hidden-xs">
+	<div class="toppane hidden-xs">
 		<?php for ($j = 0; $j < 2; $j++) { ?>
 			<div class="row-toppane">
 				<?php
@@ -128,9 +134,9 @@ $panes[34] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange'
 				?>
 			</div>
 		<?php } ?>
-        <div class="row-toppane-title">
+		<div class="row-toppane-title">
 			<?php print_titlebox(); ?>
-        </div>
+		</div>
 		<?php for ($j = 2; $j < 4; $j++) { ?>
 			<div class="row-toppane">
 				<?php
@@ -141,12 +147,12 @@ $panes[34] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange'
 				?>
 			</div>
 		<?php } ?>
-    </div>
+	</div>
 
-    <div class="toppane visible-xs">
-        <div class="row-toppane-title">
+	<div class="toppane visible-xs">
+		<div class="row-toppane-title">
 			<?php print_titlebox(); ?>
-        </div>
+		</div>
 		<div class="mini-cell-wrap">
 			<?php
 			foreach ($panes as $p) {
@@ -154,7 +160,7 @@ $panes[34] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange'
 			}
 			?>
 		</div>
-    </div>
+	</div>
 </div>
 <meta itemprop="screenshot" content="<?= PATH_IMG_PRO_ELZUP ?>">
 <meta itemprop="datePublished" content="2014-08-01">

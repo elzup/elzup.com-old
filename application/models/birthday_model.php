@@ -8,10 +8,7 @@ class Birthday_model extends CI_Model {
 
 	public function get_birthday() {
 		$user_name = 'elzup';
-		$parameter = array(
-			'user_name' => $user_name,
-			'include_details' => TRUE,
-		);
+		$parameter = array('user_name' => $user_name, 'include_details' => TRUE,);
 		$url_tail = '?' . http_build_query($parameter);
 		$url = 'http://api.elzup.com/birthday/titles/user.json' . $url_tail;
 		$title_list = json_decode(file_get_contents($url));

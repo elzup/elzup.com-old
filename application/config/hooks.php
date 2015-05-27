@@ -17,7 +17,5 @@ $hook['pre_controller'][] = array(
 	'filepath' => 'hooks',
 );
 
-
-
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */

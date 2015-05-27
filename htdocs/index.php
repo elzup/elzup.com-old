@@ -50,8 +50,7 @@ $environment_path = $home . 'application/config/environment.php';
 if (file_exists($environment_path))
 {
 	require_once($environment_path);
-} else
-{
+} else {
 	define('ENVIRONMENT', 'development');
 }
 

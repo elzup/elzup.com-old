@@ -8,9 +8,7 @@ foreach ($ds_log as $date => $logs) {
 	<div class="row-box">
 		<div class="left-side"><span class="date4"><?= $date ?></span></div>
 		<div class="right-side">
-			<?php
-			foreach ($logs as $log) {
-				?>
+			<?php foreach ($logs as $log) { ?>
 				<div class="dsyogi-log-pane <?= $log->result ?>">
 					<a href="<?= $log->url ?>" target="_blank">
 						<span class="result"><?= $log->get_result_char() ?></span>
@@ -19,10 +17,8 @@ foreach ($ds_log as $date => $logs) {
 						</span>
 					</a>
 				</div>
-				<?php
-			}
-			?> 
+			<?php } ?>
 		</div>
 	</div>
-	<?php
+<?php
 }

@@ -1,17 +1,8 @@
 <?php
 // TODO: import json
-$tags = array(
-	'Webサイト制作' => './port',
-	'ゲームプログラミング' => '',
-	'Vim' => '//github.com/elzzup/dotfiles/blob/master/.vimrc',
-	'Firefox' => '',
-	'ArchLinux' => '',
-	'Minecraft' => '//elzup.tumblr.com/minecraft',
-	'オセロ' => '',
-	'将棋' => '',
-	'ルービックキューブ' => '//elzup.tumblr.com/cube',
-	'アニメ' => '',
-);
+$tags = array('Webサイト制作' => './port', 'ゲームプログラミング' => '', 'Vim' => '//github.com/elzzup/dotfiles/blob/master/.vimrc',
+	'Firefox' => '', 'ArchLinux' => '', 'Minecraft' => '//elzup.tumblr.com/minecraft', 'オセロ' => '', '将棋' => '',
+	'ルービックキューブ' => '//elzup.tumblr.com/cube', 'アニメ' => '',);
 
 class AccountRecord {
 
@@ -28,20 +19,19 @@ class AccountRecord {
 }
 
 /** @var $account_list AccountRecord[] */
-$account_list = array(
-	new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzzup'),
+$account_list = array(new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzzup'),
 	new AccountRecord('Github', 'elzzup', '//github.com/elzzup'),
 	new AccountRecord('Facebook', '高橋洸人', '//www.facebook.com/takahashiroto'),
 	new AccountRecord('SlideShare', 'elzup', '//www.slideshare.net/elzup/'),
 	new AccountRecord('Qiita', 'elzup', '//qiita.com/elzup'),
-	new AccountRecord('Tumblr', 'elzup', '//elzup.tumblr.com'),
-	new AccountRecord('Skype', 'guild0105'),
+	new AccountRecord('Tumblr', 'elzup', '//elzup.tumblr.com'), new AccountRecord('Skype', 'guild0105'),
 	new AccountRecord('将棋ウォーズ', 'elzup', '//shogiwars.heroz.jp/users/elzup'),
-//	new AccountRecord('GameCenter<iOS>', 'elzzup'),
+	//	new AccountRecord('GameCenter<iOS>', 'elzzup'),
 );
 ?>
 <div class="content">
 	<h1 class="content-title">プロフィール of elzup</h1>
+
 	<div class="content-body">
 		<div class="profile row-box">
 			<div class="left-box">
@@ -49,6 +39,7 @@ $account_list = array(
 					<img class="elzup-icon" src="<?= PATH_IMG_ICON_ELZUP_PREF ?>01.png">
 					<img id="reload-icon" class="icon-mini" src="<?= PATH_IMG_RELOAD ?>">
 				</p>
+
 				<h2>えるざっぷ</h2>
 				<span class="rub"><strong>elzup</strong></span>
 			</div>
