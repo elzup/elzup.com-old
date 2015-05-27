@@ -52,9 +52,9 @@ class Productionobj {
 
 	/**
 	 * リンクがある場合はリンク
-	 * @var string
+	 * @var array
 	 */
-	public $link;
+	public $links;
 
 	/**
 	 * リンクがある場合はリンク
@@ -71,11 +71,11 @@ class Productionobj {
 	 * @param string[] $tech_list
 	 * @param string $date
 	 * @param string $img_src
-	 * @param string $link
-	 * @param string $members
+	 * @param array $links
+	 * @param array $members
 	 * memberName => comment
 	 */
-	public function __construct($name = NULL, $light_detail = NULL, $type = NULL, $detail = NULL, $tech_list =  NULL, $date = NULL, $img_src = NULL, $link = NULL, array $members = array()) {
+	public function __construct($name = NULL, $light_detail = NULL, $type = NULL, $detail = NULL, $tech_list =  NULL, $date = NULL, $img_src = NULL, array $links = array(), array $members = array()) {
         if (!isset($date)) {
             return;
         }
@@ -85,10 +85,22 @@ class Productionobj {
 		$this->type = $type;
 		$this->detail = $detail;
 		$this->img_src = $img_src;
-		$this->link = $link;
+		$this->links = array_merge(array(LINK_TYPE_HOME => NULL, LINK_TYPE_GITHUB => NULL, LINK_TYPE_TRELLO => NULL), $links);
 		$this->tech_list = $tech_list;
 		$this->date = $date;
 		$this->members = $members;
+	}
+
+	public function get_homelink() {
+		return $this->links[LINK_TYPE_HOME];
+	}
+
+	public function get_githublink() {
+		return '//github.com/' . $this->links[LINK_TYPE_GITHUB];
+	}
+
+	public function get_trellolink() {
+		return '//trello.com/b/' . $this->links[LINK_TYPE_TRELLO];
 	}
 
 	public function get_icon_url() {

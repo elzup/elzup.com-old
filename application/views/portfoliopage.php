@@ -30,7 +30,7 @@ EOF
 		array(TECHTAG_LANG_CPP, TECHTAG_LIB_DXLIB, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_VISUALSTUDIO),
 		'2012年8月',
 		PATH_IMG_PRO_TANK,
-		NULL,
+		array(),
 		array('Lamia_inase' => 'ステージ上のドット絵全般', 'karura820' => 'サウンド全般')
 	),
 
@@ -41,7 +41,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_OPT_GOOGLESCRIPT, TECHTAG_API_TWITTERAPI, TECHTAG_API_YAHOOAPI, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_ECLIPSE),
 		'2013年3月',
 		PATH_IMG_PRO_TREND,
-		'//twitter.com/TDU_Trend'
+		array(
+			LINK_TYPE_HOME => '//twitter.com/TDU_Trend',
+			LINK_TYPE_GITHUB => 'elzzup/tdu_trend',
+		)
 	),
 
 	new Productionobj('IconStage',
@@ -51,7 +54,9 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_LANG_PROCESSING, TECHTAG_MLANG_PROCESSING_JS, TECHTAG_MLANG_JQUERY, TECHTAG_API_TWITTERAPI, TECHTAG_API_TWITTERWEBAPI, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_ECLIPSE),
 		'2013年3月',
 		PATH_IMG_PRO_ICONSTAGE,
-		'//iconstages.elzup.com/'
+		array(
+			LINK_TYPE_HOME => '//iconstages.elzup.com/',
+		)
 	),
 
 	new Productionobj('Jenga Note',
@@ -61,7 +66,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_LESS, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_DB_MYSQL, TECHTAG_EDIT_ECLIPSE, TECHTAG_EDIT_VIM),
 		'2013年11月',
 		PATH_IMG_PRO_JENGA /* PATH_IMG_PRO_JENGA */,
-		'//elzzup.yuta-ri.net/fillup/'
+		array(
+			LINK_TYPE_HOME => '//elzzup.yuta-ri.net/fillup/',
+			LINK_TYPE_GITHUB => 'elzzup/fillup',
+		)
 	),
 
 	new Productionobj('一夜人狼',
@@ -71,7 +79,9 @@ EOF
 		array(TECHTAG_LANG_JS, TECHTAG_MLANG_LESS, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_ECLIPSE, TECHTAG_EDIT_VIM),
 		'2013年12月',
 		PATH_IMG_PRO_ICHIYA,
-		'//elzzup.yuta-ri.net/wolf/'
+		array(
+			LINK_TYPE_HOME => '//elzzup.yuta-ri.net/wolf/',
+		)
 	),
 
 	new Productionobj('時みくじ',
@@ -81,7 +91,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_LESS, TECHTAG_MLANG_JQUERY, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_ECLIPSE),
 		'2014年1月',
 		PATH_IMG_PRO_TOKIMIKUJI,
-		'//app.elzup.com/tk'
+		array(
+			LINK_TYPE_HOME => '//app.elzup.com/tk',
+			LINK_TYPE_GITHUB => 'elzzup/app.elzup.com',
+		)
 	),
 
 	new Productionobj('RollCakeRSS',
@@ -91,7 +104,9 @@ EOF
 		array(TECHTAG_LANG_JAVA, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_ECLIPSE, TECHTAG_EDIT_VIM),
 		'2014年1月',
 		PATH_IMG_PRO_ROLLCAKE,
-		'//github.com/elzzup/RollCake_RSS'
+		array(
+			LINK_TYPE_GITHUB => 'elzzup/RollCake_RSS',
+		)
 	),
 
 	new Productionobj('投票メーカー',
@@ -101,7 +116,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_LESS, TECHTAG_API_TWITTERAPI, TECHTAG_API_TWITTERWEBAPI, TECHTAG_FW_CODEIGNITER, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_OS_LINUX, TECHTAG_DB_MYSQL, TECHTAG_VC_GIT),
 		'2014年4月',
 		PATH_IMG_PRO_TOHYO,
-		'//tohyomaker.com'
+		array(
+			LINK_TYPE_HOME => '//tohyomaker.com',
+			LINK_TYPE_GITHUB => 'elzzup/tohyomaker.com',
+		)
 	),
 
 	new Productionobj('asn_web',
@@ -111,7 +129,9 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_LESS, TECHTAG_MLANG_JQUERY, TECHTAG_FW_BOOTSTRAP, TECHTAG_FW_CODEIGNITER, TECHTAG_API_USTREAMAPI, TECHTAG_OS_LINUX, TECHTAG_OS_WINDOWS, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
 		'2014年7月',
 		PATH_IMG_PRO_ASN,
-		'//asn-web.com'
+		array(
+			LINK_TYPE_HOME => '//asn-web.com'
+		)
 	),
 
 	new Productionobj('TDUClaud',
@@ -121,7 +141,7 @@ EOF
 		array(TECHTAG_LANG_JAVA, TECHTAG_API_TWITTERAPI, TECHTAG_LIB_JAVASERVLET, TECHTAG_MLANG_JQUERY, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_OS_LINUX, TECHTAG_EDIT_ECLIPSE, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
 		'2013年6月',
 		PATH_IMG_PRO_CLAUD,
-		NULL,
+		array(),
 		array('sukonbu0909' => 'プロジェクトマネージャ',
 			'twinkfrag' => 'アプリケーションスペシャリスト',
 			'godslew' => 'ITアーキテクト',
@@ -136,7 +156,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_LESS, TECHTAG_API_YAHOOAPI, TECHTAG_API_TWITTERAPI, TECHTAG_FW_CODEIGNITER, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_LINUX, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM),
 		'2014年6月',
 		PATH_IMG_PRO_YOPPARATTER,
-		'//app.elzup.com/yopparatter/'
+		array (
+			LINK_TYPE_HOME => '//app.elzup.com/yopparatter/',
+			LINK_TYPE_GITHUB => 'elzzup/app.elzup.com',
+		)
 	),
 
 	new Productionobj('BirthdayAPI',
@@ -146,7 +169,9 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_OS_LINUX, TECHTAG_DB_MYSQL, TECHTAG_DB_POSTGRESQL, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
 		'2014年7月',
 		PATH_IMG_PRO_BIRTHDAY,
-		'//github.com/elzzup/CharactorBirthdayAPI'
+		array (
+			LINK_TYPE_GITHUB => '//elzzup/CharactorBirthdayAPI'
+		)
 	),
 
 	new Productionobj('念写ったー',
@@ -156,7 +181,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JAVA, TECHTAG_LANG_PROCESSING, TECHTAG_FW_BOOTSTRAP, TECHTAG_FW_CODEIGNITER, TECHTAG_API_TWITTERAPI, TECHTAG_OS_LINUX, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_INTELLIJIDEA, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
 		'2014年8月',
 		PATH_IMG_PRO_NENSYATTER,
-		'//app.elzup.com/nn'
+		array (
+			LINK_TYPE_HOME => '//app.elzup.com/nn',
+			LINK_TYPE_GITHUB => 'elzzup/app.elzup.com',
+		)
 	),
 
 	new Productionobj('<strong>elzup.com</strong>',
@@ -165,7 +193,11 @@ EOF
 		'Bootstrapは使わずに,できるだけライブラリに頼らないように作った.これからも進化を続けていく',
 		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_STYLUS, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_FW_CODEIGNITER, TECHTAG_MLANG_JQUERY, TECHTAG_OS_LINUX, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER),
 		'2014年8月',
-		PATH_IMG_PRO_ELZUP
+		PATH_IMG_PRO_ELZUP,
+		array (
+			LINK_TYPE_GITHUB => 'elzzup/elzup.com',
+			LINK_TYPE_TRELLO => 'bYpHhQGW/elzup-com',
+		)
 	),
 
 	new Productionobj('言えるかな？',
@@ -175,7 +207,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_FW_CODEIGNITER, TECHTAG_FW_BOOTSTRAP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_LINUX, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT, TECHTAG_VC_GRUNT),
 		'2014年8月',
 		PATH_IMG_PRO_IERUKANA,
-		'//ierukana.elzup.com'
+		array (
+			LINK_TYPE_HOME => '//ierukana.elzup.com',
+			LINK_TYPE_GITHUB => 'elzzup/IerukanaMaker',
+		)
 	),
 
 	new Productionobj('TDU12FI研究室希望bot',
@@ -185,7 +220,9 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_API_TWITTERAPI, TECHTAG_OS_LINUX, TECHTAG_EDIT_VIM),
 		'2014年9月',
 		PATH_IMG_PRO_LABOATTEND,
-		'//twitter.com/tdu12fi'
+		array (
+			LINK_TYPE_HOME => '//twitter.com/tdu12fi'
+		)
 	),
 
 	new Productionobj('どうぶつしょうぎ解析',
@@ -195,7 +232,9 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_LESS, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_DB_MYSQL, TECHTAG_EDIT_VIM),
 		'2014年9月',
 		PATH_IMG_PRO_DSHOGI,
-		'//dshogi.elzup.com'
+		array (
+			LINK_TYPE_HOME => '//dshogi.elzup.com'
+		)
 	),
 
 	new Productionobj('Happy days',
@@ -205,7 +244,10 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_LESS, TECHTAG_MLANG_JQUERY, TECHTAG_OS_WINDOWS, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM),
 		'2014年1月',
 		PATH_IMG_PRO_HAPPY,
-		'//happy.elzup.com'
+		array (
+			LINK_TYPE_HOME => '//happy.elzup.com',
+			LINK_TYPE_GITHUB => 'elzzup/happy',
+		)
 	),
 
 	new Productionobj('東京メトロRailway Map',
@@ -215,17 +257,23 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_JQUERY, TECHTAG_API_METROAPI, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_DB_MYSQL, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_EDIT_VIM),
 		'2014年11月',
 		PATH_IMG_PRO_METRO,
-		'//metro.elzup.com'
+		array (
+			LINK_TYPE_HOME => '//metro.elzup.com',
+		)
 	),
 
 	new Productionobj('電大トレンド君 on Web',
 		'あのトレンドくんがWebサイトで帰ってきた！',
 		PRO_TYPE_SERIVICE,
         '電大トレンド君botを根本から作りなおして,統計とかが捗るような設計にしてそれをwebに移植した.',
-		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_JADE, TECHTAG_MLANG_SASS, TECHTAG_DB_MYSQL, TECHTAG_FW_SLIM, TECHTAG_FW_MATERIALIZE, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_VC_BOWER, TECHTAG_VC_NPM, TECHTAG_VC_GULP, TECHTAG_EDIT_VIM, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_PHPSTORM),
+		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_JADE, TECHTAG_MLANG_SASS, TECHTAG_DB_MYSQL, TECHTAG_FW_SLIM, TECHTAG_FW_MATERIALIZE, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_VC_BOWER, TECHTAG_VC_NPM, TECHTAG_VC_GULP, TECHTAG_EDIT_VIM, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_PHPSTORM, TECHTAG_VC_TRELLO),
 		'2014年12月',
 		PATH_IMG_PRO_TRENDWEB,
-		'//trend.elzup.com'
+		array (
+			LINK_TYPE_HOME => '//trend.elzup.com',
+			LINK_TYPE_GITHUB => 'elzzup/tdu_trend',
+			LINK_TYPE_TRELLO => 'LMOjKwdv/tdu-trend',
+		)
 	),
 
 	new Productionobj('EV3 ライントレースカー',
@@ -235,7 +283,9 @@ EOF
 		array(TECHTAG_LANG_C, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM),
 		'2014年12月',
 		PATH_IMG_PRO_EV3,
-		'//github.com/elzzup/ev3_linetrace'
+		array (
+			LINK_TYPE_GITHUB => 'elzzup/ev3_linetrace',
+		)
 	),
 
 	new Productionobj('東京エリアストレス',
@@ -245,7 +295,9 @@ EOF
 		array(TECHTAG_LANG_RUBY, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_API_TWITTERAPI, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_EDIT_VIM),
 		'2014年12月',
 		PATH_IMG_PRO_AREA,
-		'http://areastress.cps.im.dendai.ac.jp/'
+		array (
+			LINK_TYPE_HOME => '//areastress.cps.im.dendai.ac.jp/',
+		)
 	),
 
 	new Productionobj('ドミネーター',
@@ -255,27 +307,38 @@ EOF
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_LIB_MECAB, TECHTAG_FW_FOUNDATION, TECHTAG_FW_CODEIGNITER, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_MLANG_STYLUS, TECHTAG_OS_LINUX, TECHTAG_API_TWITTERAPI, TECHTAG_VC_GIT, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM),
 		'2015年01',
 		PATH_IMG_PRO_DOMI,
-		'http://dominator.elzup.com/'
+		array (
+			LINK_TYPE_HOME => '//dominator.elzup.com/',
+			LINK_TYPE_GITHUB => 'elzzup/dominator',
+		)
 	),
 
 	new Productionobj('残留申請 CSV',
 		'研究生活を支援するツール',
 		PRO_TYPE_SOFTWARE,
 		'大学への残留申請をするために必要なCSVを生成できるWebツール, Content-Typeやアクセス管理の勉強になった',
-		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_JQUERY, TECHTAG_FW_SLIM, TECHTAG_FW_FOUNDATION, TECHTAG_OS_LINUX, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_BOWER),
+		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_JQUERY, TECHTAG_FW_SLIM, TECHTAG_FW_FOUNDATION, TECHTAG_OS_LINUX, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_BOWER, TECHTAG_VC_TRELLO),
 		'2015年02',
 		PATH_IMG_PRO_CPSLEAST,
-		'http://cps.elzup.com/'
+		array (
+			LINK_TYPE_HOME => '//cps.elzup.com/',
+			LINK_TYPE_GITHUB => 'elzzup/cps_stay',
+			LINK_TYPE_TRELLO => '6BXGEdHC/-',
+		)
 	),
 
 	new Productionobj('cps.tdu.black',
 		'研究室の紹介ページ',
 		PRO_TYPE_NETA,
 		'大学パンフレットの学科紹介ページを真似て, 一晩遊びで作ったページ. シンプルで綺麗なプロジェクト構成で綺麗に出来たと思う',
-		array(TECHTAG_MLANG_JADE, TECHTAG_MLANG_STYLUS, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_GULP),
+		array(TECHTAG_MLANG_JADE, TECHTAG_MLANG_STYLUS, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_GULP, TECHTAG_VC_TRELLO),
 		'2015年04',
 		PATH_IMG_PRO_CPSBLACK,
-		'http://cps.tdu.black'
+		array(
+			LINK_TYPE_HOME => '//cps.tdu.black',
+			LINK_TYPE_GITHUB => 'elzzup/cps.tdu.black',
+			LINK_TYPE_TRELLO => 'q8KJVfLI/cps-tdu-black',
+		)
 	),
 
 	new Productionobj('ゴロゴロえるざっぷ',
@@ -285,7 +348,10 @@ EOF
 		array(TECHTAG_LANG_CS, TECHTAG_EDIT_UNITY, TECHTAG_EDIT_BLENDER, TECHTAG_EDIT_MONODEVELOP, TECHTAG_OS_OSX, TECHTAG_VC_GIT),
 		'2015年05',
 		PATH_IMG_PRO_GORO,
-		'http://gorogoro.elzup.com/',
+		array(
+			LINK_TYPE_HOME => '//gorogoro.elzup.com/',
+			LINK_TYPE_GITHUB => 'elzzup/Roll-a-elzup',
+		),
 		array('s_dm_u' => 'えるざっぷモデルの作成')
 	),
 
@@ -293,20 +359,26 @@ EOF
 		'Geo タグとクラスタリング',
 		PRO_TYPE_STUDY,
 		'Geoタグ付きツイートを位置や時間からクラスタリングしてイベントっぽいものを検出する, 可視化するところまでは作った',
-		array(TECHTAG_LANG_PYTHON, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_DB_MYSQL, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_OSX, TECHTAG_EDIT_PHPSTORM, TECHTAG_EDIT_PYCHARM, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
+		array(TECHTAG_LANG_PYTHON, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_DB_MYSQL, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_OSX, TECHTAG_EDIT_PHPSTORM, TECHTAG_EDIT_PYCHARM, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT, TECHTAG_VC_TRELLO),
 		'2015年05',
 		PATH_IMG_PRO_EVENT,
-		'https://github.com/elzzup/event_clustering'
+		array(
+			LINK_TYPE_GITHUB => 'elzzup/event_clustering'
+		)
 	),
 
 	new Productionobj('Pictter',
 		'Android 画像収集クライアント',
 		PRO_TYPE_SOFTWARE,
 		'初めて Android 開発で作ったアプリ. 画像検索で取得した画像リストを, スワイプ一つで保存できるアプリ. 友人と2人で時に大まかな役割は決めずにタスク分けしながら作成した.',
-		array(TECHTAG_LANG_JAVA, TECHTAG_FW_ANDROIDSDK, TECHTAG_LIB_FABRIC, TECHTAG_LIB_TWITTER4J, TECHTAG_EDIT_ANDROIDSTUDIO, TECHTAG_OS_OSX, TECHTAG_VC_GIT),
+		array(TECHTAG_LANG_JAVA, TECHTAG_FW_ANDROIDSDK, TECHTAG_LIB_FABRIC, TECHTAG_LIB_TWITTER4J, TECHTAG_EDIT_ANDROIDSTUDIO, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_TRELLO),
 		'2015年05',
 		PATH_IMG_PRO_PICTTER,
-		'https://play.google.com/store/apps/details?id=com.elzup.pictter.pictter&hl=ja',
+		array(
+			LINK_TYPE_HOME => '//play.google.com/store/apps/details?id=com.elzup.pictter.pictter&hl=ja',
+			LINK_TYPE_GITHUB => 'gachapdev/pictter',
+			LINK_TYPE_TRELLO => 'eRFaCrSO/pictter',
+		),
 		array('mikekuroe', 'エンジニア')
 	),
 
@@ -453,6 +525,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理, パッケージ管理',
 			<?php
 			$c = 0;
 			foreach ($production_list as $i => $p) {
+				/* @var Productionobj $p */
 				?>
 				<div id="pi<?= $p->id ?>" class="production-item half">
 					<div class="img-box">
@@ -461,10 +534,25 @@ $tag_helps[] = array('Admin', 'プロジェクト管理, パッケージ管理',
 						</a>
 					</div>
 					<div class="detail-box">
-						<a href="<?= $p->link ?>" class="<?= $p->link ? '' : 'disabled' ?>" target="_blank">
-							<span class="name"><?= $p->name ?></span><span
-								class="icon-jump"><?= $p->link ? '↗' : '' ?></span>
-						</a>
+						<?php $link = $p->get_homelink(); ?>
+						<?php if(isset($link)) { ?>
+							<a href="<?= $link ?>" target="_blank">
+								<span class="name"><?= $p->name ?></span><span class="icon-jump">↗</span>
+							</a>
+						<?php } else { ?>
+							<span class="name"><?= $p->name ?></span>
+						<?php } ?>
+						<?php if($link = $p->get_githublink()) { ?>
+							<a href="<?= $link ?>" target="_blank">
+								git
+							</a>
+						<?php } ?>
+						<?php if($link = $p->get_trellolink()) { ?>
+							<a href="<?= $link ?>" target="_blank">
+								trello
+							</a>
+						<?php } ?>
+<!--						TODO: other link -->
 
 						<p class="light-detail"><?= $p->light_detail ?></p>
 

@@ -236,5 +236,12 @@ define('URL_DOBUTSUSYOGI_MYHISTORYPAGE', 'http://shogiwars.heroz.jp/a/users/elzu
 define('URL_DOBUTSUSYOGI_MYHISTORYPAGE_HISTORY', 'http://shogiwars.heroz.jp/a/users/history/elzup?gtype=a');
 define('DOBUTSUSYOGI_NAME', 'elzup');
 
+/**
+ * Link types
+ */
+define('LINK_TYPE_HOME', 'a');
+define('LINK_TYPE_GITHUB', 'b');
+define('LINK_TYPE_TRELLO', 'c');
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
