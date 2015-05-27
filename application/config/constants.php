@@ -130,13 +130,16 @@ define('PATH_IMG_LOADING', PATH_IMG . 'load.gif');
 // lang
 define('TECHTAG_LANG_C', 'C');
 define('TECHTAG_LANG_CPP', 'C++');
+define('TECHTAG_LANG_CS', 'C#');
 define('TECHTAG_LANG_PHP', 'PHP');
+define('TECHTAG_LANG_PYTHON', 'Python');
 define('TECHTAG_LANG_JAVA', 'Java');
 define('TECHTAG_LANG_RUBY', 'Ruby');
 define('TECHTAG_LANG_JS', 'JavaScript');
 define('TECHTAG_LANG_PROCESSING', 'processing');
 // metaLang
 define('TECHTAG_MLANG_JQUERY', 'jQuery');
+define('TECHTAG_MLANG_JADE', 'Jade');
 define('TECHTAG_MLANG_LESS', 'LESS');
 define('TECHTAG_MLANG_SASS', 'SASS');
 define('TECHTAG_MLANG_STYLUS', 'Stylus');
@@ -149,10 +152,15 @@ define('TECHTAG_FW_BOOTSTRAP', 'Bootstrap');
 define('TECHTAG_FW_PURE', 'Pure');
 define('TECHTAG_FW_MATERIALIZE', 'Materialize');
 define('TECHTAG_FW_FOUNDATION', 'Foundation');
+define('TECHTAG_FW_DJANGO', 'Django');
+define('TECHTAG_FW_ANDROIDSDK', 'AndroidSDK');
 // lib
 define('TECHTAG_LIB_DXLIB', 'DxLib');
 define('TECHTAG_LIB_JAVASERVLET', 'Java servlet');
 define('TECHTAG_LIB_MECAB', 'Mecab');
+define('TECHTAG_LIB_PARIS', 'Paris/idiorm');
+define('TECHTAG_LIB_FABRIC', 'TwitterFabric');
+define('TECHTAG_LIB_TWITTER4J', 'Twitter4J');
 // api
 define('TECHTAG_API_TWITTERAPI', 'TwitterAPI');
 define('TECHTAG_API_TWITTERWEBAPI', 'TwitterWebAPI');
@@ -165,6 +173,7 @@ define('TECHTAG_OPT_GOOGLESCRIPT', 'GoogleScript');
 // OS
 define('TECHTAG_OS_WINDOWS', 'Windows');
 define('TECHTAG_OS_LINUX', 'linux');
+define('TECHTAG_OS_OSX', 'OSX');
 // db
 define('TECHTAG_DB_MYSQL', 'mysql');
 define('TECHTAG_DB_POSTGRESQL', 'PostgreSQL');
@@ -173,14 +182,24 @@ define('TECHTAG_EDIT_VISUALSTUDIO', 'VisualStudio');
 define('TECHTAG_EDIT_ECLIPSE', 'Eclipse');
 define('TECHTAG_EDIT_NETBEANS', 'NetBeans');
 define('TECHTAG_EDIT_INTELLIJIDEA', 'IntelliJ IDEA');
+define('TECHTAG_EDIT_PHPSTORM', 'PhpStorm');
+define('TECHTAG_EDIT_WEBSOTRM', 'WebStorm');
+define('TECHTAG_EDIT_PYCHARM', 'PyCharm');
+define('TECHTAG_EDIT_ANDROIDSTUDIO', 'AndroidStudio');
 define('TECHTAG_EDIT_VIM', 'Vim');
-// version control
+define('TECHTAG_EDIT_UNITY', 'Unity');
+define('TECHTAG_EDIT_BLENDER', 'Blender');
+define('TECHTAG_EDIT_MONODEVELOP', 'MonoDevelop');
+// version control, buildsystem
 define('TECHTAG_VC_GIT', 'git');
 define('TECHTAG_VC_GRUNT', 'grunt');
 define('TECHTAG_VC_COMPOSER', 'composer');
 define('TECHTAG_VC_NPM', 'npm');
 define('TECHTAG_VC_GEM', 'gem');
 define('TECHTAG_VC_BOWER', 'bower');
+define('TECHTAG_VC_GULP', 'gulp');
+define('TECHTAG_VC_GRADLE', 'gradle');
+define('TECHTAG_VC_TRELLO', 'Trello');
 
 /**
  * production type
@@ -191,6 +210,7 @@ define('PRO_TYPE_BOT', 'Bot');
 define('PRO_TYPE_API', 'API');
 define('PRO_TYPE_ROBOT', '機体・制御・マイコン');
 define('PRO_TYPE_NETA', '小ネタ');
+define('PRO_TYPE_STUDY', '研究関連');
 
 /**
  * DB constants

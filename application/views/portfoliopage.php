@@ -129,7 +129,6 @@ EOF
 			'munisystem' => '品質保証マネージャ')
 	),
 
-
 	new Productionobj('酔っ払った―',
 		'酔っ払ったツイートができる簡易Webアプリ',
 		PRO_TYPE_NETA,
@@ -223,7 +222,7 @@ EOF
 		'あのトレンドくんがWebサイトで帰ってきた！',
 		PRO_TYPE_SERIVICE,
         '電大トレンド君botを根本から作りなおして,統計とかが捗るような設計にしてそれをwebに移植した.',
-		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_SASS, TECHTAG_DB_MYSQL, TECHTAG_FW_SLIM, TECHTAG_FW_MATERIALIZE, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_VC_BOWER, TECHTAG_VC_NPM, TECHTAG_EDIT_VIM, TECHTAG_EDIT_NETBEANS),
+		array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_JADE, TECHTAG_MLANG_SASS, TECHTAG_DB_MYSQL, TECHTAG_FW_SLIM, TECHTAG_FW_MATERIALIZE, TECHTAG_OS_LINUX, TECHTAG_VC_GIT, TECHTAG_VC_COMPOSER, TECHTAG_VC_BOWER, TECHTAG_VC_NPM, TECHTAG_VC_GULP, TECHTAG_EDIT_VIM, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_PHPSTORM),
 		'2014年12月',
 		PATH_IMG_PRO_TRENDWEB,
 		'//trend.elzup.com'
@@ -258,14 +257,111 @@ EOF
 		PATH_IMG_PRO_DOMI,
 		'http://dominator.elzup.com/'
 	),
+
+	new Productionobj('残留申請 CSV',
+		'研究生活を支援するツール',
+		PRO_TYPE_SOFTWARE,
+		'大学への残留申請をするために必要なCSVを生成できるWebツール, Content-Typeやアクセス管理の勉強になった',
+		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_JQUERY, TECHTAG_FW_SLIM, TECHTAG_FW_FOUNDATION, TECHTAG_OS_LINUX, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_BOWER),
+		'2015年02',
+		PATH_IMG_PRO_AREA, # TODO:
+		'http://cps.elzup.com/'
+	),
+
+	new Productionobj('cps.tdu.black',
+		'研究室の紹介ページ',
+		PRO_TYPE_NETA,
+		'大学パンフレットの学科紹介ページを真似て, 一晩遊びで作ったページ. シンプルで綺麗なプロジェクト構成で綺麗に出来たと思う',
+		array(TECHTAG_MLANG_JADE, TECHTAG_MLANG_STYLUS, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_GULP),
+		'2015年04',
+		PATH_IMG_PRO_NENSYATTER, # TODO:
+		'http://project.url/'
+	),
+
+	new Productionobj('ゴロゴロえるざっぷ',
+		'Unity でゲーム',
+		PRO_TYPE_SOFTWARE,
+		'コロコロカービィ風のゲーム. 休日一日を費やして Unity を勉強しながら作った. モデルは友人に作ってもらって Blender でUVマッピング色付けのみ自分でやった. 3Dはしばらく触ってなかったけれど Unity もモデリングもやってみたら面白かった',
+		array(TECHTAG_LANG_CS, TECHTAG_EDIT_UNITY, TECHTAG_EDIT_BLENDER, TECHTAG_EDIT_MONODEVELOP, TECHTAG_OS_OSX, TECHTAG_VC_GIT),
+		'2015年05',
+		PATH_IMG_PRO_AREA, # TODO:
+		'http://gorogoro.elzup.com/',
+		array('s_dm_u' => 'えるざっぷモデルの作成')
+	),
+
+	new Productionobj('Twitter イベント検出',
+		'Geo タグとクラスタリング',
+		PRO_TYPE_STUDY,
+		'Geoタグ付きツイートを位置や時間からクラスタリングしてイベントっぽいものを検出する, 可視化するところまでは作った',
+		array(TECHTAG_LANG_PYTHON, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_DB_MYSQL, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_OSX, TECHTAG_EDIT_PHPSTORM, TECHTAG_EDIT_PYCHARM, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
+		'2015年05',
+		PATH_IMG_PRO_AREA, # TODO:
+		'https://github.com/elzzup/event_clustering'
+	),
+
+	new Productionobj('Pictter',
+		'Android 画像収集クライアント',
+		PRO_TYPE_SOFTWARE,
+		'初めて Android 開発で作ったアプリ. 画像検索で取得した画像リストを, スワイプ一つで保存できるアプリ. 友人と2人で時に大まかな役割は決めずにタスク分けしながら作成した.',
+		array(TECHTAG_LANG_JAVA, TECHTAG_FW_ANDROIDSDK, TECHTAG_LIB_FABRIC, TECHTAG_LIB_TWITTER4J, TECHTAG_EDIT_ANDROIDSTUDIO, TECHTAG_OS_OSX, TECHTAG_VC_GIT),
+		'2015年05',
+		PATH_IMG_PRO_AREA,
+		'https://play.google.com/store/apps/details?id=com.elzup.pictter.pictter&hl=ja',
+		array('mikekuroe', 'エンジニア')
+	),
+
+#	new Productionobj('エモカメラ',
+#		'サブタイトル, 軽い詳細',
+#		PRO_TYPE,
+#		'長い解説文',
+#		array(TECHTAG_FOOBAR),
+#		'2015年01',
+#		PATH_IMG_PRO_PATH
+#		'http://project.url/',
+#		array('member twitter id', 'member note')
+#	),
+#
+#	new Productionobj('残留日',
+#		'サブタイトル, 軽い詳細',
+#		PRO_TYPE,
+#		'長い解説文',
+#		array(TECHTAG_FOOBAR),
+#		'2015年01',
+#		PATH_IMG_PRO_PATH,
+#		'http://project.url/',
+#		array('member twitter id', 'member note')
+#	),
+#
+#	new Productionobj('名前',
+#		'サブタイトル, 軽い詳細',
+#		PRO_TYPE,
+#		'長い解説文',
+#		array(TECHTAG_FOOBAR),
+#		'2015年01',
+#		PATH_IMG_PRO_PATH,
+#		'http://project.url/',
+#		array('member twitter id', 'member note')
+#	),
+#
+#	new Productionobj('名前',
+#		'サブタイトル, 軽い詳細',
+#		PRO_TYPE,
+#		'長い解説文',
+#		array(TECHTAG_FOOBAR),
+#		'2015年01',
+#		PATH_IMG_PRO_PATH,
+#		'http://project.url/',
+#		array('member twitter id', 'member note')
+#	),
 );
+
 # new Productionobj('名前',
 # 	'サブタイトル, 軽い詳細',
 # 	PRO_TYPE,
 # 	'長い解説文',
-# 	array(TECHTAG_FOOBAR),
+# 	array(TECHTAG_LANG_C),
 # 	'2015年01',
-# 	PATH_IMG_PRO_PATH,
+#	PATH_IMG_PRO_AREA, # TODO:
 # 	'http://project.url/',
 # 	array('member twitter id', 'member note')
 # ),
