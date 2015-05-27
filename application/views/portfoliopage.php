@@ -371,7 +371,7 @@ EOF
 		'Android 画像収集クライアント',
 		PRO_TYPE_SOFTWARE,
 		'初めて Android 開発で作ったアプリ. 画像検索で取得した画像リストを, スワイプ一つで保存できるアプリ. 友人と2人で時に大まかな役割は決めずにタスク分けしながら作成した.',
-		array(TECHTAG_LANG_JAVA, TECHTAG_FW_ANDROIDSDK, TECHTAG_LIB_FABRIC, TECHTAG_LIB_TWITTER4J, TECHTAG_EDIT_ANDROIDSTUDIO, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_TRELLO),
+		array(TECHTAG_LANG_JAVA, TECHTAG_FW_ANDROIDSDK, TECHTAG_LIB_FABRIC, TECHTAG_LIB_TWITTER4J, TECHTAG_EDIT_ANDROIDSTUDIO, TECHTAG_OS_OSX, TECHTAG_VC_GRADLE, TECHTAG_VC_GIT, TECHTAG_VC_TRELLO),
 		'2015年05',
 		PATH_IMG_PRO_PICTTER,
 		array(
@@ -534,6 +534,7 @@ $tag_helps[] = array('Admin', 'プロジェクト管理, パッケージ管理',
 						</a>
 					</div>
 					<div class="detail-box">
+						<p>
 						<?php $link = $p->get_homelink(); ?>
 						<?php if(isset($link)) { ?>
 							<a href="<?= $link ?>" target="_blank">
@@ -544,16 +545,15 @@ $tag_helps[] = array('Admin', 'プロジェクト管理, パッケージ管理',
 						<?php } ?>
 						<?php if($link = $p->get_githublink()) { ?>
 							<a href="<?= $link ?>" target="_blank">
-								git
+								<span class="link-icon"><img src="<?= PATH_IMG_ICON_LINK_GITHUB ?>" /></span>
 							</a>
 						<?php } ?>
 						<?php if($link = $p->get_trellolink()) { ?>
 							<a href="<?= $link ?>" target="_blank">
-								trello
+								<span class="link-icon"><img src="<?= PATH_IMG_ICON_LINK_TRELLO ?>" /></span>
 							</a>
 						<?php } ?>
-<!--						TODO: other link -->
-
+						</p>
 						<p class="light-detail"><?= $p->light_detail ?></p>
 
 						<p class="detail"><?= $p->detail ?></p>

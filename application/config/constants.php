@@ -95,6 +95,9 @@ define('PATH_IMG_ICON_LINK', PATH_IMG . 'icon_link.png');
 define('PATH_IMG_ICON_HATENABLOG', PATH_IMG . 'icon_hatenablog.png');
 define('PATH_IMG_ICON_ELZUP_PREF', '//elzup.com/i/co');
 
+define('PATH_IMG_ICON_LINK_GITHUB', 'images/mk-github.png');
+define('PATH_IMG_ICON_LINK_TRELLO', 'images/mk-trello.png');
+
 /* icon myapp */
 define('PATH_IMG_PRO_OTHELLO', PATH_IMG . 'sc_othello.png');
 define('PATH_IMG_PRO_TANK', PATH_IMG . 'sc_tank.png');

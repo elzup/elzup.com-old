@@ -96,10 +96,16 @@ class Productionobj {
 	}
 
 	public function get_githublink() {
+		if (!isset($this->links[LINK_TYPE_GITHUB])) {
+			return NULL;
+		}
 		return '//github.com/' . $this->links[LINK_TYPE_GITHUB];
 	}
 
 	public function get_trellolink() {
+		if (!isset($this->links[LINK_TYPE_TRELLO])) {
+			return NULL;
+		}
 		return '//trello.com/b/' . $this->links[LINK_TYPE_TRELLO];
 	}
 
