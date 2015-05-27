@@ -120,6 +120,11 @@ define('PATH_IMG_PRO_TRENDWEB', PATH_IMG . 'sc_trendweb.png');
 define('PATH_IMG_PRO_EV3', PATH_IMG . 'sc_ev3.png');
 define('PATH_IMG_PRO_AREA', PATH_IMG . 'sc_area.png');
 define('PATH_IMG_PRO_DOMI', PATH_IMG . 'sc_domi.png');
+define('PATH_IMG_PRO_CPSLEAST', PATH_IMG . 'sc_cpsleast.png');
+define('PATH_IMG_PRO_CPSBLACK', PATH_IMG . 'sc_cpsblack.png');
+define('PATH_IMG_PRO_GORO', PATH_IMG . 'sc_goro.png');
+define('PATH_IMG_PRO_EVENT', PATH_IMG . 'sc_event.png');
+define('PATH_IMG_PRO_PICTTER', PATH_IMG . 'sc_pictter.png');
 
 define('PATH_IMG_RELOAD', PATH_IMG . 'im_reload.png');
 

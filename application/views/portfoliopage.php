@@ -4,7 +4,7 @@
  * @var $tag string
  */
 function convert_to_css_class($str) {
-	return strtolower(str_replace(array('.', '+', ' ', '形態素解析'), array('-', 'p', '_', ''), $str));
+	return strtolower(str_replace(array('.', '+', ' ', '形態素解析', '#'), array('-', 'p', '_', '', 's'), $str));
 }
 
 function tag_techtag($tech, $cate = NULL) {
@@ -264,7 +264,7 @@ EOF
 		'大学への残留申請をするために必要なCSVを生成できるWebツール, Content-Typeやアクセス管理の勉強になった',
 		array(TECHTAG_LANG_PHP, TECHTAG_LANG_JS, TECHTAG_MLANG_JQUERY, TECHTAG_FW_SLIM, TECHTAG_FW_FOUNDATION, TECHTAG_OS_LINUX, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_BOWER),
 		'2015年02',
-		PATH_IMG_PRO_AREA, # TODO:
+		PATH_IMG_PRO_CPSLEAST,
 		'http://cps.elzup.com/'
 	),
 
@@ -274,8 +274,8 @@ EOF
 		'大学パンフレットの学科紹介ページを真似て, 一晩遊びで作ったページ. シンプルで綺麗なプロジェクト構成で綺麗に出来たと思う',
 		array(TECHTAG_MLANG_JADE, TECHTAG_MLANG_STYLUS, TECHTAG_MLANG_COFFEESCRIPT, TECHTAG_OS_OSX, TECHTAG_VC_GIT, TECHTAG_VC_GULP),
 		'2015年04',
-		PATH_IMG_PRO_NENSYATTER, # TODO:
-		'http://project.url/'
+		PATH_IMG_PRO_CPSBLACK,
+		'http://cps.tdu.black'
 	),
 
 	new Productionobj('ゴロゴロえるざっぷ',
@@ -284,7 +284,7 @@ EOF
 		'コロコロカービィ風のゲーム. 休日一日を費やして Unity を勉強しながら作った. モデルは友人に作ってもらって Blender でUVマッピング色付けのみ自分でやった. 3Dはしばらく触ってなかったけれど Unity もモデリングもやってみたら面白かった',
 		array(TECHTAG_LANG_CS, TECHTAG_EDIT_UNITY, TECHTAG_EDIT_BLENDER, TECHTAG_EDIT_MONODEVELOP, TECHTAG_OS_OSX, TECHTAG_VC_GIT),
 		'2015年05',
-		PATH_IMG_PRO_AREA, # TODO:
+		PATH_IMG_PRO_GORO,
 		'http://gorogoro.elzup.com/',
 		array('s_dm_u' => 'えるざっぷモデルの作成')
 	),
@@ -295,7 +295,7 @@ EOF
 		'Geoタグ付きツイートを位置や時間からクラスタリングしてイベントっぽいものを検出する, 可視化するところまでは作った',
 		array(TECHTAG_LANG_PYTHON, TECHTAG_LANG_PHP, TECHTAG_LIB_MECAB, TECHTAG_DB_MYSQL, TECHTAG_API_GOOGLEMAPAPI, TECHTAG_OS_OSX, TECHTAG_EDIT_PHPSTORM, TECHTAG_EDIT_PYCHARM, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
 		'2015年05',
-		PATH_IMG_PRO_AREA, # TODO:
+		PATH_IMG_PRO_EVENT,
 		'https://github.com/elzzup/event_clustering'
 	),
 
@@ -305,7 +305,7 @@ EOF
 		'初めて Android 開発で作ったアプリ. 画像検索で取得した画像リストを, スワイプ一つで保存できるアプリ. 友人と2人で時に大まかな役割は決めずにタスク分けしながら作成した.',
 		array(TECHTAG_LANG_JAVA, TECHTAG_FW_ANDROIDSDK, TECHTAG_LIB_FABRIC, TECHTAG_LIB_TWITTER4J, TECHTAG_EDIT_ANDROIDSTUDIO, TECHTAG_OS_OSX, TECHTAG_VC_GIT),
 		'2015年05',
-		PATH_IMG_PRO_AREA,
+		PATH_IMG_PRO_PICTTER,
 		'https://play.google.com/store/apps/details?id=com.elzup.pictter.pictter&hl=ja',
 		array('mikekuroe', 'エンジニア')
 	),
