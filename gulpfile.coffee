@@ -7,23 +7,28 @@ $ = require('gulp-load-plugins')()
 # src_dir = './src'
 # public_dir = './public'
 
+# NOTE: template -> jade, script -> coffee, script -> stylus のがいいかも?
 config =
   templates:
     source: './src/jade'
     watch: './src/jade/**/*.jade'
-    destination: './public/templates'
+    destination: './htdocs/'
     config:
       pretty: true
   scripts:
     source: './src/coffee'
     watch: './src/coffee/*.coffee'
-    destination: './public/scripts'
+    destination: './htdocs/js/'
     option:
       bare: true
-  styles:
+  stylus:
     source: './src/stylus'
     watch: './src/stylus/*.styl'
-    destination: './public/styles/'
+    destination: './htdocs/style/'
+  sass:
+    source: './src/sass'
+    watch: './src/sass/*.sass'
+    destination: './htdocs/style/'
 
 # error handle
 handleError = (err) ->
@@ -50,17 +55,34 @@ gulp.task 'script', ->
     .on 'error', handleError
     .pipe gulp.dest config.scripts.destination
 
-gulp.task "style", ->
+gulp.task "stylus", ->
   gulp
-    .src config.styles.watch
-    .pipe $.stylus()
+    .src config.stylus.watch
+    .pipe $.sourcemaps.init()
+    .pipe $.stylus
+      compress: true
+    .pipe $.autoprefixer
+      browsers: ['last 2 versions']
+    .pipe $.sourcemaps.write('.')
     .on 'error', handleError
-    .pipe gulp.dest config.styles.destination
+    .pipe gulp.dest config.stylus.destination
+
+gulp.task "sass", ->
+  gulp
+  .src config.sass.watch
+  .pipe $.sourcemaps.init()
+  .pipe $.sass
+    compress: true
+  .pipe $.autoprefixer
+    browsers: ['last 2 versions']
+  .pipe $.sourcemaps.write('.')
+  .on 'error', handleError
+  .pipe gulp.dest config.sass.destination
 
 # watch
 gulp.task 'watch', ->
-  gulp.watch config.scripts.source, ['script']
-  gulp.watch config.styles.source, ['style']
+  gulp.watch config.scripts.watch, ['script']
+  gulp.watch config.stylus.watch, ['stylus']
 
 #load
-gulp.task 'default', ["script", "style"]
+gulp.task 'default', ["script", "stylus"]

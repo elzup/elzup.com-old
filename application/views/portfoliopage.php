@@ -379,7 +379,7 @@ EOF
 			LINK_TYPE_GITHUB => 'gachapdev/pictter',
 			LINK_TYPE_TRELLO => 'eRFaCrSO/pictter',
 		),
-		array('mikekuroe', 'エンジニア')
+		array('mikekuroe' => 'エンジニア')
 	),
 
 #	new Productionobj('エモカメラ',
@@ -435,7 +435,7 @@ EOF
 # 	'2015年01',
 #	PATH_IMG_PRO_AREA, # TODO:
 # 	'http://project.url/',
-# 	array('member twitter id', 'member note')
+# 	array('member twitter id' => 'member note')
 # ),
 
 // 種類分け
