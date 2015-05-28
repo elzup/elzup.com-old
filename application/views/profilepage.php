@@ -63,6 +63,9 @@ $account_list = array(new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzz
 				</div>
 			</div>
 		</div>
+		<div class="row-box">
+			<?php $this->load->view('work_list'); ?>
+		</div>
 	</div>
 </div>
 

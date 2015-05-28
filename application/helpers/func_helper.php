@@ -223,3 +223,19 @@ if (!function_exists('get_defined_constants_fillter')) {
 		return $arr;
 	}
 }
+
+function convert_to_css_class($str) {
+	return strtolower(str_replace(array('.', '+', ' ', '形態素解析', '#'), array('-', 'p', '_', '', 's'), $str));
+}
+
+function tag_techtag($tech, $cate = NULL) {
+	?>
+	<a href="<?= base_url(PATH_PORT . '?tag=' . urlencode($tech)) ?>"
+	   class="techtag <?= $cate ? "techtag-{$cate} " : "" ?>techtag-<?= convert_to_css_class($tech) ?>"><?= $tech ?></a>
+<?php
+}
+
+function count_to_graph($num) {
+	return str_repeat('<div class="pro_icon gold">■</div>', $num / 8) . str_repeat('<div class="pro_icon silver">■</div>', $num % 8);
+}
+
