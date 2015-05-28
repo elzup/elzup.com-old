@@ -84,4 +84,4 @@ gulp.task 'watch', ->
   gulp.watch config.stylus.watch, ['style']
 
 #load
-gulp.task 'default', ["style"]
+gulp.task 'default', ["script", "style"]
