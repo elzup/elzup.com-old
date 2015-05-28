@@ -55,10 +55,9 @@ gulp.task 'script', ->
     .on 'error', handleError
     .pipe gulp.dest config.scripts.destination
 
-gulp.task "stylus", ->
+gulp.task "style", ->
   gulp
     .src config.stylus.watch
-    .pipe $.sourcemaps.init()
     .pipe $.stylus
       compress: true
     .pipe $.autoprefixer
@@ -82,7 +81,7 @@ gulp.task "sass", ->
 # watch
 gulp.task 'watch', ->
   gulp.watch config.scripts.watch, ['script']
-  gulp.watch config.stylus.watch, ['stylus']
+  gulp.watch config.stylus.watch, ['style']
 
 #load
-gulp.task 'default', ["script", "stylus"]
+gulp.task 'default', ["style"]

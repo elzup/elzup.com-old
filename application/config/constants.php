@@ -153,6 +153,7 @@ define('TECHTAG_MLANG_SASS', 'SASS');
 define('TECHTAG_MLANG_STYLUS', 'Stylus');
 define('TECHTAG_MLANG_COFFEESCRIPT', 'CoffeeScript');
 define('TECHTAG_MLANG_PROCESSING_JS', 'processing.js');
+define('TECHTAG_MLANG_THYMELEAF', 'Thymeleaf');
 // framework
 define('TECHTAG_FW_CODEIGNITER', 'CodeIgniter');
 define('TECHTAG_FW_SLIM', 'Slim');
@@ -162,6 +163,8 @@ define('TECHTAG_FW_MATERIALIZE', 'Materialize');
 define('TECHTAG_FW_FOUNDATION', 'Foundation');
 define('TECHTAG_FW_DJANGO', 'Django');
 define('TECHTAG_FW_ANDROIDSDK', 'AndroidSDK');
+define('TECHTAG_FW_SPRING', 'Spring');
+define('TECHTAG_FW_RAILS', 'Rails');
 // lib
 define('TECHTAG_LIB_DXLIB', 'DxLib');
 define('TECHTAG_LIB_JAVASERVLET', 'Java servlet');
@@ -169,6 +172,8 @@ define('TECHTAG_LIB_MECAB', 'Mecab');
 define('TECHTAG_LIB_PARIS', 'Paris/idiorm');
 define('TECHTAG_LIB_FABRIC', 'TwitterFabric');
 define('TECHTAG_LIB_TWITTER4J', 'Twitter4J');
+define('TECHTAG_LIB_SELENIUM', 'Selenium');
+define('TECHTAG_LIB_BS4', 'BeautifulSoup');
 // api
 define('TECHTAG_API_TWITTERAPI', 'TwitterAPI');
 define('TECHTAG_API_TWITTERWEBAPI', 'TwitterWebAPI');
@@ -185,6 +190,7 @@ define('TECHTAG_OS_OSX', 'OSX');
 // db
 define('TECHTAG_DB_MYSQL', 'mysql');
 define('TECHTAG_DB_POSTGRESQL', 'PostgreSQL');
+define('TECHTAG_DB_REDIS', 'redis');
 // IDE,editor
 define('TECHTAG_EDIT_VISUALSTUDIO', 'VisualStudio');
 define('TECHTAG_EDIT_ECLIPSE', 'Eclipse');
@@ -207,6 +213,7 @@ define('TECHTAG_VC_GEM', 'gem');
 define('TECHTAG_VC_BOWER', 'bower');
 define('TECHTAG_VC_GULP', 'gulp');
 define('TECHTAG_VC_GRADLE', 'gradle');
+define('TECHTAG_VC_MAVEN', 'maven');
 define('TECHTAG_VC_TRELLO', 'Trello');
 
 /**
@@ -245,6 +252,14 @@ define('DOBUTSUSYOGI_NAME', 'elzup');
 define('LINK_TYPE_HOME', 'a');
 define('LINK_TYPE_GITHUB', 'b');
 define('LINK_TYPE_TRELLO', 'c');
+
+/**
+ * Rate css class
+ */
+define('RATE_GOLD', 'gold');
+define('RATE_SILVER', 'silver');
+define('RATE_BRONZE', 'bronze');
+define('RATE_NONE', '');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

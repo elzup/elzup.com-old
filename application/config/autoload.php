@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('session', 'metaobj', 'productionobj', 'tweetlogobj', 'dsyogilogobj', 'dsyogiprofobj',);
+$autoload['libraries'] = array('session', 'metaobj', 'productionobj', 'tweetlogobj', 'dsyogilogobj', 'dsyogiprofobj', 'workobj',);
 
 
 /*
@@ -64,7 +64,7 @@ $autoload['libraries'] = array('session', 'metaobj', 'productionobj', 'tweetlogo
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'func', 'parts', 'partstwitter', 'partsex',);
+$autoload['helper'] = array('url', 'func', 'parts', 'partstwitter', 'partsex', 'loadproducts',);
 
 
 /*

@@ -116,6 +116,13 @@ menu-item(cl)
             width 50%
           border-bottom solid 1px #DDD
 
+.full
+  width 100%
+
+.table-works
+  border-spacing 0px 6px
+  border-collapse separate
+
 cell-action(col)
   >div:hover
     cursor pointer
@@ -441,13 +448,13 @@ techtag-roop(labels color)
   label_lang = language cpp php python java javascript processing c cs ruby
   techtag-roop label_lang red
   /* metalang */
-  label_meta = metalang jquery jade less processing-js coffeescript sass stylus
+  label_meta = metalang jquery jade less processing-js coffeescript sass stylus thymeleaf
   techtag-roop label_meta orange
   /* framework */
-  label_framework = codeigniter bootstrap slim pure materialize foundation django androidsdk
+  label_framework = codeigniter bootstrap slim pure materialize foundation django androidsdk spring rails
   techtag-roop label_framework yellow
   /* lib */
-  label_lib = lib dxlib java_servlet mecab paris twitterfabric twitter4j
+  label_lib = lib dxlib java_servlet mecab paris twitterfabric twitter4j selenium beautifulsoup
   techtag-roop label_lib lime
   /* api */
   label_api = api twitterapi twitterwebapi ustreamapi yahooapi metroapi googlemapapi
@@ -459,13 +466,13 @@ techtag-roop(labels color)
   label_os = os windows linux osx
   techtag-roop label_os ghostwhite
   /* db */
-  label_db = db mysql postgresql
+  label_db = db mysql postgresql redis
   techtag-roop label_db green
   /* ide,editor */
   label_editor = editor visualstudio eclipse netbeans vim intellij_idea webstorm phpstorm pycharm androidstudio unity blender monodevelop
   techtag-roop label_editor orchid
   /* version control */
-  label_admin = admin git grunt composer npm gem bower gulp gradle trello
+  label_admin = admin git grunt composer npm gem bower gulp gradle trello maven
   techtag-roop label_admin darkgray
 
   /*
@@ -512,22 +519,25 @@ techtag-roop(labels color)
       vertical-align top
       &.count
         text-align center
-      &.activ
-        .pro_icon
-          float left
-          size(20px, 20px)
-          &.gold
-            color: rgba(255,255,0,.8);
-            text-shadow: 1px 1px 2px red;
-          &.silver
-            color silver
-            text-shadow: 1px 1px 5px blue;
     height 1.8em
   .help-top
     margin-bottom 14px
   td.cate
     vertical-align top
 /*            background url('../images/icon_product.png') 48px 0 */
+
+.pro_icon
+  float left
+  size(20px, 20px)
+  &.gold
+    color: rgba(255,255,0,.8);
+    text-shadow: 1px 1px 2px red;
+  &.silver
+    color silver
+    text-shadow: 1px 1px 5px blue;
+  &.bronze
+    color rgb(226, 120, 0)
+    text-shadow 1px 1px 5px #940000
 
 .icon-jump
   font-size 25px
@@ -571,5 +581,5 @@ html
     {p}\%
       background-color hsl(p * 3.6, 100%, 50%)
 
-@import "./md.styl"
-@import "./xs.styl"
+@import "./sub/md.styl"
+@import "./sub/xs.styl"
