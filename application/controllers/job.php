@@ -39,36 +39,4 @@ class Job extends CI_Controller {
 		}
 		return $logs;
 	}
-
-	public function test() {
-		$tweets = $this->twitter->get_my_tweet_all(603283270097219584);
-		echo '<pre>';
-		foreach ($tweets as $i => $st) {
-			echo $i . '. ' . $st->id . '::' . $st->text . PHP_EOL;
-		}
-	}
-
-	public function load_tweet_csv() {
-		$rows = $this::get_csv_rows('../Arzzup150529.csv');
-		$logs = array_map(function($row) {
-			$log = new Logobj();
-			$log->value = $row[0];
-			$log->timestamp = parse_twilog_timestamp($row[1]);
-			$log->type = 0;
-			return $log;
-		}, $rows);
-		$this->log->insert_log_all($logs);
-	}
-
-	public static function get_csv_rows($filename) {
-		$rows = array();
-		if (($handle = fopen($filename, "r")) !== FALSE) {
-			while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-				$rows[] = $data;
-			}
-			fclose($handle);
-		}
-		return $rows;
-	}
-
 }

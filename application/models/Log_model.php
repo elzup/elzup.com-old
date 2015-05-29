@@ -3,7 +3,7 @@
 class Log_model extends CI_Model {
 
 	/** @var CI_DB_active_record */
-	#	public $db;
+#	public $db;
 
 	private static $table = 'logs';
 
@@ -30,6 +30,15 @@ class Log_model extends CI_Model {
 
 	public function get_all_tweets() {
 		$recos = $this->db->get($this::$table);
+		return $this::to_logobj($recos);
+	}
+
+	public function get_recent_tweets() {
+		$recos = $this->db->get_where($this::$table, 'timestamp >= (NOW() - INTERVAL 3 MONTH)')->result();
+		return $this::to_logobj($recos);
+	}
+
+	public static function to_logobj($recos) {
 		return array_map(function ($row) {
 			return new Logobj($row);
 		}, $recos);
