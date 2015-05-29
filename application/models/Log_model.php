@@ -34,7 +34,7 @@ class Log_model extends CI_Model {
 	}
 
 	public function get_recent_tweets() {
-		$recos = $this->db->get_where($this::$table, 'timestamp >= (NOW() - INTERVAL 3 MONTH)')->result();
+		$recos = $this->db->get_where($this::$table, 'timestamp >= (NOW() - INTERVAL 1 YEAR)')->result();
 		return $this::to_logobj($recos);
 	}
 
