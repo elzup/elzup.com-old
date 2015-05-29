@@ -243,3 +243,6 @@ function to_mysql_timestamp($timestamp) {
 	return date(MYSQL_DATETIME_FORMAT, $timestamp);
 }
 
+function parse_twilog_timestamp($timestr) {
+	return strtotime('20' . $timestr);
+}

@@ -26,16 +26,14 @@ class Twitter_model extends CI_Model {
 	public function get_my_tweet_all($since_id) {
 		$tweets = array();
 		$max_id = NULL;
-		$i = 0;
 		while (TRUE) {
 			$res = $this->get_my_tweets($max_id);
-			$i ++;
-			if (count($res) == 0 or $i == 2) {
+			if (count($res) == 0) {
 				break;
 			}
 			foreach ($res as $st) {
-				if ($st->id < $since_id) {
-					break;
+				if ($st->id <= $since_id) {
+					break 2;
 				}
 				$tweets[] = $st;
 			}
