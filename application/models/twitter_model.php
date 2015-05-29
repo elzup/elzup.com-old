@@ -6,7 +6,8 @@ class Twitter_model extends CI_Model {
 	private $owner;
 
 	public function __construct() {
-		$cfg = $this->config->item('TWITTER_API')['elzup_mg'];
+		$configs = $this->config->item('TWITTER_API');
+		$cfg = $configs['elzup_mg'];
 		$this->client = new TwistOAuth($cfg['consumer_key'], $cfg['consumer_secret'], $cfg['token_key'], $cfg['token_secret']);
 		$this->owner = TWITTER_OWNER_SN;
 	}
