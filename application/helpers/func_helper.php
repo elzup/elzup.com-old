@@ -239,3 +239,7 @@ function count_to_graph($num) {
 	return str_repeat('<div class="pro_icon gold">■</div>', $num / 8) . str_repeat('<div class="pro_icon silver">■</div>', $num % 8);
 }
 
+function to_mysql_timestamp($timestamp) {
+	return date(MYSQL_DATETIME_FORMAT, $timestamp);
+}
+

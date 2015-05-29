@@ -2,9 +2,6 @@
 
 class Log extends CI_Controller {
 
-	/** @var Tweetlog_model */
-	public $tweetlog;
-
 	/** @var Scrape_model */
 	public $scrape;
 
@@ -39,12 +36,6 @@ class Log extends CI_Controller {
 		$this->load->model('Scrape_model', 'scrape');
 		$prof = $this->scrape->get_dobutusyogi_prof();
 		$this->load->view('dsyogiproftagplain', array('prof' => $prof));
-	}
-
-	public function tweetlogplain() {
-		$this->load->model('Tweetlog_model', 'tweetlog', TRUE);
-		$tl_log = $this->tweetlog->get_tweet_logs();
-		$this->load->view('tweetlogtagplain', array('tl_log' => $tl_log));
 	}
 
 	public function birthdayplain() {

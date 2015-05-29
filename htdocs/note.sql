@@ -1,0 +1,5 @@
+CREATE TABLE logs (
+    id INTEGER PRIMARY KEY AUTOINCLEMENT,
+    created_at TIMESTAMP,
+    type TINYINT NOT NULL
+);

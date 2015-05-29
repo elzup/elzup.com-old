@@ -243,6 +243,8 @@ if (is_dir($application_folder))
  * And away we go...
  *
  */
+
+include_once '../application/vendor/autoload.php';
 require_once BASEPATH . 'core/CodeIgniter.php';
 
 /* End of file index.php */
