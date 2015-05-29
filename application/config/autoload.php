@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('session', 'metaobj', 'productionobj', 'tweetlogobj', 'dsyogilogobj', 'dsyogiprofobj', 'workobj',);
+$autoload['libraries'] = array('session', 'metaobj', 'productionobj', 'logobj', 'dsyogilogobj', 'dsyogiprofobj', 'workobj',);
 
 
 /*
