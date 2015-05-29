@@ -1,8 +1,8 @@
 <?php
 
 class Log_model extends CI_Model {
-	/** @var CI_DB_active_record */
-	private $db;
+#	/** @var CI_DB_active_record */
+#	public $db;
 
 	private static $table = 'logs';
 
@@ -10,12 +10,12 @@ class Log_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function insert_all_tweets(array $logs) {
+	public function insert_log_all(array $logs) {
 		$set = array_map(function (Logobj $v) {
 			return array(
 				'value' => $v->value,
 				'timestamp' => to_mysql_timestamp($v->timestamp),
-				'type' => LOG_TYPE_TWEET
+				'type' => $v->type
 				);
 		}, $logs);
 		$this->db->insert_batch($this::$table, $set);

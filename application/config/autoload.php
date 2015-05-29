@@ -80,7 +80,7 @@ $autoload['helper'] = array('url', 'func', 'parts', 'partstwitter', 'partsex', '
 |
 */
 
-$autoload['config'] = array('my_googleapis',);
+$autoload['config'] = array('my_googleapis', 'my_twitterapis');
 
 /*
 | -------------------------------------------------------------------

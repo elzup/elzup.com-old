@@ -269,6 +269,7 @@ define('LOG_TYPE_TWEET', 0);
 define('LOG_TYPE_COMMIT', 1);
 define('LOG_TYPE_TOUCH', 2);
 
+define('TWITTER_OWNER_SN', 'arzzup');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
