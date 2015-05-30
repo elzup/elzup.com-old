@@ -3,9 +3,9 @@
 
 <svg xmlns="http://www.w3.org/2000/svg"
 	 width="4.7in" height="1.1in"
+	 id="logo-elzup"
 	 viewBox="0 0 732 182">
-	<path id="logo-elzup"
-		  fill="none" stroke="black" stroke-width="1"
+	<path fill="none" stroke="black" stroke-width="1"
 		  d="M 139.97,124.30
            C 138.72,126.11 135.04,126.78 133.00,127.19
              126.53,128.49 118.66,128.75 113.33,124.20
