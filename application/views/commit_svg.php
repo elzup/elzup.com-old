@@ -10,7 +10,7 @@ $date = strtotime('- 1 year');
 $date -= $date % $day1;
 $today = time();
 $today -= $today % $day1;
-$we = date('w') - 1;
+$we = (date('w') + 6) % 7;
 $x = 0;
 $months = array();
 
@@ -58,7 +58,7 @@ foreach($dlogs as &$log) {
 			} ?>
 		</g>
 		<?php foreach ($months as $m => $xp) { ?>
-			<text class="month" y="10" x="<?= $xp ?>"><?= $m ?></text>
+			<text class="month" y="-5" x="<?= $xp ?>"><?= $m ?></text>
 		<?php } ?>
 		<text style="display: none;" dy="9" dx="-10" class="wday" text-anchor="middle">S</text>
 		<text dy="22" dx="-10" class="wday" text-anchor="middle">M</text>
