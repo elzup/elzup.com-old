@@ -202,8 +202,9 @@ cell-action(col)
       .center-box
         text-align center
         overflow auto
-        width 444px
+        width 580px
         margin 0 auto
+        padding-top 24px
         .top-icon
           height 89px
           float left
@@ -588,6 +589,20 @@ text
   &.wday
     font-size 10px
 
+#logo-elzup
+  fill none
+  stroke-width 5
+  stroke-dasharray  5000
+  stroke-dashoffset 5000
+  animation  DASH 5.0s ease-in-out alternate forwards
+
+@keyframes DASH
+  0%
+    stroke-dashoffset 5000
+  80%
+    stroke-dashoffset 2000
+  100%
+    stroke-dashoffset 0
 
 @import "./sub/md.styl"
 @import "./sub/xs.styl"

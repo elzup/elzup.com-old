@@ -94,14 +94,15 @@ function tag_cell($k, $pane) {
 <?php
 }
 
-function print_titlebox() {
+function print_titlebox($context) {
 	?>
 	<div class="middle-box">
 		<div class="center-box">
 			<a href="//elzup.tumblr.com/icons" target="_blank"><span class="hide">elzup icon </span><img
 					itemprop="image" class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ"/></a>
 			<!--<a href="#" data-toggle="jumpopen" data-url="//elzup.tumblr.com/icons" target="_blank"><img class="top-icon" src="<?= PATH_IMG . "icon.png" ?>" alt="elzup.com メインロゴ" /></a>-->
-			<h1 itemprop="name">elzup.com</h1>
+			<!-- SEO に関係するかも -->
+			<h1 itemprop="name"><?php $context->load->view('logo'); ?></h1>
 		</div>
 	</div>
 <?php
@@ -135,7 +136,7 @@ $panes[34] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange'
 			</div>
 		<?php } ?>
 		<div class="row-toppane-title">
-			<?php print_titlebox(); ?>
+			<?php print_titlebox($this); ?>
 		</div>
 		<?php for ($j = 2; $j < 4; $j++) { ?>
 			<div class="row-toppane">
@@ -151,7 +152,7 @@ $panes[34] = new Pane("Blog", "むーぶめんと", "//blog.elzup.com", 'orange'
 
 	<div class="toppane visible-xs">
 		<div class="row-toppane-title">
-			<?php print_titlebox(); ?>
+			<?php print_titlebox($this); ?>
 		</div>
 		<div class="mini-cell-wrap">
 			<?php
