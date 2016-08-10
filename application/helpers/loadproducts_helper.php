@@ -31,7 +31,7 @@ function load_products() {
 			PATH_IMG_PRO_TREND,
 			array(
 				LINK_TYPE_HOME => '//twitter.com/TDU_Trend',
-				LINK_TYPE_GITHUB => 'elzzup/tdu_trend',
+				LINK_TYPE_GITHUB => 'elzup/tdu_trend',
 			)
 		),
 
@@ -56,7 +56,7 @@ function load_products() {
 			PATH_IMG_PRO_JENGA /* PATH_IMG_PRO_JENGA */,
 			array(
 				LINK_TYPE_HOME => '//elzzup.yuta-ri.net/fillup/',
-				LINK_TYPE_GITHUB => 'elzzup/fillup',
+				LINK_TYPE_GITHUB => 'elzup/fillup',
 			)
 		),
 
@@ -81,7 +81,7 @@ function load_products() {
 			PATH_IMG_PRO_TOKIMIKUJI,
 			array(
 				LINK_TYPE_HOME => '//app.elzup.com/tk',
-				LINK_TYPE_GITHUB => 'elzzup/app.elzup.com',
+				LINK_TYPE_GITHUB => 'elzup/app.elzup.com',
 			)
 		),
 
@@ -93,7 +93,7 @@ function load_products() {
 			'2014年1月',
 			PATH_IMG_PRO_ROLLCAKE,
 			array(
-				LINK_TYPE_GITHUB => 'elzzup/RollCake_RSS',
+				LINK_TYPE_GITHUB => 'elzup/RollCake_RSS',
 			)
 		),
 
@@ -106,7 +106,7 @@ function load_products() {
 			PATH_IMG_PRO_TOHYO,
 			array(
 				LINK_TYPE_HOME => '//tohyomaker.com',
-				LINK_TYPE_GITHUB => 'elzzup/tohyomaker.com',
+				LINK_TYPE_GITHUB => 'elzup/tohyomaker.com',
 			)
 		),
 
@@ -146,7 +146,7 @@ function load_products() {
 			PATH_IMG_PRO_YOPPARATTER,
 			array (
 				LINK_TYPE_HOME => '//app.elzup.com/yopparatter/',
-				LINK_TYPE_GITHUB => 'elzzup/app.elzup.com',
+				LINK_TYPE_GITHUB => 'elzup/app.elzup.com',
 			)
 		),
 
@@ -158,7 +158,7 @@ function load_products() {
 			'2014年7月',
 			PATH_IMG_PRO_BIRTHDAY,
 			array (
-				LINK_TYPE_GITHUB => '//elzzup/CharactorBirthdayAPI'
+				LINK_TYPE_GITHUB => '//elzup/CharactorBirthdayAPI'
 			)
 		),
 
@@ -171,7 +171,7 @@ function load_products() {
 			PATH_IMG_PRO_NENSYATTER,
 			array (
 				LINK_TYPE_HOME => '//app.elzup.com/nn',
-				LINK_TYPE_GITHUB => 'elzzup/app.elzup.com',
+				LINK_TYPE_GITHUB => 'elzup/app.elzup.com',
 			)
 		),
 
@@ -183,7 +183,7 @@ function load_products() {
 			'2014年8月',
 			PATH_IMG_PRO_ELZUP,
 			array (
-				LINK_TYPE_GITHUB => 'elzzup/elzup.com',
+				LINK_TYPE_GITHUB => 'elzup/elzup.com',
 				LINK_TYPE_TRELLO => 'bYpHhQGW/elzup-com',
 			)
 		),
@@ -197,7 +197,7 @@ function load_products() {
 			PATH_IMG_PRO_IERUKANA,
 			array (
 				LINK_TYPE_HOME => '//ierukana.elzup.com',
-				LINK_TYPE_GITHUB => 'elzzup/IerukanaMaker',
+				LINK_TYPE_GITHUB => 'elzup/IerukanaMaker',
 			)
 		),
 
@@ -234,7 +234,7 @@ function load_products() {
 			PATH_IMG_PRO_HAPPY,
 			array (
 				LINK_TYPE_HOME => '//happy.elzup.com',
-				LINK_TYPE_GITHUB => 'elzzup/happy',
+				LINK_TYPE_GITHUB => 'elzup/happy',
 			)
 		),
 
@@ -259,7 +259,7 @@ function load_products() {
 			PATH_IMG_PRO_TRENDWEB,
 			array (
 				LINK_TYPE_HOME => '//trend.elzup.com',
-				LINK_TYPE_GITHUB => 'elzzup/tdu_trend',
+				LINK_TYPE_GITHUB => 'elzup/tdu_trend',
 				LINK_TYPE_TRELLO => 'LMOjKwdv/tdu-trend',
 			)
 		),
@@ -272,7 +272,7 @@ function load_products() {
 			'2014年12月',
 			PATH_IMG_PRO_EV3,
 			array (
-				LINK_TYPE_GITHUB => 'elzzup/ev3_linetrace',
+				LINK_TYPE_GITHUB => 'elzup/ev3_linetrace',
 			)
 		),
 
@@ -297,7 +297,7 @@ function load_products() {
 			PATH_IMG_PRO_DOMI,
 			array (
 				LINK_TYPE_HOME => '//dominator.elzup.com/',
-				LINK_TYPE_GITHUB => 'elzzup/dominator',
+				LINK_TYPE_GITHUB => 'elzup/dominator',
 			)
 		),
 
@@ -310,7 +310,7 @@ function load_products() {
 			PATH_IMG_PRO_CPSLEAST,
 			array (
 				LINK_TYPE_HOME => '//cps.elzup.com/',
-				LINK_TYPE_GITHUB => 'elzzup/cps_stay',
+				LINK_TYPE_GITHUB => 'elzup/cps_stay',
 				LINK_TYPE_TRELLO => '6BXGEdHC/-',
 			)
 		),
@@ -324,7 +324,7 @@ function load_products() {
 			PATH_IMG_PRO_CPSBLACK,
 			array(
 				LINK_TYPE_HOME => '//cps.tdu.black',
-				LINK_TYPE_GITHUB => 'elzzup/cps.tdu.black',
+				LINK_TYPE_GITHUB => 'elzup/cps.tdu.black',
 				LINK_TYPE_TRELLO => 'q8KJVfLI/cps-tdu-black',
 			)
 		),
@@ -338,7 +338,7 @@ function load_products() {
 			PATH_IMG_PRO_GORO,
 			array(
 				LINK_TYPE_HOME => '//gorogoro.elzup.com/',
-				LINK_TYPE_GITHUB => 'elzzup/Roll-a-elzup',
+				LINK_TYPE_GITHUB => 'elzup/Roll-a-elzup',
 			),
 			array('s_dm_u' => 'えるざっぷモデルの作成')
 		),
@@ -351,7 +351,7 @@ function load_products() {
 			'2015年05',
 			PATH_IMG_PRO_EVENT,
 			array(
-				LINK_TYPE_GITHUB => 'elzzup/event_clustering'
+				LINK_TYPE_GITHUB => 'elzup/event_clustering'
 			)
 		),
 

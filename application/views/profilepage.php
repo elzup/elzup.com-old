@@ -1,6 +1,6 @@
 <?php
 // TODO: import json
-$tags = array('Webサイト制作' => './port', 'ゲームプログラミング' => '', 'Vim' => '//github.com/elzzup/dotfiles/blob/master/.vimrc',
+$tags = array('Webサイト制作' => './port', 'ゲームプログラミング' => '', 'Vim' => 'https://github.com/elzup/dotfiles/tree/master/dotfiles/.vim',
 	'Firefox' => '', 'ArchLinux' => '', 'Minecraft' => '//elzup.tumblr.com/minecraft', 'オセロ' => '', '将棋' => '',
 	'ルービックキューブ' => '//elzup.tumblr.com/cube', 'アニメ' => '',);
 
@@ -20,7 +20,7 @@ class AccountRecord {
 
 /** @var $account_list AccountRecord[] */
 $account_list = array(new AccountRecord('Twitter', 'Arzzup', '//twitter.com/arzzup'),
-	new AccountRecord('Github', 'elzzup', '//github.com/elzzup'),
+	new AccountRecord('Github', 'elzup', '//github.com/elzzup'),
 	new AccountRecord('Facebook', '高橋洸人', '//www.facebook.com/takahashiroto'),
 	new AccountRecord('SlideShare', 'elzup', '//www.slideshare.net/elzup/'),
 	new AccountRecord('Qiita', 'elzup', '//qiita.com/elzup'),
