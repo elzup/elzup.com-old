@@ -106,7 +106,7 @@ menu-item(cl)
       width 100%
       tr
         height 1.8em
-        &nth-child(2n)
+        &:nth-child(2n)
           background #fafafa
         td
           &.name
@@ -416,10 +416,7 @@ result-pane(col)
 
 .date4
   padding 0 2px
-  bottom-shadow
 
-bottom-shadow()
-  box-shadow -9px 1px, -18px 2px, -27px 3px
 .tag
   color #333
   margin-left 10px
@@ -431,7 +428,8 @@ bottom-shadow()
 
 techtag-style(base-color=gray)
   border-bottom base-color solid 4px
-techtag-roop(labels color)
+
+techtag-roop(labels, color)
   for tag_name in labels
     &.techtag-{tag_name}
       techtag-style color
@@ -512,7 +510,7 @@ techtag-roop(labels color)
             a
               float left
 
-.help-table 
+.help-table
   tr
     &.top
       border-top solid 1px
@@ -539,6 +537,11 @@ techtag-roop(labels color)
   &.bronze
     color rgb(226, 120, 0)
     text-shadow 1px 1px 5px #940000
+
+.closed
+  pointer-events none
+  .icon-jump
+    color: #aaa
 
 .icon-jump
   font-size 25px

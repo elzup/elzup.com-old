@@ -91,6 +91,10 @@ class Productionobj {
 		$this->members = $members;
 	}
 
+    public function is_homelink_closed() {
+        return $this->links[LINK_TYPE_HOME] == LINK_STATE_CLOSED;
+    }
+
 	public function get_homelink() {
 		return $this->links[LINK_TYPE_HOME];
 	}

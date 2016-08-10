@@ -53,9 +53,9 @@ function load_products() {
 			'授業についてのメモを講義ごとのページで共有できるサービス.その時間に行われてる講義をわかりやすくしたり,メモが整理できるように特化した掲示板にした,Bootstrapを初めて使った.現在停止中',
 			array(TECHTAG_LANG_PHP, TECHTAG_MLANG_JQUERY, TECHTAG_MLANG_LESS, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_DB_MYSQL, TECHTAG_EDIT_ECLIPSE, TECHTAG_EDIT_VIM),
 			'2013年11月',
-			PATH_IMG_PRO_JENGA /* PATH_IMG_PRO_JENGA */,
+			PATH_IMG_PRO_JENGA,
 			array(
-				LINK_TYPE_HOME => '//elzzup.yuta-ri.net/fillup/',
+				LINK_TYPE_HOME => LINK_STATE_CLOSED,
 				LINK_TYPE_GITHUB => 'elzup/fillup',
 			)
 		),
@@ -118,7 +118,7 @@ function load_products() {
 			'2014年7月',
 			PATH_IMG_PRO_ASN,
 			array(
-				LINK_TYPE_HOME => '//asn-web.com'
+				LINK_TYPE_HOME => LINK_STATE_CLOSED
 			)
 		),
 
@@ -129,7 +129,10 @@ function load_products() {
 			array(TECHTAG_LANG_JAVA, TECHTAG_API_TWITTERAPI, TECHTAG_LIB_JAVASERVLET, TECHTAG_MLANG_JQUERY, TECHTAG_FW_BOOTSTRAP, TECHTAG_OS_WINDOWS, TECHTAG_OS_LINUX, TECHTAG_EDIT_ECLIPSE, TECHTAG_EDIT_NETBEANS, TECHTAG_EDIT_VIM, TECHTAG_VC_GIT),
 			'2013年6月',
 			PATH_IMG_PRO_CLAUD,
-			array(),
+			array(
+                LINK_TYPE_HOME => LINK_STATE_CLOSED,
+			    LINK_TYPE_GITHUB => 'twinkfrag/tduim3wsp_claud'
+            ),
 			array('sukonbu0909' => 'プロジェクトマネージャ',
 				'twinkfrag' => 'アプリケーションスペシャリスト',
 				'godslew' => 'ITアーキテクト',
@@ -284,7 +287,7 @@ function load_products() {
 			'2014年12月',
 			PATH_IMG_PRO_AREA,
 			array (
-				LINK_TYPE_HOME => '//areastress.cps.im.dendai.ac.jp/',
+				LINK_TYPE_HOME => LINK_STATE_CLOSED,
 			)
 		),
 

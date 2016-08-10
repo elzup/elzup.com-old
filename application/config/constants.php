@@ -69,7 +69,7 @@ define('PATH_LIB_ANIME', PATH_LIB . 'animations.css');
 define('PATH_LIB_LIGHTBOX_CSS', PATH_LIB . 'lightbox/css/lightbox.css');
 define('PATH_LIB_FLIP', PATH_LIB . 'roncioso/jquery.flip.js');
 define('PATH_LIB_LIGHTBOX_JS', PATH_LIB . 'lightbox/js/lightbox.js');
-define('PATH_STYLE', 'style/');
+define('PATH_STYLE', '/style/');
 define('PATH_STYLE_CSS_MAIN', PATH_STYLE . 'main.css');
 define('PATH_STYLE_CSS_MD', PATH_STYLE . 'md.css');
 define('PATH_STYLE_CSS_XS', PATH_STYLE . 'xs.css');
@@ -252,6 +252,8 @@ define('DOBUTSUSYOGI_NAME', 'elzup');
 define('LINK_TYPE_HOME', 'a');
 define('LINK_TYPE_GITHUB', 'b');
 define('LINK_TYPE_TRELLO', 'c');
+
+define('LINK_STATE_CLOSED', 'CLOSED');
 
 /**
  * Rate css class

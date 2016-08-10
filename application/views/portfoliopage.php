@@ -109,9 +109,17 @@ $tag_helps[] = array('Admin', 'プロジェクト管理, パッケージ管理',
 						<p>
 						<?php $link = $p->get_homelink(); ?>
 						<?php if(isset($link)) { ?>
-							<a href="<?= $link ?>" target="_blank">
-								<span class="name"><?= $p->name ?></span><span class="icon-jump">↗</span>
-							</a>
+                            <?php if (!$p->is_homelink_closed()) { ?>
+								<a href="<?= $link ?>" target="_blank">
+									<span class="name"><?= $p->name ?></span>
+									<span class="icon-jump">↗</span>
+								</a>
+							<?php } else { ?>
+								<a class="closed" href="<?= $link ?>" target="_blank" title="Closed">
+									<span class="name"><?= $p->name ?></span>
+									<span class="icon-jump">x</span>
+								</a>
+							<?php } ?>
 						<?php } else { ?>
 							<span class="name"><?= $p->name ?></span>
 						<?php } ?>
