@@ -75,6 +75,22 @@ $work_list = array(
 		RATE_SILVER,
 		'GitLabでプルリク開発'
 	),
+
+	new Workobj(
+		TECHTAG_FW_CODEIGNITER,
+		RATE_SILVER,
+		'[PI]APIの作成'
+	),
+	new Workobj(
+		TECHTAG_FW_ANDROIDSDK,
+		RATE_SILVER,
+		'[PI]アプリケーションの実装'
+	),
+	new Workobj(
+		TECHTAG_VC_GIT,
+		RATE_SILVER,
+		'[PI]Gitflow開発'
+	),
 );
 
 ?>
@@ -82,6 +98,7 @@ $work_list = array(
 <div class="help-panel">
 	<h3 class="sub-title">実務経験</h3>
 	<p>[SA] … サイバーエージェント1ヶ月インターン</p>
+	<p>[PI] … Pixiv2週間インターン</p>
 	<table class="full table-works">
 		<tr>
 			<th></th>
